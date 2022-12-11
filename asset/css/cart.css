@@ -1,0 +1,154 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    background-color: white;
+    position: sticky;
+    top: 0px;
+    
+}
+
+.header{
+    display:flex;
+    background-color: white;
+    justify-content: space-between;
+}
+
+.head2{
+     margin-top: 30px;
+     margin-right: 60px;
+}
+.head2 a{
+    
+        text-decoration: none;
+        color:white;
+        font-size: 15px;
+        font-family: 'Rubik Microbe', cursive;
+        
+        border-radius: 50px;
+        background-color: black;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 50px;
+}
+
+.head2 li {
+    list-style: none;
+    padding-bottom: 15px;
+}
+
+.nav1 ul{
+    display: flex;
+    position: absolute;
+    top:60px;
+    left: 170px;
+    padding-left: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+  }
+.nav1 li{
+    list-style: none;
+    padding-left: 40px;
+}
+
+.nav1 a{
+    text-decoration: none;
+    color: black;  
+}
+
+  .nav1 li::after{
+    content:"";
+    background-color: red;
+    display: block;
+    height: 3px;
+    width: 0%;
+    margin:auto;
+    transition: 0.7s;
+  }
+
+  .nav1 li:hover::after{
+    width: 100%;
+  }
+
+  .main h2{
+    background-color: blanchedalmond;
+    color: black;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .main2{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+  }
+  hr{
+    margin-top: 30px;
+    width: 1300px;
+    margin-left: 130px;
+  }
+
+  .motherchild{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    list-style: 6;
+    letter-spacing: 2px;
+  }
+
+  .mother h3{
+    margin-bottom: 10px;
+  }
+
+  .mother2{
+    margin-top: 20px;
+  }
+
+  #text{
+    padding: 10px;
+    padding-right: 180px;
+    
+    margin-top: 5px;
+  }
+
+  .motherchild1 h2{
+          margin-bottom: 20px;
+          float: right;
+  }
+
+  .motherchild1 {
+    margin-top: 60px;
+  }
+
+ 
+  .yellow1{
+    display: flex;
+    margin-top: 10px;
+    margin-left: 150px;
+  }
+  button{
+    margin-left: 370px;
+    margin-top: 20px;
+    padding: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+    background-color: antiquewhite;
+    border-radius: 50px;
+    border: none;
+  }
+
+  button a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+  }
+
+  .mother h3,h2{
+    color: grey;
+}
+
+ 

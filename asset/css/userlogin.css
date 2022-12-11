@@ -1,0 +1,88 @@
+*{
+  margin: 0px;  
+  padding: 0px;
+  border-color:  gold;
+  
+}
+
+
+body{
+    background-image: url(../images/Green\ and\ White\ Minimalist\ Nature\ Travel\ Vlog\ Youtube\ Thumbnail.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main{
+    margin-left: 85px;
+    padding-top: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+ 
+
+fieldset{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 30px;
+    background-color: white;
+    border-radius: 50px;
+}
+
+#fname{
+    padding: 10px;
+    padding-left: 30px;
+    margin-left: 60px;
+    border-radius: 50px;
+    
+}
+
+#country{
+    padding: 10px;
+    padding-left: 50px;
+    width: 200px;
+    margin-left: 75px;
+    border-radius: 50px;
+    border: 2px solid gold;
+}
+ 
+#pass{
+    margin-left: 12px;
+    padding: 10px;
+    padding-left: 30px;
+    border-radius: 50px;
+}
+#pass1{
+    margin-left: 65px;
+    padding: 10px;
+    padding-left: 30px;
+    border-radius: 50px;
+}
+
+#e-mail{
+    margin-left: 82px;
+    padding: 10px;
+    padding-left: 30px;
+    border-radius: 50px;
+}
+button{
+    margin-left: 90px;
+    margin-top: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding: 15px;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+p{
+    margin-left: 70px;
+
+}
+a{
+    font-size: 25px;
+    text-decoration: none;
+    color: burlywood ;
+}
+
+ 

@@ -1,0 +1,203 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+ 
+body{
+    background-color:white;
+    line-height: 1.6;
+    letter-spacing: 1px;
+}
+
+header{
+    background-color: whitesmoke;
+    position: sticky;
+    top: 0px;
+    z-index: 5;
+}
+
+.header{
+    display:flex;
+    background-color: whitesmoke;
+    justify-content: space-between;
+}
+
+.head2{
+     margin-top: 30px;
+     margin-right: 60px;
+}
+.head2 a{
+    
+        text-decoration: none;
+        color:white;
+        font-size: 15px;
+        font-family: 'Rubik Microbe', cursive;
+        
+        border-radius: 50px;
+        background-color: black;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 50px;
+}
+
+.head2 li {
+    list-style: none;
+    padding-bottom: 15px;
+    
+}
+
+.nav1 ul{
+    display: flex;
+    position: absolute;
+    top:60px;
+    left: 170px;
+    padding-left: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+  }
+.nav1 li{
+    list-style: none;
+    padding-left: 40px;
+}
+
+.nav1 a{
+    text-decoration: none;
+    color: black;  
+}
+
+  .nav1 li::after{
+    content:"";
+    background-color: red;
+    display: block;
+    height: 3px;
+    width: 0%;
+    margin:auto;
+    transition: 0.7s;
+  }
+
+  .nav1 li:hover::after{
+    width: 100%;
+  }
+
+  .content{
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+    line-height: 2;
+    letter-spacing: 3;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+  }
+ 
+  .div{
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .div1 h1{
+    color: rgb(79, 107, 148);
+  }
+
+  .div1 p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+  }
+ .con{
+    z-index: 2;
+ }
+ 
+  .con2{
+    padding-left: 70px;
+    padding-top: 100px;
+  }
+  .con2 img{
+     width: 400px;
+  }
+
+  
+.con h1{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 50px;
+}
+
+.content span img{
+    position: absolute;
+    width: 550px;
+    top: 300px;
+    right: 740px;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+ .main img{
+    width: 160px;
+    border-radius: 50%;
+ }
+
+ 
+#dropbtn {
+ 
+  text-decoration: none;
+
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  font-size: 26px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  left: 450px;
+  display: inline-block;
+  top: -35px;
+ list-style: none;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  border: none;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 35px;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  border: none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown a{
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+
+}
+
+.dropdown a::after {
+  content: "";
+  background-color: red;
+  display: block;
+  height: 3px;
+  width: 0%;
+  margin: auto;
+  transition: 0.7s;
+}
