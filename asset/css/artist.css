@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     font-family: 'Poppins', sans-serif;
+    font-size: 15px;
 }
 
 header{
@@ -9,6 +10,11 @@ header{
     position: sticky;
     top: 0px;
     
+}
+
+
+.fullbox{
+  background-color: whitesmoke;
 }
 
 .header{
@@ -80,4 +86,89 @@ header{
 
   .allover{
     background-color:black;
+  }
+
+  .bottom{
+    display: flex;
+  }
+
+  .bottom0{
+    margin-left: 290px;
+    line-height: 2;
+    letter-spacing: 2px;
+    margin-top: 20px;
+  }
+
+  .main,.main1{
+    text-align: center;
+    line-height: 2;
+  }
+  
+  .empty{
+     margin-top: 40px;
+  }
+
+  .empty1{
+    padding-left: 90px;
+  }
+
+  #text,#country{
+       padding: 5px;
+       padding-right: 170px;
+       margin-bottom: 20px;
+  }
+
+  #inch{
+    padding: 5px;
+    padding-right: 20px;
+  }
+
+  #doc{
+    padding: 5px;
+    padding-left: 80px;
+  }
+
+  .atlast{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .atlast a{
+  
+    text-decoration: none;
+    background-color: rgb(64, 71, 178);
+    border: none;
+    border-radius: 50px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+  }
+
+  .atlast2 a{
+    margin-top: 20px;
+    margin-left: 100px;
+  }
+
+  .main h1{
+      background-color: gainsboro ;
+      font-size: 50px;
+      color: black;
+      font-family: 'Courgette', cursive;
+      padding-top: 50px;
+      padding-bottom: 30px;
+  }
+
+  .main{
+    margin-top: 50px;
+  }
+
+  span{
+    color: green;
+  }
+
+  #star{
+   font-size: 5px;
+   color: red;
   }
