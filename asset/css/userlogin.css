@@ -69,9 +69,8 @@ fieldset{
 button{
     margin-left: 90px;
     margin-top: 15px;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding: 15px;
+  
+    padding: 15px 25px 15px 25px;
     border-radius: 50px;
     font-family: 'Poppins', sans-serif;
 }
