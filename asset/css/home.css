@@ -135,7 +135,8 @@ body {
 .material {
   color: black;
   text-align: center;
-  padding-left: 70px;
+  padding-left: 50px;
+  margin-right: 30px;
 
 }
 
@@ -182,6 +183,7 @@ body {
   0%{transform: translateX(1500px);opacity: 0;}
   100%{transform: translateX(0px); opacity: 1;}
 }
+
 
 #dummy {
   margin-top: 1000px;

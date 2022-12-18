@@ -23,7 +23,7 @@ header {
 
 
 .head1 img {
-    margin-left: 510px;
+    margin-left: 410px;
     margin-top: 20px;
 }
 
@@ -57,10 +57,11 @@ header {
     position: absolute;
     color: white;
     /* top: 60px; */
-    left: 580px;
+    left: 480px;
     padding-left: 30px;
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
+    font-weight: 700;
 }
 
 

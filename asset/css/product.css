@@ -8,35 +8,44 @@ body{
   line-height: 1.6;
   letter-spacing: 1px;
 }
-
-header{
+header {
   background-color: white;
   position: sticky;
   top: 0px;
+  font-family: 'Poppins', sans-serif;
+  z-index: 1;
+  
+
 }
 
-.header{
-  display:flex;
+.header {
+  display: flex;
   background-color: white;
   justify-content: space-between;
+  font-family: 'Poppins', sans-serif;
 }
 
-.head2{
-   margin-top: 30px;
-   margin-right: 60px;
+.head1 {
+  margin-left: 400px;
 }
-.head2 a{
-  
-      text-decoration: none;
-      color:white;
-      font-size: 15px;
-      font-family: 'Rubik Microbe', cursive;
-      
-      border-radius: 50px;
-      background-color: black;
-      padding-left: 20px;
-      padding-right: 20px;
-      border-radius: 50px;
+
+.head2 {
+  margin-top: 30px;
+  margin-right: 60px;
+}
+
+.head2 a {
+
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  border-radius: 50px;
+  background-color: black;
+  padding-left: 20px;
+  padding-right: 20px;
+
 }
 
 .head2 li {
@@ -44,44 +53,54 @@ header{
   padding-bottom: 15px;
 }
 
-.nav1 ul{
+.nav1 ul {
   display: flex;
   position: absolute;
-  top:60px;
-  left: 170px;
+  top: 30px;
+  left: 470px;
   padding-left: 30px;
   font-family: 'Poppins', sans-serif;
-  font-size: 15px;
+  font-size: 16px;
+  font-weight: 700;
 }
-.nav1 li{
+
+.nav1 li {
   list-style: none;
   padding-left: 40px;
 }
 
-.nav1 a{
+.nav1 a {
   text-decoration: none;
-  color: black;  
+  color: black;
 }
 
-.nav1 li::after{
-  content:"";
+.nav1 li::after {
+  content: "";
   background-color: red;
   display: block;
   height: 3px;
   width: 0%;
-  margin:auto;
+  margin: auto;
   transition: 0.7s;
 }
 
-.nav1 li:hover::after{
+.nav1 li:hover::after {
   width: 100%;
 }
 
-
-main img{
-    width: 400px;
+main span img{
+    /* width: 400px; */
     margin-left: 200px;
     margin-top: 90px;
+    position: relative;
+    left: 20px;
+}
+ 
+main img{
+  position: relative;
+  padding-left: 50px;
+  left: 260px;
+  padding-top: 50px;
 }
 
 .content{
@@ -90,19 +109,24 @@ main img{
 
 }
 
-.lo{
+
+#parrot{
+  font-size: 15px;
+ color: black;  
+}
+.product_txt{
   margin-top: 100px;
-  margin-left: 100px;
+  margin-left: 50px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
 
 }
 
-.lo p{
+.product_txt p{
   font-weight:400;
 }
 
-.lo img{
+.product_txt img{
   width: 30px;
 }
 
@@ -115,8 +139,9 @@ main img{
   color: red;
   font-weight: 600;
 }
-.lo h3{
+.product_txt h3{
   font-weight: 600;
+  
 }
 #hello{
   
@@ -174,11 +199,15 @@ main img{
   text-align: center;
   font-family: 'Montserrat', sans-serif;
 }
+.rev1 img{
+  width: 200px;
+}
 
 
 
 
 .foot{
+  z-index: 0;
 background-color: rgb(251, 248, 248);
 }
 .foot p{
@@ -186,7 +215,7 @@ background-color: white;
 width: 400px;
 position: absolute;
 text-align: center;
-top:2000px;
+top:2200px;
 padding: 14px;
 padding-left: 30px;
 padding-right: 30px;
@@ -197,7 +226,7 @@ font-family:  sans-serif;
 }
 .foot img{
   width: 900px;
-  height: 400px;
+  height: 600px;
   margin-left: 300px;
   opacity: 0.5;
   margin-top: 100px;   
