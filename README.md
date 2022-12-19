@@ -9,4 +9,4 @@ Userflow:https://drive.google.com/file/d/1H03NS4JNfvoTLXZGyJrwzxvziyt9UtzJ/view?
 
 Wireframe:https://drive.google.com/drive/folders/1HSOXP1bPAA7rlnB2QA03VYvxGJrGZqye
 
-Website link:https://santhanam13.github.io/F-arts-and-Design-/
+Website link  :https://fssa-batch3.github.io/santhanam.mariappan__web_project/
