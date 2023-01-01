@@ -42,7 +42,7 @@ header{
 #text{
   
    
-    padding: 10px 380px 10px 380px;
+    padding: 10px 250px 10px 250px;
     
     border-radius: 10px;
    border: 2px solid gainsboro;
@@ -55,7 +55,7 @@ header{
 
 
 #country{
-    padding:10px 420px 10px 420px;
+    padding:10px 270px 10px 270px;
     
   
     border-radius: 10px;
@@ -82,7 +82,7 @@ header{
 #optional{
     margin-top: 20px;
    
-    padding: 10px 380px 10px 380px;
+    padding: 10px 250px 10px 250px;
   
     border-radius: 10px;
    border: 2px solid gainsboro;

@@ -73,6 +73,7 @@ hr{
     height: 30px;
     width: 200px;
     margin-left: 20px;
+    text-align: center;
  }
 
  .head2{
@@ -92,4 +93,14 @@ hr{
     color: white;
     text-decoration: none;
     margin-left: 60px;
+ }
+ 
+
+ .yellow1 span a{
+     color: black;
+     background-color: white;
+     line-height: 3;
+     font-size: 16px;
+    position: relative;
+    right: 40px;
  }

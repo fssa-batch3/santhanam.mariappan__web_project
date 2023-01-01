@@ -1,0 +1,30 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+ 
+
+ main{
+    margin-top: 150px;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 3;
+    font-size: 20px;
+ }
+
+ main h3{
+    
+    font-size: 40px;
+    font-family:sans-serif;
+ }
+
+ main a{
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+    background-color: rgb(118, 116, 116);
+    padding: 10px 30px 10px 30px;
+    border-radius: 50px;
+
+ }

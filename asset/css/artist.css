@@ -1,17 +1,17 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 15px;
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
 }
 
+/* header starts */
 header {
   background-color: white;
   position: sticky;
   top: 0px;
   font-family: 'Poppins', sans-serif;
-  
-
 }
 
 .header {
@@ -84,96 +84,110 @@ header {
   width: 100%;
 }
 
-  .empty{
-    display: flex;
-    justify-content: center;
-  }
+/* header ends */
 
-  .allover{
-    background-color:black;
-  }
 
-  .bottom{
-    display: flex;
-  }
 
-  .bottom0{
-    margin-left: 290px;
-    line-height: 2;
-    letter-spacing: 2px;
-    margin-top: 20px;
-  }
+/* empty section  */
+.empty {
+  display: flex;
+  justify-content: center;
+}
 
-  .main,.main1{
-    text-align: center;
-    line-height: 2;
-  }
-  
-  .empty{
-     margin-top: 40px;
-  }
 
-  .empty1{
-    padding-left: 90px;
-  }
 
-  #text,#country{
-       padding: 5px;
-       padding-right: 170px;
-       margin-bottom: 20px;
-  }
+.allover {
+  background-color: black;
+}
 
-  #inch{
-    padding: 5px;
-    padding-right: 20px;
-  }
+.bottom {
+  display: flex;
+}
 
-  #doc{
-    padding: 5px;
-    padding-left: 80px;
-  }
+.bottom0 {
+  margin-left: 290px;
+  line-height: 2;
+  letter-spacing: 2px;
+  margin-top: 20px;
+}
 
-  .atlast{
-    display: flex;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
+.main,
+.main1 {
+  text-align: center;
+  line-height: 2;
+}
 
-  .atlast a{
-  
-    text-decoration: none;
-    background-color: rgb(64, 71, 178);
-    border: none;
-    border-radius: 50px;
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    color: white;
-  }
+.empty {
+  margin-top: 40px;
+}
 
-  .atlast2 a{
-    margin-top: 20px;
-    margin-left: 100px;
-  }
+.empty1 {
+  padding-left: 90px;
+}
 
-  .main h1{
-      background-color: gainsboro ;
-      font-size: 50px;
-      color: black;
-      font-family: 'Courgette', cursive;
-      padding-top: 50px;
-      padding-bottom: 30px;
-  }
+#text,
+#country {
+  padding: 5px;
+  padding-right: 170px;
+  margin-bottom: 20px;
+}
 
-  .main{
-    margin-top: 50px;
-  }
+#inch {
+  padding: 5px;
+  padding-right: 20px;
+}
 
-  span{
-    color: green;
-  }
+#doc {
+  padding: 5px;
+  padding-left: 80px;
+}
 
-  #star{
-   font-size: 5px;
-   color: red;
-  }
+.atlast {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.atlast a {
+
+  text-decoration: none;
+  background-color: rgb(64, 71, 178);
+  border: none;
+  border-radius: 50px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: white;
+}
+
+.atlast2 a {
+  margin-top: 20px;
+  margin-left: 100px;
+}
+
+.main h1 {
+  background-color:pink;
+  font-size: 50px;
+  color: black;
+  font-family: 'Courgette', cursive;
+  padding-top: 0px;
+  padding-bottom: 30px;
+}
+
+.main {
+  margin-top: 20px;
+  background-color: rgba(180, 171, 171, 0.523);
+}
+
+span {
+  color: green;
+}
+
+#star {
+  font-size: 5px;
+  color: red;
+}
+
+.fullbox{
+  background-color: rgb(253, 248, 248);
+}

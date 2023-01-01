@@ -457,5 +457,25 @@ footer{
   width: 200px;
 }
 
+.follow_insta1 img{
+   width: 200px;
+  padding-left: 40px;
+  
+}
 
+.follow_insta1{
+  background-color: rgb(230, 202, 206);
+  padding-bottom: 60px;
+  text-align: center;
+}
+
+.follow_insta1 h1{
+  padding-top: 40px;
+  font-family: sans-serif;
+}
+
+.follow_insta1 a{
+     text-decoration: none;
+     color: black;
+}
  
