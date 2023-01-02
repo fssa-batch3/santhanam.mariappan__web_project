@@ -180,9 +180,17 @@ body {
   animation-name: slide;
   animation-duration: 4s;
 }
-@keyframes slide{
-  0%{transform: translateX(1500px);opacity: 0;}
-  100%{transform: translateX(0px); opacity: 1;}
+
+@keyframes slide {
+  0% {
+    transform: translateX(1500px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
 }
 
 
@@ -359,69 +367,76 @@ body {
 
 
 
-.foot{
+.foot {
   background-color: rgb(251, 248, 248);
 }
-.foot p{
+
+.foot p {
   background-color: white;
   width: 400px;
   position: absolute;
   text-align: center;
-  top:2000px;
+  top: 2000px;
   padding: 14px;
   padding-left: 30px;
   padding-right: 30px;
   border-radius: 50px;
   color: black;
   left: 540px;
-  font-family:  sans-serif;
-}
-.foot img{
-    width: 900px;
-    height: 400px;
-    margin-left: 300px;
-    opacity: 0.5;
-    margin-top: 100px;   
+  font-family: sans-serif;
 }
 
-footer{
+.foot img {
+  width: 900px;
+  height: 400px;
+  margin-left: 300px;
+  opacity: 0.5;
+  margin-top: 100px;
+}
+
+footer {
   background-color: rgba(18, 17, 17, 0.868);
   color: white;
   letter-spacing: 4;
 }
-.foot0{
+
+.foot0 {
   line-height: 3;
   margin-left: 30px;
 }
-.foot0 h1{
+
+.foot0 h1 {
   font-size: 60px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
 }
-.foot0 p{
+
+.foot0 p {
   font-size: 18px;
   font-family: 'Poppins', sans-serif;
 }
- .foot1{
+
+.foot1 {
   display: flex;
   justify-content: space-around;
- }
+}
 
- .foot1{
+.foot1 {
   margin-top: 50px;
   line-height: 3;
- }
- .foot1 h2{
+}
+
+.foot1 h2 {
   font-size: 30px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
- }
-
-.foot4 img{
-   width: 90px;
 }
 
-#name{
+.foot4 img {
+  width: 90px;
+}
+
+#name {
   padding: 10px;
   padding-left: 15px;
   padding-right: 15px;
@@ -429,14 +444,14 @@ footer{
   font-family: 'Montserrat', sans-serif;
 }
 
-#feed{
+#feed {
   padding: 16px;
   padding-bottom: 20px;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
 }
 
-.foot3 button{
+.foot3 button {
   padding: 10px;
   border-radius: 20px;
   padding-left: 14px;
@@ -446,36 +461,53 @@ footer{
   margin-top: 10px;
 }
 
-.dum{
+.dum {
   display: flex;
   justify-content: space-between;
 }
 
-.dum2 img{
+.dum2 img {
   margin-top: 60px;
   margin-right: 100px;
   width: 200px;
 }
 
-.follow_insta1 img{
-   width: 200px;
+.follow_insta1 img {
+  width: 200px;
   padding-left: 40px;
-  
+
 }
 
-.follow_insta1{
+.follow_insta1 {
   background-color: rgb(230, 202, 206);
   padding-bottom: 60px;
   text-align: center;
 }
 
-.follow_insta1 h1{
+.follow_insta1 h1 {
   padding-top: 40px;
   font-family: sans-serif;
 }
 
-.follow_insta1 a{
-     text-decoration: none;
-     color: black;
+.follow_insta1 a {
+  text-decoration: none;
+  color: black;
 }
- 
+
+
+
+@media screen and (max-width:400px) {
+  .hero video{
+
+      width:100%;
+
+}
+
+}                       
+
+
+
+
+
+
+

@@ -1,0 +1,22 @@
+{
+  "name": "f_arts_and_design",
+  "version": "1.0.0",
+  "description": "My website is all about selling Arts. I’m trying to solve the problem of artists  who post their works on social media.For example if artists post their art on instagram they don't get proper responses to it.My website ensures all these problems for artists and provides a way for job opportunities.",
+  "main": "main.js",
+  "scripts": {
+    "dev": "http-server ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fssa-batch3/santhanam.mariappan__web_project.git"
+  },
+  "author": "santhanam_13",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fssa-batch3/santhanam.mariappan__web_project/issues"
+  },
+  "homepage": "https://github.com/fssa-batch3/santhanam.mariappan__web_project#readme",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
