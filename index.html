@@ -25,11 +25,15 @@
            
             <h3>User Login</h3>
             <br><br>
-             User name <input type="Usernmae,email" id="username" placeholder="Username or email">
+
+            <form action=""></form>
+             phone number <input type="number" id="username" placeholder="Username or email">
              <br><br>
-             Password <input type="Password" id="username" placeholder="Password">
+             Password <input type="Password" id="password" placeholder="Password">
              <br><br>
-              <span>  <a href="pages/home.html"> Submit </a> </span>
+              <span> <button onclick="code_red()">  <a href="pages/home.html"> Submit </a> 
+              </button> </span>
+            </form>
               <br><br>
               <hr>
               <br>
@@ -44,7 +48,36 @@
            </fieldset>
     </header>
 
+
+
     <!-- end of header -->
     
+
+
+    <script>
+      function code_red(){
+       
+        const number = document.getElementById("username").value
+        const password = document.getElementById("password").value
+        let array = JSON.parse(localStorage.getItem("users"))
+        let res;
+            array.find(element =>{
+                if(element["number"] == number && element["Password"] == password){
+                    return res=1;
+                }
+                else{
+                    return res=0;
+                }
+            });
+            if(res==1){
+                alert("Yep!", "you logged in bruh!", "success");
+            }
+            else{
+                alert("Oops!", "email or password is not correct!", "error");
+            }
+
+
+      }
+    </script>
 </body>
 </html>

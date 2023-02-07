@@ -17,36 +17,84 @@
 
     <fieldset>
         <legend></legend>
+
      
         <div class="head1"> 
         <img src="../asset/images/logo1.png" alt="">
     </div>
          
        <div class="head2">
+        <form action=""> 
+
        
         <h3>User Sign up</h3>
         <br><br>
          Frist  name <input type="Usernmae,email" id="username" placeholder=" Fristname">
          <br><br>
-        Last name <input type="Usernmae,email" id="username" placeholder="Last name">
+        Last name <input type="Usernmae,email" id="hello" placeholder="Last name">
          <br><br>
-          Create New Password <input type="Password" id="username" placeholder="enter your password">
+          Create New Password <input type="Password" id="dot1" placeholder="enter your password">
          <br><br>
-          Re-enter Password <input type="Password" id="username" placeholder="enter your password">
+          Re-enter Password <input type="Password" id="dot2" placeholder="enter your password">
          <br><br>
-         mobile number <input type="text"   id="username" placeholder="Enter your 10 digit number">
-         <br><br>
-
-         <input type="checkbox" name="" id="usernmae"  >save your password
+         mobile number <input type="text"   id="dot3" placeholder="Enter your 10 digit number">
          <br><br>
 
-          <span>  <a href="../pages/home.html"> Login </a> </span>
+         <input type="checkbox" name="" id="dot4"  >save your password
+         <br><br>
+        </form>
+
+          <span> <button>  <a href="" id="submit" onclick="getUserCret()"> Login </a></button> </span>
           <br><br>
           
           
           
         </div>
        </fieldset>
+
+       <script>
+        function getUserCret(){
+            let first_Name = document.getElementById("username").value;
+            let last_Name=  document.getElementById("hello").value;
+            let Password= document.getElementById("dot1").value;
+            let Re_Password= document.getElementById("dot2").value;
+            let number=document.getElementById("dot3").value;
+ 
+           const user_detail = {};
+         //    const user_List = [];
+
+            user_detail["first_Name"]= first_Name,
+            user_detail["last_Name"]= last_Name,
+            user_detail["Password"] =Password,
+            user_detail["Re_Password"] =Re_Password,
+            user_detail["number"] =number;
+
+            console.log(user_detail);
+
+            // user_List.push(user_detail);
+
+            // localStorage.setItem("user",JSON.stringify(user_List));
+            
+         let record= JSON.parse(localStorage.getItem('users')) || [];  //object
+
+         record.push(user_detail);
+
+         localStorage.setItem('users', JSON.stringify(record));
+ 
+        }
+          
+        // store multiple value in localstorage
+
+
+       
+
+
+
+
+
+
+        // getUserCret()
+        </script>
  
     
 </body>

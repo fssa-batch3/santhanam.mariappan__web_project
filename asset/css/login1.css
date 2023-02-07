@@ -64,7 +64,7 @@ hr{
       
  }
 
- #username{
+ #username,#hello,#dot,#dot1,#dot2,#dot3{
     border-color: gold;
     border-radius: 50px;
     font-size: 15px;
