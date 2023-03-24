@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account page</title>
+    <link rel="stylesheet" href="account.css">
+</head>
+
+<body>
+
+    <!-- main -->
+
+    <div class="main">
+
+
+        <!--  display flex div  -->
+        <div class="back_ground">
+
+         
+
+
+            <div class="back_ground1">
+                <a href="./pages/home.html">Back to home</a>
+                <img src="profile.png" width="300px" height="440px" alt="no error">
+
+            </div>
+
+            <div class="back_ground2">
+
+
+                <span id="text_box">
+                    <h2>User Profile </h2>
+
+                </span>
+
+
+
+                <div class="display">
+
+                    <div class="display1"> 
+
+                    <h3> User name:</h3> <input type="text" name="firstname" id="username" disabled>
+
+                    <br><br>
+
+                    <h3>Gender:</h3> <input type="text" name="gender" id="gender" disabled>
+
+                    <br><br>
+
+                    <h3>Phone number</h3> <input type="text" name="phone" id="phone" disabled>
+
+                 <br><br>
+
+                    <h3>Email</h3> <input type="email" name="" id="email" disabled>
+
+                    <br><br>
+
+                    <h3>Country</h3> <input type="country" name="country" id="country" disabled>
+
+                    <br><br>
+
+                    <h3>Zip-code</h3> <input type="text" name="zip-code" id="zip-code" disabled>
+                </div>
+
+
+
+
+                <div class="display2">
+                 <img src="profile1 (2).png" alt="no error" width="200px">
+                 <h2>Upload your Photo</h2>
+                 <br>
+                 <input type="file" name="file" id="file">
+                </div>
+                </div>
+
+
+
+
+
+
+
+                <button onclick="save()" >Save</button>
+                <br> <br>
+                <button onclick="edit()"> Edit </button>
+                <br> <br>
+                <button onclick="logout()">Logout</button>
+
+
+
+
+            </div>
+<script>
+
+let arr=JSON.parse(localStorage.getItem("profile"));
+
+
+
+document.getElementById("username").value=arr["user"];
+document.getElementById("email").value=arr["email"];
+document.getElementById("phone").value=arr["mobile"];
+
+
+
+function edit(){
+     
+    document.getElementById("username").removeAttribute("disabled");
+    document.getElementById("gender").removeAttribute("disabled");
+    document.getElementById("phone").removeAttribute("disabled");
+    document.getElementById("country").removeAttribute("disabled");
+    document.getElementById("zip-code").removeAttribute("disabled");
+    
+
+}
+
+
+function save(){
+  
+    document.getElementById("username").setAttribute("disabled","");
+    document.getElementById("gender").setAttribute("disabled","");
+    document.getElementById("phone").setAttribute("disabled","");
+    document.getElementById("country").setAttribute("disabled","");
+    document.getElementById("zip-code").setAttribute("disabled","");
+  
+let newdata=JSON.parse(localStorage.getItem("users"));
+
+ const useremail = document.getElementById("email").value;
+ const phone = document.getElementById("phone").value;
+ let username=document.getElementById("username").value
+
+
+  
+  newdata.find(userobj => {
+     if (userobj["email"] ==useremail)
+      {
+         userobj["user"]=username;
+         userobj["mobile"]=phone;        
+         localStorage.setItem("users",JSON.stringify(newdata))
+         localStorage.setItem("profile",JSON.stringify(userobj))
+
+  }
+
+ })
+
+
+}
+
+
+function logout(){
+      let del = JSON.parse(localStorage.getItem("profile"));
+
+      let dele = delete del
+       localStorage.setItem("profile",JSON.stringify(dele))
+    
+      
+}
+ 
+</script>
+
+</body>
+
+</html>

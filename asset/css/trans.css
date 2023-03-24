@@ -1,0 +1,74 @@
+body {
+    font-size: 20px;
+    background-color: rgb(249, 249, 246);
+}
+.logo {
+    position: relative;
+    left: 640px;
+    border-radius: 30px;
+}
+.borderbox {
+    border: 1px solid black;
+     
+    width: 800px;
+    
+    position: relative;
+    left: 480px;
+    top: 60px;
+}
+.img {
+    display: flex;
+    margin-top: 10px;
+    padding-left: 120px;
+}
+.label {
+    padding-left: 35px;
+    padding-top: 30px;
+}
+.para {
+    padding-left: 70px;
+    margin-top: -30px;
+    color: rgb(193, 30, 30);
+    font-weight: 600;
+}
+h4 {
+    text-align: center;
+    text-decoration: underline;
+}
+.gpay {
+    margin-left: 20px;
+}
+.labelimg {
+    float: right;
+    margin-right: 20px;
+}
+.cancel {
+    margin-top: 100px;
+    margin-left: 510px;
+}
+.but {
+    height: 45px;
+    width: 350px;
+    border: 0px ;
+    background-color: rgb(68, 185, 146);
+    border-radius: 10px;
+    margin-right: 20px;
+    /* margin-left: -10px; */
+}
+a {
+    text-decoration: none;
+    font-size: 17px;
+    color: white;
+}
+
+#_nu,#det{
+    width: 250px;
+    height: 30px;
+    margin-left: 45px;
+}
+
+ main{
+    position: relative;
+    top: 100px;
+    right: 100px;
+ }

@@ -1,83 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Userlogin</title>
-    <link rel="stylesheet" href="asset/css/index.css">
+    <title>login</title>
+    <link rel="stylesheet" href="login.css">
 </head>
+
 <body>
 
+    <!-- setting background image -->
 
-    <!-- header for the webpage-->
 
-    <header>
+    <div class="main"> 
 
-        <fieldset>
-            <legend></legend>
-        
-            <div class="head1"> 
-            <img src="asset/images/logo1.png" alt="">
+        <div class="side_img">
+            <img src="./asset/images/login_ba.jpg" width="440px" height="550px" alt="">
         </div>
-             
-           <div class="head2">
-           
-            <h3>User Login</h3>
-            <br><br>
 
-            <form action=""></form>
-             phone number <input type="number" id="username" placeholder="Username or email">
-             <br><br>
-             Password <input type="Password" id="password" placeholder="Password">
-             <br><br>
-              <span> <button onclick="code_red()">  <a href="pages/home.html"> Submit </a> 
-              </button> </span>
-            </form>
-              <br><br>
-              <hr>
-              <br>
-               <div class="yellow1"> 
-                <a href="">Forgot password?</a>
-                <br>
-               
-               <span> <a href="pages/login1.html">Create your Account ?</a></span>  
-                 
+
+
+        <div class="backgrond_image">
+
+            <div class="form_class">
+
+                <div class="but_box">
+
+                    <div id="butn"></div>
+
+                    <button class="butn_1" id="butn_1" onclick="login()">Login</button>
+                    <button class="butn_1" id="butn_1 " onclick="register()">Register</button>
+
+                </div>
+
+                <div class="icons">
+                    <img src="./asset/images/gp.png" alt="">
+                    <img src="./asset/images/tw.png" alt="">
+                    <img src="./asset/images/insta.png" alt="">
+
+                </div>
+
+                <form id="login" class="input_group">
+
+                    <input type="email" class="input_field" id="log_mail" placeholder="User mail" required >
+                    <input type="text" class="input_field" id="passcode" placeholder="Enter password" required>
+                    <input type="checkbox" class="checkbox"> <span>Save information</span>
+                    <button class="submitbut" id="login_submit"> login</a></button>
+                   
+                </form>
+                <button id="test">click</button>
+
+
+                <form id="register" class="input_group" onsubmit="field()">
+
+                    <input type="text" class="input_field" id="user_id" placeholder=" Create your User id" pattern="[A-Za-z]{1-12}" title ="usernmae cannot contain space" required="true">
+                    <input type="email" class="input_field" id="email" placeholder="Enter your email" required>
+                    <input type="password" class="input_field" id="password" placeholder="Create your password"
+                        required pattern="[A-Z a-z] [0-9] [@,!] {8-12}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"}>
+                    <input type="password" class="input_field" id="password1" placeholder="Enter your password" required>
+                    <input type="text" class="input_field" id="mobilenumber" placeholder="Enter your mobile number" pattern="[0-9]{10}"  title= " This box only have numbers"
+                        required>
+
+                    <input type="checkbox" class="checkbox"> <span> Agree terms and conditions</span>
+                    <button class="submit_butn">Register</button>
+
+                </form>
+
+
             </div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <!-- congrulations popup -->
+ 
+    <!-- <div class="container">
+            function in submit but   
+            <div class="popup" id="popup">
+                <img src="./asset/404-tick.png" alt="">
+                <h2>congrulations</h2>
+                <p>Your created Zan Arts account Sucessfully</p>
+                <button type="button">Ok</button>
             </div>
-           </fieldset>
-    </header>
+    </div> -->
+    <!-- over popup -->
+
+    <script>
+ 
+
+        // creating divs
+
+
+        //   main div
+            yellow = document.createElement("div");
+            yellow.setAttribute("class", "main")
+            document.querySelector("body").prepend(yellow)
+
+
+            //side_img div
+            red = document.createElement("div");
+            red.setAttribute("class", "side_img");
+            yellow.append(red);
 
 
 
-    <!-- end of header -->
+            // image placed inside the side_img div
+
+            orange = document.createElement("img");
+            orange.setAttribute("src", "./assets/banner.jpg");
+            red.append(orange);
+
+
+            // backgrond_image div
+            violet = document.createElement("div");
+            violet.setAttribute("class", "backgrond_image");
+            yellow.append(violet);
+
+
+            // form_class
+
+            blue = document.createElement("div");
+            blue.setAttribute("class", "form_class");
+            violet.append(blue);
+
+
+         //  but_box
+            black = document.createElement("div");
+            black.setAttribute("class", "but_box");
+            blue.append(black);
+
+
+
+            // butn
+            brown = document.createElement("div");
+            brown.setAttribute("class", "butn");
+            black.append(brown);
+
+
+
+            // button1
+
+            grey=document.createElement("button");
+            grey.setAttribute("class","butn_1");
+            grey.setAttribute("id","butn_1");
+            grey.innerText="Login";
+            black.append(grey);
+
+
+
+            // button2
+
+
+            pink=document.createElement("button");
+            pink.setAttribute("class","butn_1");
+            pink.setAttribute("id","butn_1");
+            pink.innerText="Register";
+            black.append(grey);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        var red = document.getElementById("login")
+        var yellow = document.getElementById("register")
+        var orange = document.getElementById("butn")
+
+
+        function register() {
+            red.style.left = "-400px"
+            yellow.style.left = "50px"
+            orange.style.left = "110px"
+        }
+
+
+        function login() {
+            red.style.left = "50px"
+            yellow.style.left = "450px"
+            orange.style.left = "110px"
+  
+        }
+
+
+        function field() {
+
+            let user = document.getElementById("user_id").value;
+            let Email = document.getElementById("email").value;
+            let pass = document.getElementById("password").value;
+            let enterpass = document.getElementById("password1").value;
+            let mobile = document.getElementById("mobilenumber").value;
+
+
+
+
+
+            let ret = {};
+
+                ret["user"] = user,
+                ret["email"] = Email,
+                ret["pass"] = pass,
+                ret["enterpass"] = enterpass,
+                ret["mobile"] = mobile
+
+
+
+
+
+            let command = JSON.parse(localStorage.getItem("users")) ?? [];
+
+            // command.push(ret);
+
+            // localStorage.setItem("users", JSON.stringify(command));
+
+
+            // console.log(command);
+
+            let j = 0;
+
+            for ( let i = 0; i< command.length; i++){
+                 if (command[i]["email"]==Email){
+                    j=1;
+                    break;
+
+                 }
+            }
+
+            if(j==1){
+                alert("Email id already exists")
+            }
+             else{
+                command.push(ret);
+                localStorage.setItem('users',JSON.stringify(command));
+                alert("Your account created sucessfully")
+             }
+
+            
+        }
+ 
+
+        let submit_butn = document.getElementById("login_submit")
+        let test=document.getElementById("test");
+
+document.getElementById("login").addEventListener("submit",(e)=>{
+    e.preventDefault();
+    done();
+})
+
+        function done() {
+
+            let log_mail = document.getElementById("log_mail").value;
+            let passcode = document.getElementById("passcode").value;
+                   // popup
+        
+            let submit_butn = document.getElementById("login_submit")
+            const user_data = JSON.parse(localStorage.getItem("users"));
+      
+ 
+
+            let check;
+
+            user_data.find(element => {
+
+                if (element["email"] == log_mail && element["pass"] == passcode) {
+                      const profile= JSON.stringify(element);
+                      localStorage.setItem("profile",profile);
+                    console.log("isac");
+                    return check = 1
+
+                }
+                else {
+                    return check = 0
+                }
+
+
+            })
+
+            if (check == 1) {
+          
+               alert ("pass crt");
+               window.location.href = "pages/home.html";
+            }
+
+            else {
+                alert("passcode thappu")
+ 
+            }
+
+         
+
+        }
+
+
+        // let popup=document.getElementsByClassName("body");
+
+        //         test.addEventListener("click", e =>{
+        //             // popup.classList.add("check")
+
+        //             alert("hlo")
+
+        //         })
+
+ 
+
     
 
 
-    <script>
-      function code_red(){
-       
-        const number = document.getElementById("username").value
-        const password = document.getElementById("password").value
-        let array = JSON.parse(localStorage.getItem("users"))
-        let res;
-            array.find(element =>{
-                if(element["number"] == number && element["Password"] == password){
-                    return res=1;
-                }
-                else{
-                    return res=0;
-                }
-            });
-            if(res==1){
-                alert("Yep!", "you logged in bruh!", "success");
-            }
-            else{
-                alert("Oops!", "email or password is not correct!", "error");
-            }
 
 
-      }
+
+
+
+
+
     </script>
+
+
 </body>
+
 </html>

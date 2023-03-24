@@ -18,23 +18,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
 </head>
 
 
 <body>
     <header>
 
-     
-        
-<header>
-    <div class="header">
-        <div class="head1">
-          <a href="../pages/home.html"> <img src="../asset/images/logo1.png" width="100px" alt=""></a>   
-        </div>
 
-        <!-- <div class="head2">
+
+        <header>
+            <div class="header">
+                <div class="head1">
+                    <a href="../pages/home.html"> <img src="../asset/images/logo1.png" width="100px" alt=""></a>
+                </div>
+
+                <!-- <div class="head2">
                
             <ul> 
 
@@ -43,56 +47,58 @@
             <li><a href=""> Find Service</a></li>
         </ul> -->
 
-        <!-- </div> -->
-    </div>
+                <!-- </div> -->
+            </div>
 
-    <div class="nav1">
-        <ul>
-            <li> <a href="../pages/aboutus.html"> About us</a> </li>
-            <li> <a href="../pages/categories.html">Categories</a> </li> <br>
-            <li> <a href="../pages/home.html"> Home</a>
-            <li> <a href="../pages/findservice,.html">Find Service</a></li>
-            <li> <a href="../pages/userlogin.html">Artist Login</a></li>
-    </div>
-</header>
-
-
+            <div class="nav1">
+                <ul>
+                    <li> <a href="../pages/aboutus.html"> About us</a> </li>
+                    <li> <a href="../pages/categories.html">Categories</a> </li> <br>
+                    <li> <a href="../pages/home.html"> Home</a>
+                    <li> <a href="../pages/findservice,.html">Find Service</a></li>
+                    <li> <a href="../pages/userlogin.html">Artist Login</a></li>
+            </div>
+        </header>
 
 
 
-      <!-- main -->
 
-      <div class="fullbox">
-     <div class="main">
-        <h1>Add your art Work</h1>
-        <!-- <i id="star" class="fa-solid fa-star-of-life"></i -->
-        <p>Home &#62; &#62; Artist Login &#62;&#62; Upload your Arts</p>
 
-      </div>
+        <!-- main -->
 
-      <div class="main1">
-        <h3>Art Work Detail</h3>
+        <div class="fullbox">
+            <div class="main">
+                <h1>Add your art Work</h1>
+                <!-- <i id="star" class="fa-solid fa-star-of-life"></i -->
+                <p>Home &#62; &#62; Artist Login &#62;&#62; Upload your Arts</p>
 
-        <p>
-            Select Art Work to Upload [Crop image so only the art shows (no frame, mat, other objects)] <i id="star"
-                class="fa-solid fa-star-of-life"></i> </p>
-        <hr>
-        <!-- <button>Choose file</button> No file chosen -->
-        <label>Choose file
-        <input type="file"></label>
+            </div>
 
-        <span>
-            <p>Note: Our minimum printing resolution is 150 DPI. In order to offer larger prints, we suggest you to
-                upload a higher resolution image(more pixels).</p>
-        </span>
-        <br>
-        <textarea rows="10" cols="50" name="comment" form="usrform"> Add a Description</textarea>
-      </div>
+            <div class="main1">
+                <h3>Art Work Detail</h3>
 
-        <div class="empty">
-  
+                <p>
+                    Select Art Work to Upload [Crop image so only the art shows (no frame, mat, other objects)] <i
+                        id="star" class="fa-solid fa-star-of-life"></i> </p>
+                <hr>
+                <!-- <button>Choose file</button> No file chosen -->
+                <label>Choose file
+                    <input type="url" id="file_img"></label>
+                <img id="display">
 
-        <!-- <div class="content1">
+                <span>
+                    <p>Note: Our minimum printing resolution is 150 DPI. In order to offer larger prints, we suggest you
+                        to
+                        upload a higher resolution image(more pixels).</p>
+                </span>
+                <br>
+                <textarea rows="10" cols="50" name="comment" form="usrform" id="des" placeholder="Add your description">  </textarea>
+            </div>
+
+            <div class="empty">
+
+
+                <!-- <div class="content1">
         <p>
             Art Form <i id="star" class="fa-solid fa-star-of-life"></i> </p>
                 <select name="country" id="country" >
@@ -103,121 +109,180 @@
                     <option >Plastic art</option>
      </div> -->
 
-        <div class="content0">
+                <div class="content0">
 
-            <div class="content1">
-                <p>Title <i id="star" class="fa-solid fa-star-of-life"></i></p>
-                <input type="text" id="text">
-                <p>
-                    Style<i id="star" class="fa-solid fa-star-of-life"></i> </p>
-                <select name="country" id="country">
-                    <option selected="selected"> "Click to Select your option"</option>
-                    <option>Cinema</option>
-                    <option>Literature</option>
-                    <option>Sclupture</option>
-                    <option>music</option>
-                </select>
-
-                <div class="content2">
-
-                    <p>Height <i id="star" class="fa-solid fa-star-of-life"></i></p>
-                    <input type="number" id="doc" min="1" max="1000">
-                    <select name="country" id="inch">
-                        <option selected="selected">Inches</option>
-                        <option>centimeter</option>
-                        <option>Feet</option>
-                    </select>
-                </div>
-
-                 
-            </div>
-        </div>
+                    <div class="content1">
+                        <p>Title <i id="star" class="fa-solid fa-star-of-life"></i></p>
+                        <input type="title" id="title">
+                        <p>
+                            Sold by<i id=" " class="fa-solid fa-star-of-life"></i> </p>
+                        <input type="text" id="sold">
 
 
-        <div class="empty1">
+                        <div class="content2">
 
-            <div class="content1">
-                <p>Art Work<i id="star" class="fa-solid fa-star-of-life"></i></p>
-                <select name="Art" id="text">
-                    <option selected="selected"> "Click to Select your option"</option>
-                    <option>Canvas</option>
-                    <option>Water colour</option>
-                    <option>Realism</option>
-                    <option> Hyper Realism</option>
-                </select>
-                <p>
-                    Genre<i id="star" class="fa-solid fa-star-of-life"></i> </p>
-                <select name="country" id="country">
-                    <option selected="selected"> "Click to Select your option"</option>
-                    <option>Domestic</option>
-                    <option>Street Art</option>
-                    <option>nature</option>
-                    <option>Animals</option>
-                 
+                            <p>Size <i id="star" class="fa-solid fa-star-of-life"></i></p>
+                            <input type="size" id="size">
+
+                        </div>
 
 
-                </select>
-
-                <div class="content2">
-
-                    <p>Width<i id="star" class="fa-solid fa-star-of-life"></i></p>
-                    <input type="number" id="doc" min="1" max="1000">
-                    <select name="country" id="inch">
-                        <option selected="selected">Inches</option>
-                        <option>centimeter</option>
-                        <option>Feet</option>
-                    </select>
+                    </div>
                 </div>
 
 
+                <div class="empty1">
 
+                    <div class="content1">
+                        <p>Art Work<i id="star" class="fa-solid fa-star-of-life"></i></p>
+                        <select name="Art" id="text">
+                            <option selected="selected"> "Click to Select your option"</option>
+                            <option>Canvas</option>
+                            <option>Water colour</option>
+                            <option>Realism</option>
+                            <option> Hyper Realism</option>
+                        </select>
+                        <p>
+                            Genre<i id="star" class="fa-solid fa-star-of-life"></i> </p>
+                        <select name="country" id="country">
+                            <option selected="selected"> "Click to Select your option"</option>
+                            <option>Domestic</option>
+                            <option>Street Art</option>
+                            <option>nature</option>
+                            <option>Animals</option>
+
+
+
+                        </select>
+
+                        <div class="content2">
+
+                            <p>Width<i id="star" class="fa-solid fa-star-of-life"></i></p>
+                            <input type="number" id="doc" min="1" max="1000">
+                            <select name="country" id="inch">
+                                <option selected="selected">Inches</option>
+                                <option>centimeter</option>
+                                <option>Feet</option>
+                            </select>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="bottom0">
+
+                <div class="bottom">
+
+                    <div class="bottom1">
+                        <p>Show this artwork with my picture profile on artist listing page:</p>
+                        <p>Sold Out:</p>
+                        <p>Sell Original Art
+                    </div>
+
+                    <div class="bottom2">
+                        <input type="checkbox">
+                        <br>
+                        <input type="checkbox">
+                        <br>
+                        <input type="checkbox">
+                    </div>
+                </div>
+
+                <p>Price (in &#x20b9; ) <i id="star" class="fa-solid fa-star-of-life"></i></p>
+                <input type=" text" id="price" placeholder="&#x20b9; ">
+
+                <p>Status</p>
+                <input type="radio">Publish
+                <input type="radio"> Un Publish
+
+
+                <div class="atlast">
+                    <div class="atlast1">
+                        <a href="">Draft</a>
+                    </div>
+
+                    <div class="atlast2">
+                        <button onclick="upload()">Upload</button>
+                    </div>
+                </div>
             </div>
 
         </div>
 
-      </div>
+
+        <script>
+            //click=101;submit=105;change=103
+            let img_file = document.querySelector("#file_img");
+            let display_img = document.querySelector("#display");
+
+            let arr;
+            // img_file.addEventListener("change", (e) => {
+
+            //     let file_detail = e.target.files[0];//file will always store in an array
+            //     let url = URL.createObjectURL(file_detail);
+            //     console.log(e.target.files[0])
+            //     console.log(URL.createObjectURL(file_detail))
+            //     arr = url;
+            //     // console.log(file_detail["webkitRelativePath"])
+            //     // display_img.src=URL.createObjectURL(file_detail);
+            //     // display_img.src=url
+            //     // display_img.src=img_details[3]["img"]
+            //     console.log(file_detail)
+
+            // })
 
 
-      <div class="bottom0"> 
+            function upload() {
+                // let img_details = JSON.parse(localStorage.getItem("upload"));
+                // console.log(img_details)
 
-      <div class="bottom">
+                const obb_product = {}
 
-        <div class="bottom1">
-            <p>Show this artwork with my picture profile on artist listing page:</p>
-            <p>Sold Out:</p>
-            <p>Sell Original Art
-        </div>
+                let product = JSON.parse(localStorage.getItem("upload")) ?? []
 
-        <div class="bottom2">
-            <input type="checkbox">
-            <br>
-            <input type="checkbox">
-            <br>
-            <input type="checkbox">
-        </div>
-    </div>
+                let arr = document.getElementById("file_img").value;
+                let title = document.getElementById("title").value;
+                let sold = document.getElementById("sold").value;
+                let size = document.getElementById("size").value;
+                let des = document.getElementById("des").value;
+                let prize = document.getElementById("price").value
 
-        <p>Price (in &#x20b9; ) <i id="star" class="fa-solid fa-star-of-life"></i></p>
-        <input type="text" id="last" placeholder="&#x20b9; ">
 
-        <p>Status</p>
-        <input type="radio">Publish
-        <input type="radio"> Un Publish
-      
 
-      <div class="atlast">
-        <div class="atlast1">
-            <a href="">Draft</a>
-        </div>
 
-        <div class="atlast2">
-            <a href="">Upload</a>
-        </div>
-      </div>
-    </div>
 
-</div>
-  
+                obb_product["img"] = arr,
+                    obb_product["title_name"] = title,
+                    obb_product["artist_name"] = sold,
+                    obb_product["size_by"] = size,
+                    obb_product["descr"] = des,
+                    obb_product["pr"] = prize
+
+                product.push(obb_product)
+                localStorage.setItem("upload", JSON.stringify(product));
+                // console.log(product)
+                // return product,title;
+                // display_img.src = product[3]["img"]
+            }
+
+
+
+
+
+
+
+// console.log(upload());
+
+
+
+        </script>
+
 
 </body>
 

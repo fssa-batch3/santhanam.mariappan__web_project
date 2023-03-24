@@ -3,93 +3,103 @@
     padding: 0px;
     font-family: 'Poppins', sans-serif;
 }
- 
 header {
-  background-color: white;
-  position: sticky;
-  top: 0px;
-  font-family: 'Poppins', sans-serif;
-  
-
-}
-
-.header {
   display: flex;
-  background-color: white;
   justify-content: space-between;
-  font-family: 'Poppins', sans-serif;
 }
 
-.head1 {
-  margin-left: 400px;
-}
 
-.head2 {
-  margin-top: 30px;
-  margin-right: 60px;
-}
-
-.head2 a {
-
-  text-decoration: none;
-  color: white;
-  font-size: 25px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  border-radius: 50px;
-  background-color: black;
-  padding-left: 20px;
-  padding-right: 20px;
-
-}
-
-.head2 li {
-  list-style: none;
-  padding-bottom: 15px;
-}
-
-.nav1 ul {
+.side_nav {
   display: flex;
-  position: absolute;
-  top: 30px;
-  left: 470px;
-  padding-left: 30px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 16px;
+  align-items: center;
 }
 
-.nav1 li {
+.side_nav ul {
+  display: flex;
+  justify-content: space-between;
   list-style: none;
-  padding-left: 40px;
+  align-items: center;
+  /* margin-top: 30px; */
+  font-family: 'Poppins', sans-serif;
+  color: gray;
 }
 
-.nav1 a {
+.side_nav ul li {
+  margin-left: 30px;
+}
+
+.side_nav ul a {
   text-decoration: none;
+  color: gray;
+}
+
+.side_nav ul li img{
+  margin-right: 20px;
+  margin-top: 10px;
+}
+
+.side_nav span button {
+  margin-left: 20px;
+  background-color:  blanchedalmond;
+  padding: 12px 25px 12px 25px;
+  margin-bottom: 10px;
+  border-radius: 50px;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+}
+
+.side_nav span button a {
   color: black;
+  font-size: 15px;
 }
 
-.nav1 li::after {
-  content: "";
-  background-color: red;
-  display: block;
-  height: 3px;
-  width: 0%;
-  margin: auto;
-  transition: 0.7s;
+#search {
+  font-family: 'Poppins', sans-serif;
+  outline: none;
 }
 
-.nav1 li:hover::after {
-  width: 100%;
+.input i {
+  background-color:  blanchedalmond;
+  
+  color: black;
+  padding: 15px 20px;
+  border-radius: 5px;
 }
 
+
+.input #search {
+  padding: 10px 180px 10px 180px;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+.header_prt1 ul {
+  display: flex;
+  justify-content: center;
+}
+
+.header_prt1 ul li {
+  margin-top: 20px;
+  margin-left: 30px;
+  list-style: none;
+}
+
+.header_prt1 a {
+  text-decoration: none;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  color: gray;
+}
 
   .main h2{
+    margin-top: 20px;
     background-color: blanchedalmond;
     color: black;
     text-align: center;
     padding-top: 40px;
     padding-bottom: 40px;
   }
+
 
   .main2{
     display: flex;
