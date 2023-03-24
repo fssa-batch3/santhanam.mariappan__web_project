@@ -5,8 +5,6 @@ problem solving:https://docs.google.com/document/d/1reKfmx-Hn5c23MEkXKbkI38HrqFS
 
 Market research: https://docs.google.com/document/d/17gc3fhag8BD3fTHWWb6cEA1ZS5D_tK5dEgMkeSgjLKc/edit
 
-Userflow:https://drive.google.com/file/d/1H03NS4JNfvoTLXZGyJrwzxvziyt9UtzJ/view?usp=sharing
-
-Wireframe:https://drive.google.com/drive/folders/1HSOXP1bPAA7rlnB2QA03VYvxGJrGZqye
-
+Userflow: 
+Wireframe: 
 Website link  :https://fssa-batch3.github.io/santhanam.mariappan__web_project/
