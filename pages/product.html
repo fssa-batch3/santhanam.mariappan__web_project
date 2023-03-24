@@ -171,7 +171,7 @@
 
     <script>
 
-const arr = [
+        const arr = [
     
     {
         id : '1',
@@ -239,38 +239,33 @@ const arr = [
       
 ]
 
-        const url = window.location.search;                // ?name=Arun
-        const urlParams = new URLSearchParams(url);        // converting string into key value pair
-        const storevalue = urlParams.get("title")             // return value of the "name" key
+        const url = window.location.search; // ?name=Arun
+        const urlParams = new URLSearchParams(url); // converting string into key-value pairs
+        const storevalue = urlParams.get("title"); // return value of the "title" key
+
         console.log(storevalue);
 
+        const user = JSON.parse(localStorage.getItem("upload"));
 
+        const result = user.find(function (userObj) {
+        // userObj = {name : "Bala", "image": {}, "text": ""}
 
-                      // Array.find(  function(variableName){} )
-                      const user = JSON.parse(localStorage.getItem("upload"));
-                      user.find(
-                        function (userObj) {  //   userObj = {name : "Bala", "image": {}, "text": ""}
-                            
-                                const name = userObj["id"];
+        const name = userObj["title_name"];
 
-                                // console.log(userObj)
-                    
+        // console.log(userObj)
+        if (storevalue === name) {
+            return true;
+        } else {
+            return false;
+        }
+        });
 
-                                
-                                if (storevalue === name) {
-                                        return true;
-                                } else {
-                                        return false;
-                                }
+        console.log(result);
 
-                        }
-                )
-
-                        console.log(user)
 
  
 
-        for (let i=0; i<user.length; i++){
+        // for (let i=0; i<user.length; i++){
 
 
         // content 
@@ -291,20 +286,20 @@ const arr = [
 
 
         let image = document.createElement("img");
-        image.setAttribute("src", user[i]["img"]);
+        image.setAttribute("src", result["img"]);
         image.setAttribute("width", "400px");
         image.setAttribute("alt", "Image loading");
         span.append(image);
 
         let image2 = document.createElement("img");
-        image2.setAttribute("src", user[i]["img"]);
+        image2.setAttribute("src", result["img"]);
         image2.setAttribute("width", "150px");
         image2.setAttribute("alt", "Image loading");
         span.append(image2);
 
 
         let image3 = document.createElement("img");
-        image3.setAttribute("src",user[i]["img"]);
+        image3.setAttribute("src",result["img"]);
         image3.setAttribute("width", "150px");
         image3.setAttribute("alt", "Image loading");
         span.append(image3);
@@ -321,7 +316,7 @@ const arr = [
         //  span div
         let span1 = document.createElement("span");
         span1.setAttribute("id", "top");
-        span1.innerText = user[i]["title_name"]
+        span1.innerText = result["title_name"]
         // console.log(span1)
         product_txt.append(span1);
 
@@ -337,7 +332,7 @@ const arr = [
         //  span div
         let span2 = document.createElement("span");
         span2.setAttribute("id", "parrot");
-        span2.innerHTML = user[i]["descr"]
+        span2.innerHTML = result["descr"]
         product_txt.append(span2);
 
 
@@ -374,7 +369,7 @@ const arr = [
 
         let span_id = document.createElement("span");
         span_id.setAttribute("id", "yellow");
-        span_id.innerHTML = user[i]["artist_name"]
+        span_id.innerHTML = result["artist_name"]
         para.append(span_id);
 
 
@@ -384,7 +379,7 @@ const arr = [
         // h3
 
         h3 = document.createElement("h3");
-        h3.innerHTML = "₹" + user[i]["pr"];
+        h3.innerHTML = "₹" + result["pr"];
         product_txt.append(h3);
 
 
@@ -418,7 +413,7 @@ const arr = [
 
         let span_id2 = document.createElement("span");
         span_id2.setAttribute("id", "star");
-        span_id2.innerText = user[i]["size_by"]
+        span_id2.innerText = result["size_by"]
         product_txt.append(span_id2);
 
 
@@ -683,7 +678,7 @@ const arr = [
         foot.append(para_graph_atg);
 
 
-    }
+    // }
 
     //  url parameter
 
