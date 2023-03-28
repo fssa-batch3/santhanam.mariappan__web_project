@@ -10,4 +10,70 @@ Wireframe:
 Website link  :https://fssa-batch3.github.io/santhanam.mariappan__web_project/
 
 
-test
+
+
+Create an account :
+
+Scenario 1: Successfully create an account
+Steps:
+Navigate to the registration page.
+Enter the required information such as name, email, mobilenumber and password.
+Click the "Create Account" button.
+Expected Result:
+The user is redirected to the login page.
+
+
+Login into Website:
+
+Scenario 1: Successfully login in to account
+Steps:
+Navigate to the login page.
+Enter the required information such as email, and password.
+Click the "login" button.
+Expected Result:
+The user is redirected to the user profile page.
+
+
+Edit option in Profile page :
+
+Scenario 1 : Sucessfully in Edit Username
+Steps :
+Click the edit option in profile page 
+"Type your Username"
+click save 
+
+Expected Result
+The user name is changed in local storage 
+
+
+Delete option in Profile page 
+
+Scenario 1 :Sucessfully delete information in profile page 
+Steps :
+Click delete option in profile page 
+Expected Result :The user detail deleted in local storage 
+
+
+Upload arts in website 
+
+Scenario 1: Sucessfully upload art in Shop our product page 
+
+Steps :
+Scroll down the mouse in home page . There is upload option in home page . Click that
+Upload the url in the input box
+Type your Descprition and some details
+Click upload
+
+Expected Result : Sucessfully upload arts in shop our products
+
+
+
+
+
+
+
+
+
+
+
+
