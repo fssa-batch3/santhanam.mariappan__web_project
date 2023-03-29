@@ -68,10 +68,10 @@ Expected Result : Sucessfully upload arts in shop our products
 
 Yet to finish :
 
-1.Product delete
-2.Search option 
-3.Add to cart 
-4.order history
+1.Product delete<br>
+2.Search option <br>
+3.Add to cart <br>
+4.order history <br>
 
 
 
