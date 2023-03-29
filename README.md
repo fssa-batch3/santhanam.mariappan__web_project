@@ -68,6 +68,12 @@ Expected Result : Sucessfully upload arts in shop our products
 
 
 
+Yet to finish :
+
+
+1. Product delete option 
+2. Add to cart 
+3. Order histroy
 
 
 
