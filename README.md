@@ -66,7 +66,12 @@ Click upload
 
 Expected Result : Sucessfully upload arts in shop our products
 
+Yet to finish :
 
+1.Product delete
+2.Search option 
+3.Add to cart 
+4.order history
 
 
 
