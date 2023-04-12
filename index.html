@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
     <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -46,7 +47,7 @@
 
                     <input type="email" class="input_field" id="log_mail" placeholder="User mail" required>
                     <input type="text" class="input_field" id="passcode" placeholder="Enter password" required>
-                    <input type="checkbox" class="checkbox"> <span>Save information</span>
+                    <!-- <input type="checkbox" class="checkbox"> <span>Save information</span> -->
                     <button class="submitbut" id="login_submit"> login</a></button>
 
                 </form>
@@ -58,10 +59,12 @@
                     <input type="text" class="input_field" id="user_id" placeholder=" Create your User id"
                         pattern="[A-Za-z]{1-12}" title="usernmae cannot contain space" required="true">
                     <input type="email" class="input_field" id="email" placeholder="Enter your email" required>
-                    <input type="password" class="input_field" id="password" placeholder="Create your password" required
+                    <input type="password" class="input_field" id="password" placeholder="Create your password"required
                         pattern="[A-Z a-z] [0-9] [@,!] {8-12}"
-                        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
-                        }>
+                        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  
+                        >
+                         
+
                     <input type="password" class="input_field" id="password1" placeholder="Enter your password"
                         required>
                     <input type="text" class="input_field" id="mobilenumber" placeholder="Enter your mobile number"
@@ -219,6 +222,9 @@
             let Email = document.getElementById("email").value;
             let pass = document.getElementById("password").value;
             let enterpass = document.getElementById("password1").value;
+            if(pass!=enterpass){
+                alert("Your passcode is not matched")
+            }
             let mobile = document.getElementById("mobilenumber").value;
 
 
@@ -316,7 +322,6 @@
                 alert("passcode thappu")
 
             }
-
 
 
         }
