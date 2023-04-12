@@ -92,7 +92,8 @@
                         upload a higher resolution image(more pixels).</p>
                 </span>
                 <br>
-                <textarea rows="10" cols="50" name="comment" form="usrform" id="des" placeholder="Add your description">  </textarea>
+                <textarea rows="10" cols="50" name="comment" form="usrform" id="des"
+                    placeholder="Add your description">  </textarea>
             </div>
 
             <div class="empty">
@@ -266,6 +267,7 @@
 
                 product.push(obb_product)
                 localStorage.setItem("upload", JSON.stringify(product));
+                window.location.href = "../pages/categories.html"
                 // console.log(product)
                 // return product,title;
                 // display_img.src = product[3]["img"]
