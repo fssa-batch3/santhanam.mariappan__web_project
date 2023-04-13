@@ -116,7 +116,7 @@
                         <p>Title <i id="star" class="fa-solid fa-star-of-life"></i></p>
                         <input type="title" id="title">
                         <p>
-                            Sold by<i id=" " class="fa-solid fa-star-of-life"></i> </p>
+                            Sold by<i class="fa-solid fa-star-of-life"></i> </p>
                         <input type="text" id="sold">
 
 
@@ -205,11 +205,15 @@
 
                 <div class="atlast">
                     <div class="atlast1">
-                        <a href="">Draft</a>
+                        <button id="edit_btn">Edit</button>
                     </div>
 
                     <div class="atlast2">
                         <button onclick="upload()">Upload</button>
+                    </div>
+
+                    <div class="atlast3">
+                        <button onclick="Delete()">Delete</button>
                     </div>
                 </div>
             </div>
@@ -273,13 +277,47 @@
                 // display_img.src = product[3]["img"]
             }
 
+            function Delete() {
+                let arr = JSON.parse(localStorage.getItem("upload"))
+                let delname = document.getElementById("title").value
+                arr.find(function (e, index) {
+                    if (e["title_name"] == delname) {
+                        arr.splice(index, 1)
+                        localStorage.setItem("upload", JSON.stringify(arr));
+                        console.log(delname)
+                    }
+                })
+            }
+
+
+            // edit option
+            let edit_btn = document.getElementById("edit_btn")
+            edit_btn.addEventListener("click", el => {
+                el.preventDefault()
+                let photoDetails = JSON.parse(localStorage.getItem("upload"))
+                const title_name= document.getElementById("title").value
+                photoDetails.find(e => {
+                    if (e["title_name"] == title_name) {
+                        document.getElementById("title") = e["title_name"]
+                        document.getElementById("sold") = e["artist_name"]
+                        document.getElementById("size") = e["size_by"]
+                        document.getElementById("des") = e["descr"]
+                        document.getElementById("price") = e["pr"]
+                        document.getElementById("file_img")= e["img"]
+
+
+                        // document.getElementById("edit_btn").style.visibility = 'hidden';
+                        // document.getElementById("update_btn").style.visibility = 'visible';
+                    }
+                });
+            })
 
 
 
 
 
 
-// console.log(upload());
+
 
 
 

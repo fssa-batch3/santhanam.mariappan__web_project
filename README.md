@@ -10,6 +10,24 @@ Wireframe:
 Website link  :https://fssa-batch3.github.io/santhanam.mariappan__web_project/
 
 
+ <h3>Zan arts features tracking </h3>
+  <h4>
+ Completed - User Modulue
+    1.Create new Account
+    2.Register Login
+    3.Edit User profile
+    4.Delete User profile</h4>
+
+  <h4>
+  Completed - Product Modulue
+    1.Upload an art
+    2.Delete the uploaded art
+    3.Edit the uploaded art
+    4.Product listing </h4>
+
+
+
+
 
 
  <h1>Create an account :</h1>
@@ -41,6 +59,8 @@ Click the edit option in profile page
 "Type your Username"
 click save 
 
+(Change your profile in not working)
+
 Expected Result
 The user name is changed in local storage 
 
@@ -50,6 +70,7 @@ The user name is changed in local storage
 <h2>Scenario 1 :</h2>Sucessfully delete information in profile page 
 Steps :
 Click delete option in profile page 
+Reload the pageit will show undefined 
 Expected Result :The user detail deleted in local storage 
 
 
@@ -65,13 +86,23 @@ Click upload
 
 Expected Result : Sucessfully upload arts in shop our products
 
-<h1>Yet to finish :</h1>
 
-1.Product delete<br>
-2.Search option <br>
-3.Add to cart <br>
-4.order history <br>
+<h1>Edit upload arts(not working)</h1>
 
+
+<h1>Delete upload arts</h1>
+
+<h2>Scenario 1: </h2> Sucessfully delete the uploaded arts 
+Steps :
+
+Go to the home page and scroll down to the upload arts
+
+Enter the title name which is same as upload art title 
+
+click delete it will delete in the shop our product page
+
+Expectrd Result : Sucessfully Delete arts in shop our product page.
+ 
 
 
 
