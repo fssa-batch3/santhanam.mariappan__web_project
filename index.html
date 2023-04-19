@@ -31,8 +31,8 @@
 
                     <div id="butn"></div>
 
-                    <button class="butn_1" id="butn_1" onclick="login()">Login</button>
-                    <button class="butn_1" id="butn_2" onclick="register()">Register</button>
+                    <button class="butn_1" id="butn_1" onclick="login()">Register</button>
+                    <button class="butn_1" id="butn_2">Login</button>
 
                 </div>
 
@@ -43,35 +43,60 @@
 
                 </div>
 
-                <form id="login" class="input_group">
 
+                <form id="login" class="input_group" onsubmit="field()">
+                    <!-- 
                     <input type="email" class="input_field" id="log_mail" placeholder="User mail" required>
                     <input type="text" class="input_field" id="passcode" placeholder="Enter password" required>
-                    <!-- <input type="checkbox" class="checkbox"> <span>Save information</span> -->
-                    <button class="submitbut" id="login_submit"> login</a></button>
-
-                </form>
+                     <input type="checkbox" class="checkbox"> <span>Save information</span>
+                    <button class="submitbut" id="login_submit"> login</a></button>  -->
 
 
-
-                <form id="register" class="input_group" onsubmit="field()">
 
                     <input type="text" class="input_field" id="user_id" placeholder=" Create your User id"
-                        pattern="[A-Za-z]{1-12}" title="usernmae cannot contain space" required="true">
+                        pattern="[A-Za-z]{12}" title="usernmae  contain maximum 12 character" required="true">
                     <input type="email" class="input_field" id="email" placeholder="Enter your email" required>
-                    <input type="password" class="input_field" id="password" placeholder="Create your password"required
+                    <input type="password" class="input_field" id="password" placeholder="Create your password" required
                         pattern="[A-Z a-z] [0-9] [@,!] {8-12}"
-                        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  
-                        >
-                         
+                        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+
 
                     <input type="password" class="input_field" id="password1" placeholder="Enter your password"
                         required>
                     <input type="text" class="input_field" id="mobilenumber" placeholder="Enter your mobile number"
                         pattern="[0-9]{10}" title=" This box only have numbers" required>
 
-                    <input type="checkbox" class="checkbox"> <span> Agree terms and conditions</span>
+                    <input type="checkbox" class="checkbox" id="Agree"> <span> Agree terms and conditions</span>
                     <button class="submit_butn">Register</button>
+
+
+                </form>
+
+
+
+                <form id="register" class="input_group">
+
+
+                    <input type="email" class="input_field" id="log_mail" placeholder="User mail" required>
+                    <input type="text" class="input_field" id="passcode" placeholder="Enter password" required>
+                    <input type="checkbox" class="checkbox" id="span_check"> <span>Save information</span>
+                    <button class="submitbut" id="login_submit"> login</a></button>
+
+                    <!-- <input type="text" class="input_field" id="user_id" placeholder=" Create your User id"
+                        pattern="[A-Za-z]{1-12}" title="usernmae cannot contain space" required="true">
+                     <input type="email" class="input_field" id="email" placeholder="Enter your email" required>
+                     <input type="password" class="input_field" id="password" placeholder="Create your password" required
+                        pattern="[A-Z a-z] [0-9] [@,!] {8-12}"
+                        title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+
+
+                     <input type="password" class="input_field" id="password1" placeholder="Enter your password"
+                        required>
+                     <input type="text" class="input_field" id="mobilenumber" placeholder="Enter your mobile number"
+                        pattern="[0-9]{10}" title=" This box only have numbers" required>
+
+                    <input type="checkbox" class="checkbox" id="Agree"><span> Agree terms and conditions</span>
+                    <button class="submit_butn">Register</button> -->
 
                 </form>
 
@@ -81,22 +106,6 @@
         </div>
     </div>
 
-
-
-
-
-    <!-- congrulations popup -->
-
-    <!-- <div class="container">
-            function in submit but   
-            <div class="popup" id="popup">
-                <img src="./asset/404-tick.png" alt="">
-                <h2>congrulations</h2>
-                <p>Your created Zan Arts account Sucessfully</p>
-                <button type="button">Ok</button>
-            </div>
-    </div> -->
-    <!-- over popup -->
 
     <script>
 
@@ -170,24 +179,6 @@
         //     pink.innerText="Register";
         //     black.append(grey);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         let red = document.getElementById("login")
         let yellow = document.getElementById("register")
         let orange = document.getElementById("butn")
@@ -195,15 +186,18 @@
         let butn2 = document.getElementById("butn_2")
 
 
-        function register() {
+        // declares a function for register page
+        let register_login = document.getElementById("butn_2")
+        register_login.addEventListener("click", (register) => {
             red.style.left = "-400px"
             yellow.style.left = "50px"
             orange.style.left = "110px"
 
-
             butn2.style.color = "white"
             butn1.style.color = "black"
         }
+        )
+
 
 
         function login() {
@@ -216,21 +210,18 @@
         }
 
 
+        // register page to create new account
         function field() {
 
             let user = document.getElementById("user_id").value;
             let Email = document.getElementById("email").value;
             let pass = document.getElementById("password").value;
             let enterpass = document.getElementById("password1").value;
-            if(pass!=enterpass){
-                alert("Your passcode is not matched")
-            }
+
             let mobile = document.getElementById("mobilenumber").value;
 
 
-
-
-
+            //   alert message for email or account created sucessfully
             let ret = {};
 
             ret["user"] = user,
@@ -239,19 +230,7 @@
                 ret["enterpass"] = enterpass,
                 ret["mobile"] = mobile
 
-
-
-
-
             let command = JSON.parse(localStorage.getItem("users")) ?? [];
-
-            // command.push(ret);
-
-            // localStorage.setItem("users", JSON.stringify(command));
-
-
-            // console.log(command);
-
             let j = 0;
 
             for (let i = 0; i < command.length; i++) {
@@ -264,11 +243,17 @@
 
             if (j == 1) {
                 alert("Email id already exists")
+
+
+            }
+            if (pass != enterpass) {
+                alert("Your passcode is not matched")
             }
             else {
                 command.push(ret);
                 localStorage.setItem('users', JSON.stringify(command));
                 alert("Your account created sucessfully")
+
             }
 
 
@@ -278,21 +263,24 @@
         let submit_butn = document.getElementById("login_submit")
         let test = document.getElementById("test");
 
-        document.getElementById("login").addEventListener("submit", (e) => {
+
+        // Declaring a function for login
+        document.getElementById("register").addEventListener("submit", (e) => {
             e.preventDefault();
             done();
         })
+
 
         function done() {
 
             let log_mail = document.getElementById("log_mail").value;
             let passcode = document.getElementById("passcode").value;
+
+
             // popup
 
             let submit_butn = document.getElementById("login_submit")
             const user_data = JSON.parse(localStorage.getItem("users"));
-
-
 
             let check;
 
@@ -300,10 +288,16 @@
 
                 if (element["email"] == log_mail && element["pass"] == passcode) {
                     const profile = JSON.stringify(element);
-                    localStorage.setItem("profile", profile);
-                    console.log("isac");
-                    return check = 1
 
+                    // checkbox
+                    let span_check = document.getElementById("span_check").checked
+                    if (span_check) {
+
+                        localStorage.setItem("profile", profile);
+                        alert("Your information is Saved")
+
+                    }
+                    return check = 1
                 }
                 else {
                     return check = 0
@@ -314,12 +308,12 @@
 
             if (check == 1) {
 
-                alert("pass crt");
+                alert("Welcome to Zan arts");
                 window.location.href = "pages/home.html";
             }
 
             else {
-                alert("passcode thappu")
+                alert("Your passcode or email incorrect")
 
             }
 
@@ -329,9 +323,7 @@
 
 
 
-
-
-        // local storage 
+        // local storage listing product
 
 
         if (JSON.parse(localStorage.getItem("upload"))) {
@@ -354,6 +346,11 @@
             ])
             )
         }
+
+
+
+
+
 
 
 

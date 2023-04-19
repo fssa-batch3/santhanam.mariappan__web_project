@@ -1,98 +1,129 @@
 *{
     margin: 0px;
     padding: 0px;
+     
 }
 
+ 
 
-.main{
-    background-image: linear-gradient(rgb(76, 40, 130), white);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-}
-
+ 
 
 .back_ground{
-    background-color: white;
-   
-    background-repeat: no-repeat;
-    position: absolute;
-    border-radius: 20px;
-    top: 200px;
-    left: 320px;
-    height: 65%;
-    width: 55%;
-    display: flex;
+    
 }
 
 .back_ground1 img{
     border-radius: 50%;
-    margin-top: 80px;
-}
-
-form{
-    display: flex;
-    line-height: 3;
-    /* margin-top: 100px; */
-}
-
-.form2{
-    margin-left: 30px;
-    
+ 
 }
  
-/* 
-#username{
-    margin-left: 100px;
-    margin-top: 100px;
-} */
+#username,#gender,#phone,#email,#country,#zip-code,#des{
+    width: 100%;
+    padding: 10px 0;
+    padding-left: 30px;
+    margin: 5px 0;
+    outline: none;
+    border: 1px solid black;
+    text-align: center;
+    border-right:solid 8px black ;
+    font-size: 15px;
+}
 
+ .main{
+    position: absolute;
+    top:160px ;
+    left: 200px;
+    z-index: -5;
+ }
 
-span h2{
-    margin-left: 150px;
-    margin-top: 30px;
+ 
+ .main img{
+    opacity: 0.3;
+ }
+
+ 
+.btn{
+  
+   
+   border: none;
+   border-radius: 20px;
+   margin-left: 600px;
+   display: flex;
+   margin-top: 300px;
+  
+
 }
 
 button{
-   background:linear-gradient(rgb(76, 40, 130), white);
-   padding:15px 30px 15px 30px;
-   border: none;
-   border-radius: 20px;
-
+    margin-left: 75px;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: white;
+    background-color: black;
 }
+
 .display1{
-    
+    line-height: 1.5;
+    position: absolute;
+    top: 200px;
+    left: 300px;
 }
 
+.about{
+    position: absolute;
+    top: 400px;
+    left: 440px;
+}
+
+ 
 .display{
     display: flex;
     overflow: hidden;
 }
+
  
 .display2 img{
     border-radius: 100px;
-    margin-top: 60px;
+  
 }
+
+
+.middle_div{
+    display: flex;
+}
+
 
 .display2{
-    margin-left: 100px;
+    margin-left: 1200px;
 }
 
-button{
+.about{
     margin-left: 200px;
 }
 
-#username,#lastname,#email,#phone,#country,#zip-code,#gender{
-    border-top: 0px;
-    border-left: 0px;
-    border-right: 0px;
-    border-bottom: 2px solid rgb(76, 40, 130) ;
+button{
+    
+}
+
+textarea{
+    
+}
+
+#username,#lastname,#email,#phone,#country,#zip-code,#gender,#des{
     outline: none;
 }
 
-a{
-    margin-top: 10px;
-    margin-left: 10px;
+#your_art{
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    margin-right: 20px;
+    
 }
+
+
+button{
+    cursor: pointer;
+}
+ 

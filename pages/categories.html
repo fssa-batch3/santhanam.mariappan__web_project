@@ -2326,13 +2326,19 @@
         let img_details = JSON.parse(localStorage.getItem("upload"));
         console.log(img_details)
 
-        // function primary_key() {
-        //     return Math.floor(Math.random() * 10000000);
-        // }
-        // console.log(primary_key());
+        
+
+        showedProduct=img_details.filter((data)=>{
+            if(data["status"]==true){
+                return true
+            }
+            else{
+                return false
+            }
+        })
 
 
-        for (let i = 0; i < img_details.length; i++) {
+        for (let i = 0; i < showedProduct.length; i++) {
 
 
             // const done = [
@@ -2532,7 +2538,7 @@
             // a tag
 
             lion = document.createElement("a");
-            lion.setAttribute("href", "../pages/product.html?title=" + img_details[i]["title_name"]);
+            lion.setAttribute("href", "../pages/product.html?title=" + showedProduct[i]["title_name"]);
             // lion.innerText="view page"
             animal.append(lion);
 
@@ -2541,7 +2547,7 @@
 
             // image placed in a tag
             animal_img = document.createElement("img");
-            animal_img.setAttribute("src", img_details[i]["img"]);
+            animal_img.setAttribute("src", showedProduct[i]["img"]);
             // animal_img.src=done[i]["img"];
             // console.log(done[i]["img"])
             animal_img.setAttribute("alt", "noerror");
@@ -2564,13 +2570,13 @@
 
             // h2 tag
             heading_animal = document.createElement("h2");
-            heading_animal.innerText = "3D arts";
+            heading_animal.innerText = showedProduct[i]["Art_title"];
             some1_animal.append(heading_animal);
 
 
             // p tag
-            para1_animal = document.createElement("p");
-            para1_animal.innerText = "By danniel";
+            para1_animal = document.createElement("h3");
+            para1_animal.innerText ="By  "+showedProduct[i]["artist_name"] ;
             some1_animal.append(para1_animal);
 
 

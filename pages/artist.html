@@ -67,157 +67,144 @@
         <!-- main -->
 
         <div class="fullbox">
-            <div class="main">
-                <h1>Add your art Work</h1>
-                <!-- <i id="star" class="fa-solid fa-star-of-life"></i -->
-                <p>Home &#62; &#62; Artist Login &#62;&#62; Upload your Arts</p>
+            <form id="form_control">
+                <div class="main">
+                    <h1>Add your art Work</h1>
+                    <!-- <i id="star" class="fa-solid fa-star-of-life"></i -->
+                    <p>Home &#62; &#62; Artist Login &#62;&#62; Upload your Arts</p>
 
-            </div>
-
-            <div class="main1">
-                <h3>Art Work Detail</h3>
-
-                <p>
-                    Select Art Work to Upload [Crop image so only the art shows (no frame, mat, other objects)] <i
-                        id="star" class="fa-solid fa-star-of-life"></i> </p>
-                <hr>
-                <!-- <button>Choose file</button> No file chosen -->
-                <label>Choose file
-                    <input type="url" id="file_img"></label>
-                <img id="display">
-
-                <span>
-                    <p>Note: Our minimum printing resolution is 150 DPI. In order to offer larger prints, we suggest you
-                        to
-                        upload a higher resolution image(more pixels).</p>
-                </span>
-                <br>
-                <textarea rows="10" cols="50" name="comment" form="usrform" id="des"
-                    placeholder="Add your description">  </textarea>
-            </div>
-
-            <div class="empty">
-
-
-                <!-- <div class="content1">
-        <p>
-            Art Form <i id="star" class="fa-solid fa-star-of-life"></i> </p>
-                <select name="country" id="country" >
-                <option  selected="selected">  "Click to Select your option"</option>
-                    <option>Illustration</option>
-                    <option >Fiber Art</option>
-                    <option >Animation</option>
-                    <option >Plastic art</option>
-     </div> -->
-
-                <div class="content0">
-
-                    <div class="content1">
-                        <p>Title <i id="star" class="fa-solid fa-star-of-life"></i></p>
-                        <input type="title" id="title">
-                        <p>
-                            Sold by<i class="fa-solid fa-star-of-life"></i> </p>
-                        <input type="text" id="sold">
-
-
-                        <div class="content2">
-
-                            <p>Size <i id="star" class="fa-solid fa-star-of-life"></i></p>
-                            <input type="size" id="size">
-
-                        </div>
-
-
-                    </div>
                 </div>
 
+                <div class="main1">
+                    <h3>Art Work Detail</h3>
 
-                <div class="empty1">
+                    <p>
+                        Select Art Work to Upload [Crop image so only the art shows (no frame, mat, other objects)] <i
+                            id="star" class="fa-solid fa-star-of-life"></i> </p>
+                    <hr>
+                    <!-- <button>Choose file</button> No file chosen -->
+                    <label>Choose URL
+                        <input type="url" id="file_img" required></label>
+                    <img id="display">
 
-                    <div class="content1">
-                        <p>Art Work<i id="star" class="fa-solid fa-star-of-life"></i></p>
-                        <select name="Art" id="text">
-                            <option selected="selected"> "Click to Select your option"</option>
-                            <option>Canvas</option>
-                            <option>Water colour</option>
-                            <option>Realism</option>
-                            <option> Hyper Realism</option>
-                        </select>
-                        <p>
-                            Genre<i id="star" class="fa-solid fa-star-of-life"></i> </p>
-                        <select name="country" id="country">
-                            <option selected="selected"> "Click to Select your option"</option>
-                            <option>Domestic</option>
-                            <option>Street Art</option>
-                            <option>nature</option>
-                            <option>Animals</option>
+                    <span>
+                        <p>Note: Our minimum printing resolution is 150 DPI. In order to offer larger prints, we suggest
+                            you
+                            to
+                            upload a higher resolution image(more pixels).</p>
+                    </span>
+                    <br>
+                    <textarea rows="10" cols="50" name="comment" form="usrform" id="des"
+                        placeholder="Add your description" required>  </textarea>
+                </div>
+
+                <div class="empty">
 
 
 
-                        </select>
 
-                        <div class="content2">
+                    <div class="content0">
 
-                            <p>Width<i id="star" class="fa-solid fa-star-of-life"></i></p>
-                            <input type="number" id="doc" min="1" max="1000">
-                            <select name="country" id="inch">
-                                <option selected="selected">Inches</option>
-                                <option>centimeter</option>
-                                <option>Feet</option>
+                        <div class="content1">
+                            <p>Title <i id="star" class="fa-solid fa-star-of-life"></i></p>
+                            <input type="title" id="title" required>
+                            <p>
+                                Sold by<i class="fa-solid fa-star-of-life"></i> </p>
+                            <input type="text" id="sold">
+
+
+                            <div class="content2">
+
+                                <p> Width and height(mm) <i id="star" class="fa-solid fa-star-of-life"></i></p>
+                                <input type="size" id="size" required>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="empty1">
+
+                        <div class="content1">
+                            <p>Art Work<i id="star" class="fa-solid fa-star-of-life"></i></p>
+                            <select name="Art" id="Art_title" required>
+                                
+                                <option>Canvas</option>
+                                <option>Water colour</option>
+                                <option>Realism</option>
+                                <option> Hyper Realism</option>
+                                <option>3D Arts</option>
+                                <option>Mandana</option>
+
                             </select>
+                            <p>
+                                Genre<i id="star" class="fa-solid fa-star-of-life"></i> </p>
+                            <select name="country" id="country" required>
+                                
+                                <option>Domestic</option>
+                                <option>Street Art</option>
+                                <option>nature</option>
+                                <option>Animals</option>
+
+
+
+                            </select>
+
+                            <div class="content2">
+
+
+                            </div>
+
+
+
                         </div>
 
-
-
                     </div>
 
                 </div>
 
-            </div>
 
+                <div class="bottom0">
 
-            <div class="bottom0">
+                    <div class="bottom">
 
-                <div class="bottom">
+                        <div class="bottom1">
+                            <p>Show this artwork with my picture profile on artist listing page:</p>
 
-                    <div class="bottom1">
-                        <p>Show this artwork with my picture profile on artist listing page:</p>
-                        <p>Sold Out:</p>
-                        <p>Sell Original Art
+                            <p>Sell Original Art
+                        </div>
+
+                        <div class="bottom2">
+                            <input type="checkbox" id="show_art">
+                            <br>
+                            <input type="checkbox" id="sell_orginal">
+
+                        </div>
                     </div>
 
-                    <div class="bottom2">
-                        <input type="checkbox">
-                        <br>
-                        <input type="checkbox">
-                        <br>
-                        <input type="checkbox">
-                    </div>
-                </div>
-
-                <p>Price (in &#x20b9; ) <i id="star" class="fa-solid fa-star-of-life"></i></p>
-                <input type=" text" id="price" placeholder="&#x20b9; ">
-
-                <p>Status</p>
-                <input type="radio">Publish
-                <input type="radio"> Un Publish
+                    <p>Price (in &#x20b9; ) <i id="star" class="fa-solid fa-star-of-life"></i></p>
+                    <input type=" text" id="price" placeholder="&#x20b9;" pattern="[0-9]{4}">
 
 
-                <div class="atlast">
-                    <div class="atlast1">
-                        <button id="edit_btn">Edit</button>
-                    </div>
 
-                    <div class="atlast2">
-                        <button onclick="upload()">Upload</button>
-                    </div>
 
-                    <div class="atlast3">
-                        <button onclick="Delete()">Delete</button>
+                    <div class="atlast">
+                        <div class="atlast1">
+                            <button id="edit_btn">Edit</button>
+                        </div>
+
+                        <div class="atlast2">
+                            <button type="submit">Upload</button>
+                        </div>
+
+                        <div class="atlast3">
+                            <button onclick="Delete()">Delete</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-
+            </form>
         </div>
 
 
@@ -227,55 +214,69 @@
             let display_img = document.querySelector("#display");
 
             let arr;
-            // img_file.addEventListener("change", (e) => {
 
-            //     let file_detail = e.target.files[0];//file will always store in an array
-            //     let url = URL.createObjectURL(file_detail);
-            //     console.log(e.target.files[0])
-            //     console.log(URL.createObjectURL(file_detail))
-            //     arr = url;
-            //     // console.log(file_detail["webkitRelativePath"])
-            //     // display_img.src=URL.createObjectURL(file_detail);
-            //     // display_img.src=url
-            //     // display_img.src=img_details[3]["img"]
-            //     console.log(file_detail)
-
-            // })
 
 
             function upload() {
                 // let img_details = JSON.parse(localStorage.getItem("upload"));
                 // console.log(img_details)
 
-                const obb_product = {}
-
-                let product = JSON.parse(localStorage.getItem("upload")) ?? []
-
-                let arr = document.getElementById("file_img").value;
-                let title = document.getElementById("title").value;
-                let sold = document.getElementById("sold").value;
-                let size = document.getElementById("size").value;
-                let des = document.getElementById("des").value;
-                let prize = document.getElementById("price").value
+                let name_check = JSON.parse(localStorage.getItem("upload"))
+                let titles = document.getElementById("title").value;
+                let check = 0;
+                if (JSON.parse(localStorage.getItem("upload"))) {
 
 
+                    name_check.find(e => {
+                        if (e["title_name"] == titles) {
+                            alert(titles + " already exist")
+                            check = 1
+                        }
+
+                    })
+                }
+
+                if (check === 0) {
+                    const obb_product = {}
+
+                    let product = JSON.parse(localStorage.getItem("upload")) ?? []
+
+                    let arr = document.getElementById("file_img").value;
+                    let title = document.getElementById("title").value;
+                    let sold = document.getElementById("sold").value;
+                    let size = document.getElementById("size").value;
+                    let des = document.getElementById("des").value;
+                    let prize = document.getElementById("price").value
+                    let Art_title = document.getElementById("Art_title").value;
+                    let show_art = document.getElementById("show_art").checked;
+
+obb_product["status"]=true
+                    obb_product["img"] = arr,
+                        obb_product["title_name"] = title,
+                        obb_product["artist_name"] = sold,
+                        obb_product["size_by"] = size,
+                        obb_product["descr"] = des,
+                        obb_product["pr"] = prize,
+                        obb_product["Art_title"] = Art_title
+
+                    if (show_art) {
+                        alert("succesfully upload");
+
+                        product.push(obb_product)
+                        localStorage.setItem("upload", JSON.stringify(product));
+                        window.location.href = "../pages/categories.html"
+                    }
+                    else {
+                        alert("input button click hack you")
+                    }
+                }
 
 
 
-                obb_product["img"] = arr,
-                    obb_product["title_name"] = title,
-                    obb_product["artist_name"] = sold,
-                    obb_product["size_by"] = size,
-                    obb_product["descr"] = des,
-                    obb_product["pr"] = prize
-
-                product.push(obb_product)
-                localStorage.setItem("upload", JSON.stringify(product));
-                window.location.href = "../pages/categories.html"
-                // console.log(product)
-                // return product,title;
-                // display_img.src = product[3]["img"]
             }
+
+
+
 
             function Delete() {
                 let arr = JSON.parse(localStorage.getItem("upload"))
@@ -290,12 +291,13 @@
             }
 
 
+
             // edit option
             let edit_btn = document.getElementById("edit_btn")
             edit_btn.addEventListener("click", el => {
                 el.preventDefault()
                 let photoDetails = JSON.parse(localStorage.getItem("upload"))
-                const title_name= document.getElementById("title").value
+                const title_name = document.getElementById("title").value
                 photoDetails.find(e => {
                     if (e["title_name"] == title_name) {
                         document.getElementById("title") = e["title_name"]
@@ -303,7 +305,7 @@
                         document.getElementById("size") = e["size_by"]
                         document.getElementById("des") = e["descr"]
                         document.getElementById("price") = e["pr"]
-                        document.getElementById("file_img")= e["img"]
+                        document.getElementById("file_img") = e["img"]
 
 
                         // document.getElementById("edit_btn").style.visibility = 'hidden';
@@ -314,7 +316,11 @@
 
 
 
-
+            const form_conrol = document.getElementById("form_control");
+            form_conrol.addEventListener("submit", e => {
+                upload()
+                e.preventDefault()
+            })
 
 
 
