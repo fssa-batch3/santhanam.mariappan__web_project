@@ -54,7 +54,7 @@
 
 
                     <input type="text" class="input_field" id="user_id" placeholder=" Create your User id"
-                        pattern="[A-Za-z]{12}" title="usernmae  contain maximum 12 character" required="true">
+                        pattern="[A-Za-z]{1-12}" title="usernmae  contain maximum 12 character" required="true">
                     <input type="email" class="input_field" id="email" placeholder="Enter your email" required>
                     <input type="password" class="input_field" id="password" placeholder="Create your password" required
                         pattern="[A-Z a-z] [0-9] [@,!] {8-12}"
@@ -77,7 +77,7 @@
                 <form id="register" class="input_group">
 
 
-                    <input type="email" class="input_field" id="log_mail" placeholder="User mail" required>
+                    <input type="email" class="input_field" id="log_mail" placeholder="User mail" required >
                     <input type="text" class="input_field" id="passcode" placeholder="Enter password" required>
                     <input type="checkbox" class="checkbox" id="span_check"> <span>Save information</span>
                     <button class="submitbut" id="login_submit"> login</a></button>

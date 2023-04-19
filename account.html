@@ -45,85 +45,94 @@
 
 
 
-                <div class="display1">
+<form id="forms">
+    <div class="display1">
 
-                    <h3> User name:</h3> <input type="text" name="firstname" id="username" disabled>
-
-
-                    <br><br>
-                    <h3>Email</h3> <input type="email" name="" id="email" disabled>
-                    <br><br>
-
-                    <h3>Phone number</h3>
-
-                    <input type="text" name="phone" id="phone" disabled>
+        <h3> User name:</h3> <input type="text" name="firstname" id="username" disabled pattern=^[A-Za-z0-9_]{1,32}$
+         title="This contain have (Upper case && Lowercase)">
 
 
 
+        <br><br>
+        <h3>Email</h3> <input type="email" name="" id="email" disabled>
+        <br><br>
 
+        <h3>Phone number</h3>
 
-                    <br><br>
-
-                    <h3>Country</h3> <input type="country" name="country" id="country" disabled>
-
-                     
-
-                    <!-- <h3>Zip-code</h3> <input type="text" name="zip-code" id="zip-code" pattern="{0-6}" disabled -->
-
-                    <br><br>
-
-                    <h3>Gender:</h3> <select name="Gender" id="gender" required>
-
-                        <option>Male</option>
-                        <option>Female</option>
-                        <option>Other</option>
-                    </select>
-
-
-                </div>
-
-                <div class="about">
-                    <h3>About</h3>
-                    <textarea rows="10" cols="50" name="comment" form="usrform" id="des"
-                        placeholder="Add your description in maximum 20 character" required  disabled></textarea>
-                </div>
-            </div>
-
-
-
-            <div class="display2">
-                <h2>Upload your Photo</h2>
-                <img src="profile1 (2).png" alt="no error" id="image_profile" width="200px">
-
-                <br>
-                <input type="file" name="file" id="file">
-
-                <br><br>
-
-                <button id="your_art"> <a href="/asset/css/Rewardsandarts.html"> Your Uploaded arts</a>
-                </button>
-            </div>
-
-        </div>
+        <input type="text" name="phone" id="phone" disabled  required   pattern="[0-9]{10}" title="This contain have Number only">
 
 
 
 
 
-        <div class="btn">
+        <br><br>
 
-            <button onclick="save()">Save</button>
-            <br> <br>
-            <button id="edit"> Edit </button>
-            <br> <br>
-            <button onclick="logout()">Delete</button>
-        </div>
+        <h3>Country</h3> <input type="country" name="country" id="country"  pattern=^[A-Za-z0-9_]{1,32}$   disabled>
+
+         
+
+        <!-- <h3>Zip-code</h3> <input type="text" name="zip-code" id="zip-code" pattern="{0-6}" disabled -->
+
+        <br><br>
+
+        <h3>Gender:</h3> <select name="Gender" id="gender" required>
+
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+        </select>
+
+
+    </div>
+
+    <div class="about">
+        <h3>About</h3>
+        <textarea rows="10" cols="50" name="comment" form="usrform" id="des"
+            placeholder="Add your description in maximum 20 character" required  disabled></textarea>
+    </div>
+</div>
+
+
+
+<div class="display2">      
+    <h2>Upload your Photo</h2>
+    <img src="profile1 (2).png" alt="no error" id="image_profile" width="200px">
+
+    <br>
+    <input type="file" name="file" id="file">
+
+    <br><br>
+
+    <button id="your_art"> <a href="/asset/css/Rewardsandarts.html"> Your Uploaded arts</a>
+    </button>
+</div>
+
+</div>
+
+
+
+
+
+<div class="btn">
+
+<button id="save">Save</button>
+<br> <br>
+<button id="edit"> Edit </button>
+<br> <br>
+<button onclick="logout()">Delete</button>
+</div>
+</form>
 
 
 
 
     </div>
     <script>
+        const form = document.getElementById("save")
+        form.addEventListener("click",function(e){
+            e.preventDefault();
+            save();
+        })
 
         let arr = JSON.parse(localStorage.getItem("profile"));
 
@@ -139,13 +148,13 @@
         let Edit = document.getElementById("edit")
         console.log(Edit)
         Edit.addEventListener("click",(e)=>{
+            e.preventDefault();
             // alert("djidjid")
             console.log("clicked")
             document.getElementById("username").removeAttribute("disabled");
             document.getElementById("gender").removeAttribute("disabled");
             document.getElementById("phone").removeAttribute("disabled");
             document.getElementById("country").removeAttribute("disabled");
-            document.getElementById("zip-code").removeAttribute("disabled");
             document.getElementById("des").removeAttribute("disabled");
              
         })
@@ -162,14 +171,15 @@
             document.getElementById("gender").setAttribute("disabled", "");
             document.getElementById("phone").setAttribute("disabled", "");
             document.getElementById("country").setAttribute("disabled", "");
-            document.getElementById("zip-code").setAttribute("disabled", "");
-            document.getElementById("des").removeAttribute("disabled", "");
+            document.getElementById("des").setAttribute("disabled", "");
 
             let newdata = JSON.parse(localStorage.getItem("users"));
 
             const useremail = document.getElementById("email").value;
             const phone = document.getElementById("phone").value;
             let username = document.getElementById("username").value
+            let country = document.getElementById("country")
+         
 
 
 
@@ -177,6 +187,13 @@
                 if (userobj["email"] == useremail) {
                     userobj["user"] = username;
                     userobj["mobile"] = phone;
+                    // userobj["country"] =country.value;
+                    // userobj["zip-code"] =zip_code.value;
+
+                    console.log(userobj["country"])
+
+
+
                     localStorage.setItem("users", JSON.stringify(newdata))
                     localStorage.setItem("profile", JSON.stringify(userobj))
 
