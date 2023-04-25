@@ -59,7 +59,7 @@ Click the edit option in profile page
 "Type your Username"
 click save 
 
-(Change your profile in not working)
+(Change your profile image in not working)
 
 Expected Result
 The user name is changed in local storage 
@@ -87,7 +87,7 @@ Click upload
 Expected Result : Sucessfully upload arts in shop our products
 
 
-<h1>Edit upload arts(not working)</h1>
+<h1>Edit upload arts </h1>
 
 
 <h1>Delete upload arts</h1>

@@ -116,7 +116,7 @@
                             <div class="content2">
 
                                 <p> Width and height(mm) <i id="star" class="fa-solid fa-star-of-life"></i></p>
-                                <input type="size" id="size" required pattern="[0-9][x]{8}">
+                                <input type="size" id="size">
 
                             </div>
 
@@ -130,7 +130,7 @@
                         <div class="content1">
                             <p>Art Work<i id="star" class="fa-solid fa-star-of-life"></i></p>
                             <select name="Art" id="Art_title" required>
-                                
+
                                 <option>Canvas</option>
                                 <option>Water colour</option>
                                 <option>Realism</option>
@@ -142,7 +142,7 @@
                             <p>
                                 Genre<i id="star" class="fa-solid fa-star-of-life"></i> </p>
                             <select name="country" id="country" required>
-                                
+
                                 <option>Domestic</option>
                                 <option>Street Art</option>
                                 <option>nature</option>
@@ -196,7 +196,7 @@
                         </div>
 
                         <div class="atlast2">
-                            <button type="submit">Upload</button>
+                            <button type="submit">Post</button>
                         </div>
 
                         <div class="atlast3">
@@ -213,7 +213,7 @@
             let img_file = document.querySelector("#file_img");
             let display_img = document.querySelector("#display");
 
-            let arr;
+            // let arr;
 
 
 
@@ -240,6 +240,9 @@
                     const obb_product = {}
 
                     let product = JSON.parse(localStorage.getItem("upload")) ?? []
+                    let active_user = JSON.parse(localStorage.getItem("profile"))
+                        active_user["email"]
+                        let get_email = active_user["email"]
 
                     let arr = document.getElementById("file_img").value;
                     let title = document.getElementById("title").value;
@@ -250,21 +253,28 @@
                     let Art_title = document.getElementById("Art_title").value;
                     let show_art = document.getElementById("show_art").checked;
 
-obb_product["status"]=true
+                    obb_product["status"] = true
                     obb_product["img"] = arr,
                         obb_product["title_name"] = title,
                         obb_product["artist_name"] = sold,
                         obb_product["size_by"] = size,
                         obb_product["descr"] = des,
                         obb_product["pr"] = prize,
-                        obb_product["Art_title"] = Art_title
+                        obb_product["Art_title"] = Art_title,
+                        obb_product["user_email"] = get_email
+
+                        console.log(obb_product["user_email"] = get_email)
+                        
+
+
 
                     if (show_art) {
-                        alert("succesfully upload");
-
+                        // alert("loading");
+                         
                         product.push(obb_product)
                         localStorage.setItem("upload", JSON.stringify(product));
-                        window.location.href = "../pages/categories.html"
+                        // window.location.href = "../pages/categories.html"
+                        window.location.href ="../pages/upload.html"
                     }
                     else {
                         alert("input button click hack you")
@@ -278,17 +288,17 @@ obb_product["status"]=true
 
 
 
-            function Delete() {
-                let arr = JSON.parse(localStorage.getItem("upload"))
-                let delname = document.getElementById("title").value
-                arr.find(function (e, index) {
-                    if (e["title_name"] == delname) {
-                        arr.splice(index, 1)
-                        localStorage.setItem("upload", JSON.stringify(arr));
-                        console.log(delname)
-                    }
-                })
-            }
+            // function Delete() {
+                // let arr = JSON.parse(localStorage.getItem("upload"))
+                // let delname = document.getElementById("title").value
+                // arr.find(function (e, index) {
+                //     if (e["title_name"] == delname) {
+                //         arr.splice(index, 1)
+                //         localStorage.setItem("upload", JSON.stringify(arr));
+                //         console.log(delname)
+                //     }
+                // })
+           
 
 
 

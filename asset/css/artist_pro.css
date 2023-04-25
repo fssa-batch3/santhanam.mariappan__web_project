@@ -9,10 +9,10 @@ header{
     justify-content: space-between;
    }
   
-   .logo img{
+   /* .logo img{
     margin-left: 30px;
    }
-  
+   */
    .side1_nav ul{
     display: flex;
     justify-content: space-between;
@@ -141,7 +141,7 @@ span button {
 
 body {
   font: 16px / 24px 'Lora', sans-serif;
-  background-color: var(--bg-color);
+  /* background-color: var(--bg-color); */
   color: var(--color3);
   margin: 50px 0;
 }
@@ -176,11 +176,11 @@ h2 {
   justify-content: center;
   flex: 0 0 100%;
   padding: 20px;
-  background: var(--bg-color);
+  
   /* border-radius: 12px; */
-  border: 1px solid rgba(255, 255, 255, 0.20);
-  box-shadow: 6px 6px 12px 0 rgba(0, 0, 0, 0.2),
-    -6px -6px 12px 0 rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(231, 252, 3, 0.2);
+  box-shadow: 6px 6px 12px 0 rgba(93, 85, 94, 0.2),
+    -6px -6px 12px 0 rgba(125, 116, 150, 0.5);
   scroll-snap-align: start;
   transition: all 0.2s;
 }
@@ -197,8 +197,7 @@ h2 {
 }
 
 .card img{
-  width: 300px;
-  height: 300px;
+  
   border: none;
 
 }
@@ -216,13 +215,19 @@ h2 {
   font-size: 0.88rem
 }
 button.primary {
-  background-color: var(--color3);
-  border: 1px solid var(--color3);
+  background-color: black;
+  border: none;
+  border-radius: 15px;
   color: var(--white);
   font-family: inherit;
   font-weight: 500;
   padding: 10px 25px;
   margin-top: 1rem;
+}
+
+button.primary_ghost {
+  border-radius: 15px;
+  margin-left: 5px;
 }
 
 button.primary_ghost:hover {
@@ -235,8 +240,9 @@ button.primary_ghost {
 }
 
 button.primary_ghost:hover {
-  background: var(--color2);
+  background: black;
   color: var(--white);
+  border-radius: 15px;
 }
 /* Media Query */
 

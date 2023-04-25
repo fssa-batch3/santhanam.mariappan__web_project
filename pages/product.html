@@ -427,8 +427,10 @@
         // materials a tag
 
         let material_a = document.createElement("a");
-        material_a.setAttribute("href", "../pages/information.html");
-        material_a.innerText = "BUY NOW"
+        material_a.setAttribute("href", "../pages/cart.html?title_name="+  result["title_name"] );
+        material_a.innerText = "BUY NOW";
+        // material.setAttribute("value",title_name);
+        // console.log(result["title_name"])
         material.append(material_a);
 
 
@@ -595,10 +597,12 @@
         img_sc.setAttribute("alt", "no_error");
         rev1_tag.append(img_sc);
 
+
         //  p 
         let para_dot = document.createElement("p");
         para_dot.innerText = "Venom"
         rev1_tag.append(para_dot);
+
 
         // h3_tag
         let h3_tagline = document.createElement("h3");
@@ -608,7 +612,6 @@
 
 
         //  rev1 tag
-
         let rev1_tagline = document.createElement("div");
         rev1_tagline.setAttribute("class", "rev1");
         relate.append(rev1_tagline);
@@ -620,10 +623,12 @@
         img_src.setAttribute("alt", "product4.jpg");
         rev1_tagline.append(img_src);
 
+
         // p_tag
         let p_tag_line = document.createElement("p");
         p_tag_line.innerText = "Wild-man";
         rev1_tagline.append(p_tag_line);
+
 
         // h3_tag
         let h3_tag_line = document.createElement("h3");
@@ -658,7 +663,6 @@
 
 
         // foot div 
-
         let foot = document.createElement("div");
         foot.setAttribute("class", "foot");
         document.querySelector("body").append(foot);

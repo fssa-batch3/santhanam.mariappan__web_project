@@ -7,16 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account page</title>
     <link rel="stylesheet" href="account.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <!-- main -->
 
-    <div class="main">
-
-        <img src="asset/images/new_logo plain.png" width="1000" alt="">
-    </div>
 
 
     <!--  display flex div  -->
@@ -24,112 +26,134 @@
 
 
 
-
+        <!-- 
         <div class="back_ground1">
             <a href="./pages/home.html">Back to home</a>
 
 
-        </div>
+        </div> -->
+
+
 
         <div class="back_ground2">
 
 
-            <span id="text_box">
-                <h2>User Profile </h2>
 
-            </span>
+            <div class="display2">
+                <i class="fa-solid fa-plus" style="color: aliceblue;"></i>
+                <h2>Upload your Profile</h2>
+                <br>
+                <img src="asset/images/about1.jpg" alt="no error" id="image_profile" width="200px">
+
+                <br>
+                <input type="file" name="file" id="file">
+
+                <br><br>
+
+                <button id="your_art"> <a href="/asset/css/Rewardsandarts.html"> Your Uploaded arts</a>
+
+                </button>
+                <div class="btn">
+
+                    <button id="save">Save</button>
+                    <br> <br>
+                    <button id="edit"> Edit </button>
+                    <br> <br>
+                    <button onclick="logout()">Logout</button>
+                </div>
+                </form>
+
+            </div>
+
+        </div>
 
 
 
-            <div class="display">
+
+        <div class="display">
 
 
 
-<form id="forms">
-    <div class="display1">
+            <form id="forms">
 
-        <h3> User name:</h3> <input type="text" name="firstname" id="username" disabled pattern=^[A-Za-z0-9_]{1,32}$
-         title="This contain have (Upper case && Lowercase)">
+                <div class="none">
+                    <div class="display1">
 
-
-
-        <br><br>
-        <h3>Email</h3> <input type="email" name="" id="email" disabled>
-        <br><br>
-
-        <h3>Phone number</h3>
-
-        <input type="text" name="phone" id="phone" disabled  required   pattern="[0-9]{10}" title="This contain have Number only">
+                        <h3> User name:</h3> <input type="text" name="firstname" id="username" disabled
+                            pattern=^[A-Za-z0-9_]{1,32}$ title="This contain have (Upper case && Lowercase)">
 
 
 
+                        <br><br>
+                        <h3>Email</h3> <input type="email" name="" id="email" disabled>
+                        <br><br>
+
+                        <h3>Phone number</h3>
+
+                        <input type="tel" name="phone" id="phone" disabled required pattern="[0-9]{10}"
+                            title="This contain have Number only">
 
 
-        <br><br>
 
-        <h3>Country</h3> <input type="country" name="country" id="country"  pattern=^[A-Za-z0-9_]{1,32}$   disabled>
 
-         
 
-        <!-- <h3>Zip-code</h3> <input type="text" name="zip-code" id="zip-code" pattern="{0-6}" disabled -->
+                        <br><br>
 
-        <br><br>
+                        <h3>Country</h3> <input type="country" name="country" id="country" pattern=^[A-Za-z0-9_]{1,32}$
+                            disabled>
 
-        <h3>Gender:</h3> <select name="Gender" id="gender" required>
 
-            <option>Male</option>
-            <option>Female</option>
-            <option>Other</option>
-        </select>
+
+                        <!-- <h3>Zip-code</h3> <input type="text" name="zip-code" id="zip-code" pattern="{0-6}" disabled -->
+
+                        <br><br>
+
+                        <h3>Gender:</h3> <select name="Gender" id="gender" required>
+
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
+
+
+                    </div>
+
+                    <div class="about">
+                        <h3 id="ab">About</h3>
+                        <textarea rows="10" cols="50" name="comment" form="usrform" id="des"
+                            placeholder="Add your description in maximum 20 character" required disabled></textarea>
+                    </div>
+                </div>
+        </div>
+
+
+
 
 
     </div>
 
-    <div class="about">
-        <h3>About</h3>
-        <textarea rows="10" cols="50" name="comment" form="usrform" id="des"
-            placeholder="Add your description in maximum 20 character" required  disabled></textarea>
+
+    <div class="con_dev">
+
+
+        <div class="con_dev1">
+            <img src="asset/images/profile_img_con.png" width="300px" alt="">
+        </div>
+
+        <div class="text">
+            <p> Publish creative art, craft, writings and other creatives to get visibility ofart enthusiast <br> across
+                the worldWe are specialsts in Art. Creativity and fun are our ingredients for awesome work</p>
+        </div>
     </div>
-</div>
-
-
-
-<div class="display2">      
-    <h2>Upload your Photo</h2>
-    <img src="profile1 (2).png" alt="no error" id="image_profile" width="200px">
-
-    <br>
-    <input type="file" name="file" id="file">
-
-    <br><br>
-
-    <button id="your_art"> <a href="/asset/css/Rewardsandarts.html"> Your Uploaded arts</a>
-    </button>
-</div>
-
-</div>
 
 
 
 
 
-<div class="btn">
 
-<button id="save">Save</button>
-<br> <br>
-<button id="edit"> Edit </button>
-<br> <br>
-<button onclick="logout()">Delete</button>
-</div>
-</form>
-
-
-
-
-    </div>
     <script>
         const form = document.getElementById("save")
-        form.addEventListener("click",function(e){
+        form.addEventListener("click", function (e) {
             e.preventDefault();
             save();
         })
@@ -147,7 +171,7 @@
 
         let Edit = document.getElementById("edit")
         console.log(Edit)
-        Edit.addEventListener("click",(e)=>{
+        Edit.addEventListener("click", (e) => {
             e.preventDefault();
             // alert("djidjid")
             console.log("clicked")
@@ -156,13 +180,13 @@
             document.getElementById("phone").removeAttribute("disabled");
             document.getElementById("country").removeAttribute("disabled");
             document.getElementById("des").removeAttribute("disabled");
-             
+
         })
- 
-    
-     
- 
-        
+
+
+
+
+
 
 
         function save() {
@@ -178,8 +202,11 @@
             const useremail = document.getElementById("email").value;
             const phone = document.getElementById("phone").value;
             let username = document.getElementById("username").value
-            let country = document.getElementById("country")
-         
+            let gender = document.getElementById("gender").value
+            let country = document.getElementById("country").value
+            let about = document.getElementById("des").value
+           
+
 
 
 
@@ -187,6 +214,9 @@
                 if (userobj["email"] == useremail) {
                     userobj["user"] = username;
                     userobj["mobile"] = phone;
+                    // userobj["about"] = des;
+                    // userobj["gender"] = gender;
+                    // userobj["country"] = country
                     // userobj["country"] =country.value;
                     // userobj["zip-code"] =zip_code.value;
 
@@ -215,11 +245,32 @@
 
         }
 
-        let image = document.getElementById("file").src;
-         console.log(image)
-            
-            document.getElementById("image_profile").src = image;
+        let fi = document.getElementById("file")
 
+        let img = document.getElementById("image_profile")
+
+
+        //this function for change profile picture
+        file.addEventListener('change', function () {
+            const choosedFile = this.files[0];
+            if (choosedFile) {
+                const reader = new FileReader();
+                reader.addEventListener('load', function () {
+                    img.setAttribute('src', reader.result);
+                    //setting image src in localstorage
+                    const profile = JSON.parse(localStorage.getItem("profile"))
+                    profile["profile_picture"] = reader.result
+                    localStorage.setItem("profile", JSON.stringify(profile))
+                    
+                });
+                reader.readAsDataURL(choosedFile);
+                  
+            }
+            const profile = JSON.parse(localStorage.getItem("profile"))
+        img.setAttribute("src", profile["profile_picture"])
+
+        })
+       
     </script>
 
 </body>

@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../asset/css/cart.css">
-    <link rel="stylesheet" href="../asset/css/catergis.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Rubik+Microbe&display=swap"
-        rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../asset/css/cart.css">
+  <link rel="stylesheet" href="../asset/css/catergis.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Rubik+Microbe&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    
-   
+
+
   <header>
 
     <div class="logo">
@@ -64,84 +68,253 @@
 
 
 
-    <!-- main -->
-    <div class="main">
-        <h2>Shopping Cart</h2>
+  <!-- main -->
+  <div class="main">
+    <h2>Shopping Cart</h2>
+  </div>
+
+  <div class="main2">
+    <div class="note1">
+      <h4>Product</h4>
     </div>
 
-    <div class="main2">
-        <div class="note1">
-            <h4>Product</h4>
-        </div>
-
-        <div class="note">
-            <h4>Price</h4>
-        </div>
-
-        <div class="note1">
-            <h4>Quality</h4>
-        </div>
-
-        <div class="note1">
-            <h4>Total</h4>
-        </div>
+    <div class="note">
+      <h4>Price</h4>
     </div>
-    <hr>
 
-    <div class="main2">
-        <div class="note1">
+    <div class="note1">
+      <h4>Quality</h4>
+    </div>
+
+    <div class="note1">
+      <h4>Total</h4>
+    </div>
+  </div>
+  <hr>
+
+  <div class="main2">
+    <!-- <div class="note1">
             <img src="../asset/images/icons/cart1.png" width="20px" alt="">
-            <p> Registration Fee</p>
+            <p> No Registration Fee</p>
         </div>
 
         <div class="note">
             <h4>Rs.3000</h4>
         </div>
 
-        <div class="note1">
-            <!-- <label for="quantity">Quantity (between 1 and 5):</label> -->
-            &#128722;
+        <div class="note1">  
+     <label for="quantity">Quantity (between 1 and 5):  &#128722;</label>
+            
            <input type="number" id="quantity" name="quantity" min="1" max="5" placeholder="1">
         </div>
 
         <div class="note1">
             <h4>Rs.3000</h4>
-        </div>
+        </div> -->
+  </div>
+
+
+  <div class="motherchild">
+    <div class="mother">
+      <h3>Add order Note</h3>
+      <textarea rows="10" cols="50" id="product_order_note" name="comment" form="usrform">  How We Help you?</textarea>
+
+      <div class="mother2">
+        <h3>Coupon</h3>
+        <p>Coupon code will work on checkout page</p>
+
+        <input type="text" id="text" placeholder="Coupon code">
+      </div>
     </div>
 
+    <div class="motherchild1">
+      <h2 id="sub_total">SUBTOTAL:
+      </h2> <br><br><br>
+      <p>Taxes, shipping and discounts codes calculated at checkout</p>
+      <div class="yellow1">
+        <div class="yellow2">
+          <input type="checkbox" id="box">
 
-    <div class="motherchild">
-        <div class="mother">
-            <h3>Add order Note</h3>
-            <textarea rows="10" cols="50" name="comment" form="usrform">  How We Help you?</textarea>
-
-             <div class="mother2">
-                <h3>Coupon</h3>  
-                <p>Coupon code will work on checkout page</p>
-
-                <input type="text" id="text" placeholder="Coupon code">
-             </div>
         </div>
-
-        <div class="motherchild1">
-            <h2>SUBTOTAL:
-                RS. 422.88</h2> <br><br><br>
-                <p>Taxes, shipping and discounts codes calculated at checkout</p>
-                <div class="yellow1">
-                    <div class="yellow2">
-                        <input type="checkbox" id="box"> 
-                 
-                    </div>
-                    <div class="yellow2">
-                        <p>I agree with the terms and conditions.</p>
-                    </div>
-                </div>
-
-                <button> <a href="../pages/information.html"> Check out</a>  </button>
-
- 
+        <div class="yellow2">
+          <p>I agree with the terms and conditions.</p>
         </div>
+      </div>
+
+      <button> <a href="../pages/information.html"> Check out</a> </button>
+
+
     </div>
+  </div>
+
+
+  <script>
+    //  <!-- <div class="note1">
+    //     <img src="../asset/images/icons/cart1.png" width="20px" alt="">
+    //     <p> No Registration Fee</p>
+    // </div>
+
+    // <div class="note">
+    //     <h4>Rs.3000</h4>
+    // </div>
+
+    // <div class="note1"> -->
+    //     <!-- <label for="quantity">Quantity (between 1 and 5):</label>
+    //     &#128722;
+    //    <input type="number" id="quantity" name="quantity" min="1" max="5" placeholder="1">
+    // </div>
+
+    // <div class="note1">
+    //     <h4>Rs.3000</h4>
+    // </div> -->
+
+
+
+    // url paras
+    const url = window.location.search; // ?name=Arun
+    const urlParams = new URLSearchParams(url); // converting string into key-value pairs
+    const transfer_value = urlParams.get("title_name"); // return value of the "title" key
+
+    console.log(transfer_value);
+
+    const user = JSON.parse(localStorage.getItem("upload"));
+
+    const result = user.find(function (userObj) {
+      // userObj = {name : "Bala", "image": {}, "text": ""}
+
+      const value_name = userObj["title_name"];
+
+      // console.log(userObj)
+      if (transfer_value === value_name) {
+        return true;
+      } else {
+        return false;
+      }
+    });
+
+    console.log(result);
+
+
+
+    let note1 = document.createElement("div");
+    note1.setAttribute("class", "note1");
+    document.querySelectorAll(".main2")[1].append(note1);
+
+    let image = document.createElement("image");
+    image.setAttribute("src", "../asset/images/icons/cart1.png");
+    image.setAttribute("width", "20px");
+    image.setAttribute("alt", "no image error");
+    // document.querySelectorAll(".note1").append(image);
+    note1.append(image)
+
+
+    let paragraph = document.createElement("p");
+    paragraph.setAttribute("id", "para_reg");
+    paragraph.innerText = "No Registration Fee";
+    // document.querySelectorAll(".note1").append(p);
+    note1.append(paragraph)
+
+
+
+
+    let note = document.createElement("div");
+    note.setAttribute("class", "note");
+    document.querySelectorAll(".main2")[1].append(note);
+
+
+
+    let head4 = document.createElement("h4");
+    head4.setAttribute("id", "head4");
+    head4.innerText = "Rs " + result["pr"]
+    // document.querySelectorAll(".note").append(head4);
+    note.append(head4)
+
+
+
+
+
+
+    let note2 = document.createElement("div");
+    note2.setAttribute("class", "note1");
+    document.querySelectorAll(".main2")[1].append(note2);
+
+    label = document.createElement("label");
+    label.setAttribute("for", "quantity");
+    label.innerHTML = "Quantity (between 1 and 5)&#128722:"
+    note2.append(label);
+
+    let input_field = document.createElement("input")
+    input_field.setAttribute("type", "number");
+    input_field.setAttribute("id", "input_value");
+    input_field.setAttribute("id", "quantity");
+    input_field.setAttribute("name", "quantity");
+    input_field.setAttribute("min", "0");
+    input_field.setAttribute("max", "5");
+    input_field.setAttribute("placeholder", "0");
+    note2.append(input_field);
+
+
+
+    let class_note1 = document.createElement("div");
+    class_note1.setAttribute("class", "note1");
+    document.querySelectorAll(".main2")[1].append(class_note1);
+
+
+    let class_h4 = document.createElement("h4");
+    class_h4.setAttribute("id", "value_price")
+    class_h4.innerText = "Rs";
+    class_note1.append(class_h4)
+
+    let value;
+    let Total;
+    let ok;
+
+    // adding sum cart 
+    let quality = input_field.addEventListener("change", () => {
+      value = result["pr"];
+
+        ok = input_field.value
+
+       Total = value * ok
+
+      class_h4.innerText = "Rs " + Total
+      console.log(Total)
+
+      let sub_total = document.getElementById("sub_total").innerText = "SUB TOTAL : RS ." + Total
+    })
+
+
+    // storing data in to the local storage.
+
+
+    let product = {}
+    let product_order_note = document.getElementById("product_order_note").value
+    let input_value = document.getElementById("input_value").value
+    console.log(input_value+"ok");
+
+    // product["email"] = email,
+    product["product_quatity"] = input_value,
+      product["product_total"] = sub_total.value,
+      // product["product_title"] = title_name,
+
+      product["product_order_note"] = product_order_note
+    console.log(product);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
 
 </body>
+
 </html>

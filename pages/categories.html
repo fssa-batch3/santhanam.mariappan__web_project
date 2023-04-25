@@ -514,10 +514,6 @@
 
 
 
-
-
-
-
     <!-- sketch -->
 
 
@@ -1678,7 +1674,6 @@
 
 
 
-
     <!-- footer -->
 
     <!-- footer start-->
@@ -2326,13 +2321,13 @@
         let img_details = JSON.parse(localStorage.getItem("upload"));
         console.log(img_details)
 
-        
 
-        showedProduct=img_details.filter((data)=>{
-            if(data["status"]==true){
+
+        showedProduct = img_details.filter((data) => {
+            if (data["status"] == true) {
                 return true
             }
-            else{
+            else {
                 return false
             }
         })
@@ -2576,7 +2571,7 @@
 
             // p tag
             para1_animal = document.createElement("h3");
-            para1_animal.innerText ="By  "+showedProduct[i]["artist_name"] ;
+            para1_animal.innerText = "By  " + showedProduct[i]["artist_name"];
             some1_animal.append(para1_animal);
 
 
@@ -2593,6 +2588,27 @@
             image2_animal.setAttribute("alt", "no error");
             some2_animal.append(image2_animal);
         }
+
+
+
+
+        //search
+        let search = document.getElementById("search");
+        search.addEventListener("keyup", (e) => {
+            let words = e.target.value.toLowerCase();
+            let letter = document.querySelectorAll(".content");
+            letter.forEach((element) => {
+                let content = element.children[1].textContent.toLowerCase();
+                if (content.includes(words)) {
+                    element.style.display = "block";
+                } else {
+                    element.style.display = "none";
+                }
+            });
+        });
+
+
+
 
     </script>
 

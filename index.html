@@ -44,7 +44,7 @@
                 </div>
 
 
-                <form id="login" class="input_group" onsubmit="field()">
+                <form id="login" class="input_group" >
                     <!-- 
                     <input type="email" class="input_field" id="log_mail" placeholder="User mail" required>
                     <input type="text" class="input_field" id="passcode" placeholder="Enter password" required>
@@ -54,7 +54,7 @@
 
 
                     <input type="text" class="input_field" id="user_id" placeholder=" Create your User id"
-                        pattern="[A-Za-z]{1-12}" title="usernmae  contain maximum 12 character" required="true">
+                        pattern="^[a-zA-Z]{3,20}$" title="usernmae  contain maximum 12 character" required="true">
                     <input type="email" class="input_field" id="email" placeholder="Enter your email" required>
                     <input type="password" class="input_field" id="password" placeholder="Create your password" required
                         pattern="[A-Z a-z] [0-9] [@,!] {8-12}"
@@ -63,11 +63,11 @@
 
                     <input type="password" class="input_field" id="password1" placeholder="Enter your password"
                         required>
-                    <input type="text" class="input_field" id="mobilenumber" placeholder="Enter your mobile number"
+                    <input type="tel" class="input_field" id="mobilenumber" placeholder="Enter your mobile number"
                         pattern="[0-9]{10}" title=" This box only have numbers" required>
 
                     <input type="checkbox" class="checkbox" id="Agree"> <span> Agree terms and conditions</span>
-                    <button class="submit_butn">Register</button>
+                    <button type="submit" class="submit_butn">Register</button>
 
 
                 </form>
@@ -77,9 +77,9 @@
                 <form id="register" class="input_group">
 
 
-                    <input type="email" class="input_field" id="log_mail" placeholder="User mail" required >
+                    <input type="email" class="input_field" id="log_mail" placeholder="User mail" required>
                     <input type="text" class="input_field" id="passcode" placeholder="Enter password" required>
-                    <input type="checkbox" class="checkbox" id="span_check"> <span>Save information</span>
+                    <input type="checkbox" class="checkbox" id="span_check" required> <span>Save information</span>
                     <button class="submitbut" id="login_submit"> login</a></button>
 
                     <!-- <input type="text" class="input_field" id="user_id" placeholder=" Create your User id"
@@ -209,12 +209,19 @@
 
         }
 
+let formButton=document.getElementById("login")
+formButton.addEventListener("submit",(e)=>{
+  
+    field();
+    e.preventDefault();
 
+
+})
         // register page to create new account
         function field() {
 
             let user = document.getElementById("user_id").value;
-            let Email = document.getElementById("email").value;
+            let email = document.getElementById("email").value;
             let pass = document.getElementById("password").value;
             let enterpass = document.getElementById("password1").value;
 
@@ -225,16 +232,19 @@
             let ret = {};
 
             ret["user"] = user,
-                ret["email"] = Email,
+                ret["email"] = email,
                 ret["pass"] = pass,
                 ret["enterpass"] = enterpass,
-                ret["mobile"] = mobile
+                ret["mobile"] = mobile,
+                ret["about"] = "",
+                ret["country"] = "",
+                ret["gender"] = ""
 
             let command = JSON.parse(localStorage.getItem("users")) ?? [];
             let j = 0;
 
             for (let i = 0; i < command.length; i++) {
-                if (command[i]["email"] == Email) {
+                if (command[i]["email"] == email) {
                     j = 1;
                     break;
 
@@ -243,21 +253,28 @@
 
             if (j == 1) {
                 alert("Email id already exists")
-
-
+                // ret.preventDefault()
             }
-            if (pass != enterpass) {
+
+            else if (pass !== enterpass) {
                 alert("Your passcode is not matched")
             }
             else {
                 command.push(ret);
                 localStorage.setItem('users', JSON.stringify(command));
-                alert("Your account created sucessfully")
+                alert("Your account created sucessfully");
+                red.style.left = "-400px"
+            yellow.style.left = "50px"
+            orange.style.left = "110px"
 
+            butn2.style.color = "white"
+            butn1.style.color = "black"
+                
             }
 
 
         }
+
 
 
         let submit_butn = document.getElementById("login_submit")
@@ -265,7 +282,8 @@
 
 
         // Declaring a function for login
-        document.getElementById("register").addEventListener("submit", (e) => {
+        let formBtn = document.getElementById("register")
+        formBtn.addEventListener("submit", (e) => {
             e.preventDefault();
             done();
         })

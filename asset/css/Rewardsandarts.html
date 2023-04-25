@@ -30,9 +30,6 @@
 
         <div class="side1_nav">
             <ul>
-                <li><a href="">Become a seller</a></li>
-                <li><a href="">Sign up</a></li>
-                <li> <img src="../asset/images/profile_picture_user_icon_153847.png" width="30px" alt="no error"></li>
 
             </ul>
 
@@ -65,10 +62,10 @@
     <!-- background_image -->
 
     <!-- main tag for whole content -->
-    <!-- <div class="container">
+    <div class="container">
         <h2>Your Uploaded art</h2>
         <ul class="cards">
-            <li class="card">
+            <!-- <li class="card">
                 <div>
                     <img class="round" src="../images/hyperreal1.jpg" alt="user" />
                     <h3 class="card-title" id="card-title">isac</h3>
@@ -84,13 +81,14 @@
                         Delete
                     </button>
                 </div>
+                </li> -->
         </ul>
-    </div> -->
+    </div>
 
     <!-- pop up  -->
     <div class="input_box" id="input_box">
         <i class="fa-solid fa-xmark" id="close" style="color: #fc0303;"></i>
-        <form id="formbtn"action="">
+        <form id="formbtn" action="">
 
             <!-- <input type="text" name="title_name" id="title_name"> -->
             <h1 id="title_name1"></h1>
@@ -126,18 +124,16 @@
         let profile_page = JSON.parse(localStorage.getItem("upload"))
 
         let showedProduct;
-    showedProduct=profile_page.filter((data)=>{
-            if(data["status"]==true){
+        showedProduct = profile_page.filter((data) => {
+            if (data["status"] == true) {
                 return true
             }
-            else{
+            else {
                 return false
             }
         })
         let container = document.createElement("div");
         container.setAttribute("class", "container");
-
-
 
 
 
@@ -147,70 +143,85 @@
         container.append(h2);
 
         let uli = document.createElement("ul");
-        uli.setAttribute("class", "cards")
+        uli.setAttribute("class", "cards");
+        console.log(uli);
+        let ul = document.querySelector(".cards")
 
-
+        // console.log(showedProduct,"ytrfd");
         for (let i = 0; i < showedProduct.length; i++) {
 
 
-
-            let li = document.createElement("li");
-            li.setAttribute("class", "card")
-            uli.append(li);
-
-            let empty_div = document.createElement("div");
-            li.append(empty_div);
-
-
-            let image = document.querySelector("img");
-            image.setAttribute("class", "round")
-            image.setAttribute("src", showedProduct[i]["img"]);
-            image.setAttribute("alt", "Image loading");
-            empty_div.append(image);
-
-
-
-            let card_title = document.createElement("h3");
-            card_title.setAttribute("id", "card-title");
-            card_title.innerText = showedProduct[i]["title_name"]
-            empty_div.append(card_title);
-
-
-
-            let card_content = document.createElement("div");
-            card_content.setAttribute("class", "card-content")
-            empty_div.append(card_content);
-
-
-
-            let para = document.createElement("p");
-            para.innerText = showedProduct[i]["Art_title"];
-            card_content.append(para);
-
-            let div_button = document.createElement("div");
-            div_button.setAttribute("class", "buttons")
-            li.append(div_button);
-
-            let button = document.createElement("button");
-            button.setAttribute("class", "primary");
-            button.setAttribute("value",showedProduct[i]["title_name"]
- )
-            button.innerText = "Edit"
-            div_button.append(button);
-
-
-            let button1 = document.createElement("button");
-            button1.setAttribute("class", "primary_ghost");
-            button1.setAttribute("value",showedProduct[i]["title_name"]);
-            button1.innerText = "Delete"
-            div_button.append(button1);
-            container.append(uli);
-            document.querySelector("body").append(container);
-
+            ul.innerHTML += `<li class="card">
+                <div class="image_card">
+                    <img class="round" src=${showedProduct[i]["img"]} width="200px" alt="user" />
+                    <h3  id="card-title">
+                        ${showedProduct[i]["title_name"]}
+                        </h3>
+                    <div class="card-content">
+                        <p> ${showedProduct[i]["Art_title"]}</p>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button value="${showedProduct[i]["title_name"]}" class="primary">
+                        Edit
+                    </button>
+                    <button value="${showedProduct[i]["title_name"]}"class="primary_ghost">      
+                        Delete
+                    </button>
+                </div>
+                </li>`
         }
+        // let li = document.createElement("li");
+        // li.setAttribute("class", "card")
+        // uli.append(li);
+
+        // let empty_div = document.createElement("div");
+        // li.append(empty_div);
+
+
+        // let image = document.querySelector("img");
+        // image.setAttribute("class", "round")
+        // image.setAttribute("src", showedProduct[i]["img"]);
+        // image.setAttribute("alt", "Image loading");
+        // empty_div.append(image);
 
 
 
+        // let card_title = document.createElement("h3");
+        // card_title.setAttribute("id", "card-title");
+        // card_title.innerText = showedProduct[i]["title_name"]
+        // empty_div.append(card_title);
+
+
+
+        // let card_content = document.createElement("div");
+        // card_content.setAttribute("class", "card-content")
+        // empty_div.append(card_content);
+
+
+
+        // let para = document.createElement("p");
+        // para.innerText = showedProduct[i]["Art_title"];
+        // card_content.append(para);
+
+        // let div_button = document.createElement("div");
+        // div_button.setAttribute("class", "buttons")
+        // li.append(div_button);
+
+        // let button = document.createElement("button");
+        // button.setAttribute("class", "primary");
+        // button.setAttribute("value",showedProduct[i]["title_name"])
+        // button.innerText = "Edit"
+        // div_button.append(button);
+
+
+        // let button1 = document.createElement("button");
+        // button1.setAttribute("class", "primary_ghost");
+        // button1.setAttribute("value",showedProduct[i]["title_name"]);
+        // button1.innerText = "Delete"
+        // div_button.append(button1);
+        // container.append(uli);
+        // document.querySelector("body").append(container);
 
 
 
@@ -226,21 +237,21 @@
         console.log(input_box)
 
         let card_name = document.getElementById("card-title").innerText
-        // console.log( card_name)
+        console.log(card_name)
         // console.log( profile_page[0]["title_name"])
 
         //view
         let des = document.getElementById("des");
-          let sold_by = document.getElementById("sold_by");
-          let price  = document.getElementById("price");
-          let width = document.getElementById("width");
+        let sold_by = document.getElementById("sold_by");
+        let price = document.getElementById("price");
+        let width = document.getElementById("width");
 
-          let savebtn=document.getElementById("savebtn")
-let uploadproducts=JSON.parse(localStorage.getItem("upload"))
-// uploadproducts.find((data)=>{
+        let savebtn = document.getElementById("savebtn")
+        let uploadproducts = JSON.parse(localStorage.getItem("upload"))
+        // uploadproducts.find((data)=>{
 
-// })
-let saveButton;
+        // })
+        let saveButton;
 
         let Edit = document.querySelectorAll(".primary");
 
@@ -248,69 +259,71 @@ let saveButton;
         Edit.forEach(btn => {
 
             let buttonValue;
-            buttonValue=btn.value
+            buttonValue = btn.value
             btn.addEventListener("click", (e) => {
-                
+                // console.log("jihgvfg");
+
 
                 profile_page.find(obj => {
                     // console.log(obj["title_name"])
                     // console.log(card_name)
+                    // console.log("fal", card_name, obj["title_name"].trim());
 
-                    if (obj["title_name"].trim()== card_name) {
+                    if (obj["title_name"].trim() == card_name) {
                         let head = document.getElementById("title_name1")
-                        head.innerText= card_name
-                          
+                        head.innerText = card_name
+                        // console.log("sure");
+
                         input_box[0].style.display = "block"
-                    // input_box[0].style.display = "block"
+                        // input_box[0].style.display = "block"
+                    }
+                })
+                    // view
+                    for (let i = 0; i < uploadproducts.length; i++) {
+
+                        if (buttonValue == uploadproducts[i]["title_name"]) {
+
+                            sold_by.value = uploadproducts[i]["artist_name"];
+                            des.value = uploadproducts[i]["descr"];
+                            price.value = uploadproducts[i]["pr"];
+                            width.value = uploadproducts[i]["size_by"];
+                            savebtn.value = uploadproducts[i]["title_name"]
+                        }
                     }
 
-// view
-                    for(let i=0;i<uploadproducts.length;i++){
-    
-    if(btn.value==uploadproducts[i]["title_name"]){
-      sold_by.value=uploadproducts[i]["artist_name"];
-  des.value=uploadproducts[i]["descr"];
-  price.value=uploadproducts[i]["pr"];
-  width.value=uploadproducts[i]["size_by"];
-  savebtn.value=uploadproducts[i]["title_name"]
-    }
-}
- 
-                })
-      })
+               
+            })
         })
 
 
 
-      
-  
-    savebtn.addEventListener(("click"),()=>{
-        let Savedbtn=savebtn.value;
-// alert(Savedbtn)
-
-    for(let i=0;i<uploadproducts.length;i++){
-    
-    if(Savedbtn==uploadproducts[i]["title_name"]){
-      uploadproducts[i]["artist_name"]=sold_by.value;
- uploadproducts[i]["descr"]= des.value;
-uploadproducts[i]["pr"]=  price.value;
-  uploadproducts[i]["size_by"]=width.value;
-
-
-  localStorage.setItem("upload",JSON.stringify(uploadproducts))
-
-
-    }
-}
-
-        
-    })
 
 
 
 
-        
-        
+        savebtn.addEventListener(("click"), () => {
+            let Savedbtn = savebtn.value;
+            // alert(Savedbtn)
+
+            for (let i = 0; i < uploadproducts.length; i++) {
+
+                if (Savedbtn == uploadproducts[i]["title_name"]) {
+                    uploadproducts[i]["artist_name"] = sold_by.value;
+                    uploadproducts[i]["descr"] = des.value;
+                    uploadproducts[i]["pr"] = price.value;
+                    uploadproducts[i]["size_by"] = width.value;
+
+
+                    localStorage.setItem("upload", JSON.stringify(uploadproducts))
+
+
+                }
+            }
+
+
+        })
+
+
 
 
         let close_tab = document.getElementById("close");
@@ -321,25 +334,52 @@ uploadproducts[i]["pr"]=  price.value;
         })
 
 
-          
+
         // delete 
 
-        let deletedd= document.querySelector(".primary_ghost");
-            deletedd.addEventListener("click",()=>{
+        let deletedd = document.querySelectorAll(".primary_ghost");
 
-              
-                let deletevalue=deletedd.value
-                uploadproducts.find((data)=>{
-                    if(deletevalue==data["title_name"]){
-                        data["status"]=false
-                        
+        deletedd.forEach((e, index) => {
+            e.addEventListener("click", () => {
+                // alert("ok")
+                console.log("hiiii")
+
+
+
+                let deletevalue = e.value
+                uploadproducts.find((data) => {
+                    console.log(deletevalue, data["title_name"], deletevalue.length, data["title_name"].length, deletevalue == data["title_name"]);
+
+                    if (deletevalue == data["title_name"]) {
+                        data["status"] = false
+                        console.log("hi")
+                        // alert("ok")
+
                     }
-                    
-  localStorage.setItem("upload",JSON.stringify(uploadproducts))
+
+                    localStorage.setItem("upload", JSON.stringify(uploadproducts))
                 })
 
-                
+
             })
+        })
+
+        //search feature
+
+        let search = document.getElementById("search");
+        search.addEventListener("keyup", (e) => {
+            let words = e.target.value.toLowerCase();
+            let letter = document.querySelectorAll(".image_card");
+            letter.forEach((element) => {
+                let content = element.children[1].textContent.toLowerCase();
+                if (content.includes(words)) {
+                    element.style.display = "block";
+                } else {
+                    element.style.display = "none";
+                }
+            });
+        });
+
 
 
     </script>

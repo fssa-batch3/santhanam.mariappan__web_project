@@ -204,7 +204,8 @@ header {
 }
 
 .content a img {
-  width: 400px;
+  width: 350px;
+  height: 500px;
 }
 
 
@@ -378,3 +379,8 @@ footer {
   margin-right: 100px;
   width: 200px;
 }
+
+
+/* like button */
+ 
+ 
