@@ -165,6 +165,10 @@
         document.getElementById("username").value = arr["user"];
         document.getElementById("email").value = arr["email"];
         document.getElementById("phone").value = arr["mobile"];
+        document.getElementById("gender").value = arr["gender"];
+        document.getElementById("des").value = arr["about"];
+        document.getElementById("country").value =arr["country"]
+
 
 
 
@@ -214,12 +218,11 @@
                 if (userobj["email"] == useremail) {
                     userobj["user"] = username;
                     userobj["mobile"] = phone;
-                    // userobj["about"] = des;
-                    // userobj["gender"] = gender;
-                    // userobj["country"] = country
-                    // userobj["country"] =country.value;
-                    // userobj["zip-code"] =zip_code.value;
-
+                    userobj["about"] = about;
+                    userobj["gender"] = gender;
+                    userobj["country"] = country
+             
+                   
                     console.log(userobj["country"])
 
 
