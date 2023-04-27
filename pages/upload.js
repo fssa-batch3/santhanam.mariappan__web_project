@@ -94,7 +94,6 @@ class FileUpload {
             this.progressUpdateDisplay();
             this.timeout = setTimeout(() => {
 	            if (this.circle) this.circle.style.transitionTimingFunction = "linear";
-
                 this.progressLoop();
             }, 500);
         } else if (target.hasAttribute("data-reset")) {

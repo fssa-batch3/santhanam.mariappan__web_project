@@ -79,7 +79,7 @@ main {
 	transform-origin: 50% 100%;
 }
 .upload__bubble:before {
-	background-color: var(--primary11);
+	background-color: black;
 	border-radius: 50%;
 	content: "";
 	display: block;

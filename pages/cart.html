@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="../asset/css/cart.css">
-  <link rel="stylesheet" href="../asset/css/catergis.css">
+  <!-- <link rel="stylesheet" href="../asset/css/catergis.css"> -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
@@ -119,12 +119,12 @@
       <h3>Add order Note</h3>
       <textarea rows="10" cols="50" id="product_order_note" name="comment" form="usrform">  How We Help you?</textarea>
 
-      <div class="mother2">
+      <!-- <div class="mother2">
         <h3>Coupon</h3>
         <p>Coupon code will work on checkout page</p>
 
         <input type="text" id="text" placeholder="Coupon code">
-      </div>
+      </div> -->
     </div>
 
     <div class="motherchild1">
@@ -133,7 +133,7 @@
       <p>Taxes, shipping and discounts codes calculated at checkout</p>
       <div class="yellow1">
         <div class="yellow2">
-          <input type="checkbox" id="box">
+          <input type="checkbox" id="box" required>
 
         </div>
         <div class="yellow2">
@@ -141,7 +141,7 @@
         </div>
       </div>
 
-      <button> <a href="../pages/information.html"> Check out</a> </button>
+      <button> <a href="../pages/information.html" id="pro"> Proceed </a> </button>
 
 
     </div>
@@ -192,7 +192,7 @@
       }
     });
 
-    console.log(result);
+    // console.log(result);
 
 
 
@@ -246,7 +246,7 @@
     let input_field = document.createElement("input")
     input_field.setAttribute("type", "number");
     input_field.setAttribute("id", "input_value");
-    input_field.setAttribute("id", "quantity");
+    // input_field.setAttribute("id", "quantity");
     input_field.setAttribute("name", "quantity");
     input_field.setAttribute("min", "0");
     input_field.setAttribute("max", "5");
@@ -266,40 +266,60 @@
     class_note1.append(class_h4)
 
     let value;
-    let Total;
+    let total;
     let ok;
+    let sub_total;
 
     // adding sum cart 
     let quality = input_field.addEventListener("change", () => {
       value = result["pr"];
 
-        ok = input_field.value
+      ok = input_field.value
 
-       Total = value * ok
+      total = value * ok
 
-      class_h4.innerText = "Rs " + Total
-      console.log(Total)
+      class_h4.innerText = "Rs " + total
+      
 
-      let sub_total = document.getElementById("sub_total").innerText = "SUB TOTAL : RS ." + Total
+      sub_total = document.getElementById("sub_total").innerText = "SUB TOTAL : RS ." + total
     })
 
-
+    let activeuser = JSON.parse(localStorage.getItem("profile"));
     // storing data in to the local storage.
 
+    let fun = document.getElementById("pro")
 
-    let product = {}
-    let product_order_note = document.getElementById("product_order_note").value
-    let input_value = document.getElementById("input_value").value
-    console.log(input_value+"ok");
+    fun.addEventListener('click', () => {
+      let product = {}
+ 
+      let product_order_note = document.getElementById("product_order_note").value
 
-    // product["email"] = email,
-    product["product_quatity"] = input_value,
-      product["product_total"] = sub_total.value,
-      // product["product_title"] = title_name,
+      let input_val = document.getElementById("input_value")
 
-      product["product_order_note"] = product_order_note
-    console.log(product);
+      product["product_quatity"] = input_val.value,
+        product["product_irder_note"] = product_order_note,
+      product["product_total"] = value,
+      product["product_sub_total"]=sub_total,
+      product["product_title"]=result["title_name"],
+      product["Product_billing_address"]="",
+      product["user_first"]="",
+      product["user_state"]="",
+      product["pincode"]="",
+      product["user_ph_num"]="" ,
+      product["orders"]=""
+      product["person_product_email"]=result["user_email"]
+      product["requested_user_email"]=activeuser["email"];
 
+
+      let product_arr= JSON.parse(localStorage.getItem("product_details")) ?? []
+
+      product_arr.push(product)
+      console.log(product_arr);
+      localStorage.setItem('product_details', JSON.stringify(product_arr));
+
+
+
+    })
 
 
 

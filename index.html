@@ -31,8 +31,8 @@
 
                     <div id="butn"></div>
 
-                    <button class="butn_1" id="butn_1" onclick="login()">Register</button>
-                    <button class="butn_1" id="butn_2">Login</button>
+                    <button class="butn_1" type="button" id="butn_1">Register</button>
+                    <button class="butn_1" type="button" id="butn_2">Login</button>
 
                 </div>
 
@@ -44,7 +44,7 @@
                 </div>
 
 
-                <form id="login" class="input_group" >
+                <form id="login" class="input_group">
                     <!-- 
                     <input type="email" class="input_field" id="log_mail" placeholder="User mail" required>
                     <input type="text" class="input_field" id="passcode" placeholder="Enter password" required>
@@ -54,7 +54,7 @@
 
 
                     <input type="text" class="input_field" id="user_id" placeholder=" Create your User id"
-                        pattern="^[a-zA-Z]{3,20}$" title="usernmae  contain minimum 3 and maximum 12 character" required="true">
+                        pattern="^[a-zA-Z]{3,20}$" title="usernmae  contain minimum 3 and maximum 12 character">
                     <input type="email" class="input_field" id="email" placeholder="Enter your email" required>
                     <input type="password" class="input_field" id="password" placeholder="Create your password" required
                         pattern="[A-Z a-z] [0-9] [@,!] {8-12}"
@@ -107,7 +107,8 @@
     </div>
 
 
-    <script>
+    <script src="asset/js/main.js"></script>
+   <script>
 
 
         // creating divs
@@ -187,8 +188,10 @@
 
 
         // declares a function for register page
-        let register_login = document.getElementById("butn_2")
-        register_login.addEventListener("click", (register) => {
+        // let register_login = document.getElementById("butn_2")
+        butn2.addEventListener("click", (register) => {
+
+            console.log("hbfjhbr")
             red.style.left = "-400px"
             yellow.style.left = "50px"
             orange.style.left = "110px"
@@ -197,10 +200,13 @@
             butn1.style.color = "black"
         }
         )
-
-
+        let butnlogin = document.getElementById("butn_1")
+butnlogin.addEventListener("click",()=>{
+    login();
+})
 
         function login() {
+            console.log("hh")
             red.style.left = "50px"
             yellow.style.left = "450px"
             orange.style.left = "0px"
@@ -209,14 +215,14 @@
 
         }
 
-let formButton=document.getElementById("login")
-formButton.addEventListener("submit",(e)=>{
-  
-    field();
-    e.preventDefault();
+        let formButton = document.getElementById("login")
+        formButton.addEventListener("submit", (e) => {
+
+            field();
+            e.preventDefault();
 
 
-})
+        })
         // register page to create new account
         function field() {
 
@@ -264,12 +270,12 @@ formButton.addEventListener("submit",(e)=>{
                 localStorage.setItem('users', JSON.stringify(command));
                 alert("Your account created sucessfully");
                 red.style.left = "-400px"
-            yellow.style.left = "50px"
-            orange.style.left = "110px"
+                yellow.style.left = "50px"
+                orange.style.left = "110px"
 
-            butn2.style.color = "white"
-            butn1.style.color = "black"
-                
+                butn2.style.color = "white"
+                butn1.style.color = "black"
+
             }
 
 
@@ -337,45 +343,6 @@ formButton.addEventListener("submit",(e)=>{
 
 
         }
-
-
-
-
-        // local storage listing product
-
-
-        if (JSON.parse(localStorage.getItem("upload"))) {
-            // return
-        }
-        else {
-            localStorage.setItem("upload", JSON.stringify([
-                {
-                    img:
-                        "https://iili.io/HvH4cLF.jpg",
-                    title_name:
-                        "Ball Pen Art ",
-                    artist_name:
-                        "Sruthi",
-                    size_by:
-                        "6 x 9 ",
-                    descr:
-                        "Ballpoint pen art is a form of art created using only ballpoint pens, popular for its accessibility and affordability, with artists using a variety of techniques to create intricate and detailed artwork."
-                }
-            ])
-            )
-        }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     </script>
