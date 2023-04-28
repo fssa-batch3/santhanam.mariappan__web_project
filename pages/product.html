@@ -249,18 +249,18 @@
 
         const result = user.find(function (userObj) {
         // userObj = {name : "Bala", "image": {}, "text": ""}
-
-        const name = userObj["title_name"];
-
-        // console.log(userObj)
-        if (storevalue === name) {
+                 console.log(userObj["title_name"].length,storevalue.length);
+        if (storevalue ===userObj["title_name"]) {
+            console.log(userObj["title_name"]);
             return true;
-        } else {
+        }
+         else {
             return false;
         }
         });
 
-        console.log(result);
+
+
 
 
  
@@ -302,7 +302,7 @@
         image3.setAttribute("src",result["img"]);
         image3.setAttribute("width", "150px");
         image3.setAttribute("alt", "Image loading");
-        span.append(image3);
+        // span.append(image3);
 
 
         // product_txt div

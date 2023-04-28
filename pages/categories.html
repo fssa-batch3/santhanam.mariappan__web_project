@@ -2315,11 +2315,10 @@
 
     </script> -->
 
-
+<script src="../asset/js/main.js"></script>
     <script>
 
         let img_details = JSON.parse(localStorage.getItem("upload"));
-        console.log(img_details)
 
 
 
@@ -2331,6 +2330,7 @@
                 return false
             }
         })
+        console.log(showedProduct);
 
 
         for (let i = 0; i < showedProduct.length; i++) {
@@ -2521,7 +2521,6 @@
             duck.setAttribute("class", "main1");
             boat.append(duck);
 
-            console.log(boat)
 
 
             // content div
@@ -2565,7 +2564,7 @@
 
             // h2 tag
             heading_animal = document.createElement("h2");
-            heading_animal.innerText = showedProduct[i]["Art_title"];
+            heading_animal.innerText = showedProduct[i]["title_name"];
             some1_animal.append(heading_animal);
 
 
