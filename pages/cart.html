@@ -280,7 +280,7 @@
       total = value * ok
 
       class_h4.innerText = "Rs " + total
-      
+
 
       sub_total = document.getElementById("sub_total").innerText = "SUB TOTAL : RS ." + total
     })
@@ -292,27 +292,27 @@
 
     fun.addEventListener('click', () => {
       let product = {}
- 
+
       let product_order_note = document.getElementById("product_order_note").value
 
       let input_val = document.getElementById("input_value")
 
       product["product_quatity"] = input_val.value,
         product["product_irder_note"] = product_order_note,
-      product["product_total"] = value,
-      product["product_sub_total"]=sub_total,
-      product["product_title"]=result["title_name"],
-      product["Product_billing_address"]="",
-      product["user_first"]="",
-      product["user_state"]="",
-      product["pincode"]="",
-      product["user_ph_num"]="" ,
-      product["orders"]=""
-      product["person_product_email"]=result["user_email"]
-      product["requested_user_email"]=activeuser["email"];
+        product["product_total"] = value,
+        product["product_sub_total"] = sub_total,
+        product["product_title"] = result["title_name"],
+        product["Product_billing_address"] = "",
+        product["user_first"] = "",
+        product["user_state"] = "",
+        product["pincode"] = "",
+        product["user_ph_num"] = "",
+        product["orders"] = ""
+      product["person_product_email"] = result["user_email"]
+      product["requested_user_email"] = activeuser["email"];
 
 
-      let product_arr= JSON.parse(localStorage.getItem("product_details")) ?? []
+      let product_arr = JSON.parse(localStorage.getItem("product_details")) ?? []
 
       product_arr.push(product)
       console.log(product_arr);
