@@ -1,6 +1,7 @@
  *{
   margin: 0px;
   box-sizing: border-box;
+  background-color:  rgba(255,242,238,255);
  }
 
  
@@ -40,7 +41,7 @@ header{
     outline: none;
    }
    .input i{
-    background-color:rgba(242, 194, 2, 0.938);
+    background-color:orange;
     color: black;
     padding: 13px 20px;
     border-radius: 5px;
@@ -55,6 +56,7 @@ header{
     padding: 10px 180px 10px 180px;
     margin-top: 20px;
     margin-left: 30px;
+    border: 1px solid gray;
    }
   .header_prt1 ul {
     display: flex;
@@ -179,8 +181,8 @@ h2 {
   
   /* border-radius: 12px; */
   border: 1px solid rgba(231, 252, 3, 0.2);
-  box-shadow: 6px 6px 12px 0 rgba(93, 85, 94, 0.2),
-    -6px -6px 12px 0 rgba(125, 116, 150, 0.5);
+  box-shadow: 3px 3px 6px 0 rgba(251,186,113,255),
+    -1px -1px 6px 0 rgba(251,186,113,255);
   scroll-snap-align: start;
   transition: all 0.2s;
 }
@@ -215,7 +217,7 @@ h2 {
   font-size: 0.88rem
 }
 button.primary {
-  background-color: black;
+  background-color: orange;
   border: none;
   border-radius: 15px;
   color: var(--white);
@@ -236,12 +238,13 @@ button.primary_ghost:hover {
 
 button.primary_ghost {
   background-color: transparent;
-  color: var(--color3);
+  color: orange;
 }
 
 button.primary_ghost:hover {
-  background: black;
+  background: orange;
   color: var(--white);
+  border: none;
   border-radius: 15px;
 }
 /* Media Query */
@@ -304,4 +307,8 @@ button.primary_ghost:hover {
    font-size: 30px;
    margin-left: 450px;
    
+}
+
+.container {
+  text-align: center;
 }

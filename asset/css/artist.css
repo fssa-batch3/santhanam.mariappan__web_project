@@ -1,89 +1,104 @@
-* {
+*{
   margin: 0px;
   padding: 0px;
   font-family: 'Poppins', sans-serif;
-  font-size: 15px;
-  font-weight: 600;
+  background-color:  rgba(255,242,238,255);
+  text-align: center;
+}
+span a{
+background-color: rgba(251,186,113,255);
 }
 
-/* header starts */
+button a{
+background-color: rgba(251,186,113,255);
+}
 header {
-  background-color: white;
-  position: sticky;
-  top: 0px;
-  font-family: 'Poppins', sans-serif;
+display: flex;
+justify-content: space-between;
 }
 
-.header {
-  display: flex;
-  background-color: white;
-  justify-content: space-between;
-  font-family: 'Poppins', sans-serif;
+
+.side_nav {
+display: flex;
+align-items: center;
 }
 
-.head1 {
-  margin-left: 400px;
+.side_nav ul {
+display: flex;
+justify-content: space-between;
+list-style: none;
+align-items: center;
+/* margin-top: 30px; */
+font-family: 'Poppins', sans-serif;
+color: orange;
 }
 
-.head2 {
-  margin-top: 30px;
-  margin-right: 60px;
+.side_nav ul li {
+margin-left: 30px;
 }
 
-.head2 a {
-
-  text-decoration: none;
-  color: white;
-  font-size: 25px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  border-radius: 50px;
-  background-color: black;
-  padding-left: 20px;
-  padding-right: 20px;
-
+.side_nav ul a {
+text-decoration: none;
+color: gray;
 }
 
-.head2 li {
-  list-style: none;
-  padding-bottom: 15px;
+.side_nav ul li img{
+margin-right: 20px;
+margin-top: 10px;
 }
 
-.nav1 ul {
-  display: flex;
-  position: absolute;
-  top: 30px;
-  left: 470px;
-  padding-left: 30px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
+.side_nav span button {
+margin-left: 20px;
+background-color:  rgba(251,186,113,255);
+padding: 12px 25px 12px 25px;
+margin-bottom: 10px;
+border-radius: 50px;
+font-family: 'Poppins', sans-serif;
+border: none;
 }
 
-.nav1 li {
-  list-style: none;
-  padding-left: 40px;
+.side_nav span button a {
+color: black;
+font-size: 15px;
 }
 
-.nav1 a {
-  text-decoration: none;
-  color: black;
+#search {
+font-family: 'Poppins', sans-serif;
+outline: none;
 }
 
-.nav1 li::after {
-  content: "";
-  background-color: red;
-  display: block;
-  height: 3px;
-  width: 0%;
-  margin: auto;
-  transition: 0.7s;
+.input i {
+background-color:  rgba(251,186,113,255);
+
+color: black;
+padding: 15px 20px;
+border-radius: 5px;
 }
 
-.nav1 li:hover::after {
-  width: 100%;
+
+.input #search {
+padding: 10px 180px 10px 180px;
+margin-top: 20px;
+margin-left: 30px;
 }
 
+.header_prt1 ul {
+display: flex;
+justify-content: center;
+}
+
+.header_prt1 ul li {
+margin-top: 20px;
+margin-left: 30px;
+list-style: none;
+}
+
+.header_prt1 a {
+text-decoration: none;
+font-size: 20px;
+font-family: 'Poppins', sans-serif;
+color: gray;
+}
 /* header ends */
 
 
@@ -111,11 +126,13 @@ header {
   margin-top: 20px;
 }
 
-.main,
+/* .main,
 .main1 {
   text-align: center;
   line-height: 2;
-}
+  display: flex;
+  justify-content: space-evenly;
+} */
 
 .empty {
   margin-top: 40px;
@@ -164,19 +181,12 @@ header {
   margin-top: 20px;
   margin-left: 100px;
 }
-
-.main h1 {
-  background-color:pink;
-  font-size: 50px;
-  color: black;
-  font-family: 'Courgette', cursive;
-  padding-top: 0px;
-  padding-bottom: 30px;
-}
+ 
+ 
 
 .main {
   margin-top: 20px;
-  background-color: rgba(180, 171, 171, 0.523);
+  
 }
 
 span {
@@ -190,4 +200,54 @@ span {
 
 .fullbox{
   background-color: rgb(253, 248, 248);
+}
+
+/* display */
+.dis{
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#file_img{
+  padding: 5px 40px 5px 40px;
+  border-radius: 3px;
+  border: 1px solid grey;
+  outline: none;
+}
+
+#title,#sold,#size,#Art_title,#country,#price{
+  padding: 5px 40px 5px 40px;
+  border-radius: 3px;
+  border: 1px solid grey;
+  outline: none;
+}
+#des{
+  border: 1px solid grey;
+  width: 500px;
+  height: 160px;
+  margin-left: 50px;
+}
+
+#price,#perc{
+  margin-right: 190px;
+}
+
+#search{
+  border: 1px solid gray;
+}
+
+#headig{
+  color:  rgba(251,186,113,255) ;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.atlast2 button{
+  margin-top: -140px;
+  margin-left: 600px;
+  background-color: orange;
+  padding: 20px 50px 20px 50px;
+  border: none;
+  border-radius: 50px;
 }

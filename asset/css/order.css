@@ -2,6 +2,8 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    background-color:  rgba(255,242,238,255);
+
 }
  
 header{
@@ -40,7 +42,7 @@ header{
    outline: none;
   }
   .input i{
-   background-color:azure;
+   background-color:rgba(251,186,113,255);
    color: black;
    padding: 13px 20px;
    border-radius: 5px;
@@ -55,6 +57,7 @@ header{
    padding: 10px 180px 10px 180px;
    margin-top: 20px;
    margin-left: 30px;
+   border: 1px solid grey;
   }
  .header_prt1 ul {
    display: flex;
@@ -97,7 +100,7 @@ header{
    padding: 15px;
    padding-right: 60px;
    padding-left: 60px;
-   background-color: white;
+   background-color:rgba(251,186,113,255);
    border: none;
    font-size: 20px;
    margin-right: 250px;
@@ -121,6 +124,7 @@ header{
 .headerdown p {
    font-size: 20px;
    margin-left: 200px;
+   background-color: white;
 
 }
 
@@ -128,6 +132,7 @@ header{
    margin-left: 200px;
    margin-top: 70px;
    font-size: 40px;
+   background-color: white;
 }
 
 .headerdowndiv2 img {
@@ -151,7 +156,7 @@ header{
 }
 
 main{
-   background-color: azure;
+   background-color: white;
    padding-top: 40px;
    padding-bottom: 40px;
    margin-top: 30px;
@@ -180,4 +185,13 @@ main{
    cursor: pointer; 
    box-shadow: 1px 1px 3px 3px beige;
    font-family: 'Red Hat Display', sans-serif;
+}
+
+#name_image,#artist_name,#qual,.middle p,h4,#approve{
+   background-color: white;
+}
+#accept{
+   background-color:  rgba(251,186,113,255);
+   padding-left:30px;
+   padding-right: 30px;
 }

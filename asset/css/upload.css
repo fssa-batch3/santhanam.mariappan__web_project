@@ -3,7 +3,7 @@ button {
 	font: 1em/1.5 "DM Sans", sans-serif;
 }
 body {
-	background-color: var(--primary18);
+	background-color:  rgba(255,242,238,255);
 	color: var(--primary1);
 	height: 100vh;
 	transition:
@@ -43,8 +43,9 @@ main {
 	width: 100%;
 }
 .upload__button {
-	background-color: var(--primary10);
+	background-color: orange;
 	border-radius: 0.2em;
+	border: none;
 	color: hsl(0,0%,100%);
 	padding: 0.75em 1.5em;
 	width: 100%;
@@ -59,7 +60,7 @@ main {
 }
 .upload__button:not(:disabled):focus-visible,
 .upload__button:not(:disabled):hover {
-	background-color: var(--primary9);
+	background-color:   rgba(251,186,113,255) ;
 }
 .upload__bubbles {
 	margin: 0 auto 3em auto;
@@ -79,7 +80,7 @@ main {
 	transform-origin: 50% 100%;
 }
 .upload__bubble:before {
-	background-color: black;
+	background-color: orange;
 	border-radius: 50%;
 	content: "";
 	display: block;
@@ -91,6 +92,7 @@ main {
 	margin: 0 auto 3em auto;
 	width: 8em;
 	height: 8em;
+	color: orange;
 }
 .upload__cloud-explode,
 .upload__cloud-left,

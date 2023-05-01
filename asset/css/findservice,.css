@@ -362,3 +362,24 @@ footer {
   margin-right: 100px;
   width: 200px;
 }
+
+
+/* art */
+ .conent{
+  margin-top: 40px;
+  text-align: center;
+  align-items: center;
+  line-height: 2;
+  font-size: 20px;
+ }
+ 
+ .conent hr{
+  width: 500px;
+  background-color: orange;
+  height: 5px;
+  color: orange;
+  text-align: center;
+  margin-left: 500px;
+}
+
+ 

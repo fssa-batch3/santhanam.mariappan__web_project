@@ -100,7 +100,7 @@ body {
 
 .nav li::after {
   content: "";
-  background-color: skyblue;
+  background-color: orange;
   display: block;
   height: 3px;
   width: 0%;
@@ -783,7 +783,7 @@ main {
   transition: background 0.8s;
   overflow: hidden;
   /* background: white; */
-  box-shadow: 0 70px 63px -60px #d72020;
+  box-shadow: 0 70px 63px -60px orange;
   display: flex;
   justify-content: center;
   align-items: center;

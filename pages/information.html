@@ -21,151 +21,115 @@
 
 
     <!-- main -->
-    <div class="main">
+ 
+    <form id="form"> 
+    <div class="full">
+        <div class="half">
+            <img src="../asset/images/infor,m.png" width="550px" alt="">
+        </div>
 
-        <div class="dummy">
-            <div class="dummy1">
-                <img src="../asset/images/logo1.png" width="100px" alt="">
-                <span>
-                    <p>Cart &#62; Information &#62; payment</p>
-                </span>
+        <div class="main">
 
-                <p> Contact Information</p>
+            <div class="dummy">
+                <div class="dummy1">
+                    <!-- <img src="../asset/images/new_logo plain.png" width="100px" alt=""> -->
+                    <span>
+                        <p>Cart &#62; Information &#62; payment</p>
+                    </span>
+
+                    <p> Contact Information</p>
 
 
-                <!-- <input type="text" id="text" placeholder="Email">
+                    <!-- <input type="text" id="text" placeholder="Email">
             <br> -->
-                <input type="checkbox" id="box"> Email with me new and offers
-            </div>
-
-            <div class="dummy2">
-                <p>  Shipping Address</p>
-                <select name="country" id="country">
-                    <option value="0" label="Select/religion " selected="selected"> </option>
-                    <option>Tirunelveli</option>
-                    <option>Salem</option>
-                    <option>Madurai</option>
-                </select>
-
-                <div class="dummy3">
-                    <div class="dummy4">
-                        <input type="text" placeholder="Frist name" id="frist_name">
-                    </div>
-                    <div class="dummy5">
-                        <input type="text" placeholder="Last name" id="last_name">
-                    </div>
+                    <input type="checkbox" id="box"> Email with me new and offers
                 </div>
 
-
-
-                <br>
-                <input type="text" id="address" placeholder="Address">
-                <br>
-
-
-            </div>
-
-            <div class="dummy6">
-                <div class="dummy7">
-                    <input type="text" id="pink" placeholder="city">
-                </div>
-
-                <div class="dummy8">
-                    <select name="state" id="state">
-                        <option value="0" label="select your state..." selected="selected"> select your state</option>
-                        <option>Delhi</option>
-                        <option>Kerala</option>
-                        <option>pune</option>
+                <div class="dummy2">
+                    <p> Shipping Address</p>
+                    <select name="country" id="country" required>
+                         
+                        <option>Tirunelveli</option>
+                        <option>Salem</option>
+                        <option>Madurai</option>
+                        <option value="">Chennai</option>
+                        <option value="">Villuthunagar</option>
+                        <option value="">Trichy</option>
                     </select>
-                </div>
 
-
-                <div class="dummy9">
-                    <input type="text" id="pincode" placeholder="Pin code">
-                </div>
-            </div>
-
-            <input type="text" id="ph_num" placeholder="phone">
-            <br>
-            <input type="checkbox" id="box"> Save this Information for Next time
-
-            <br>
-            <div class="tag">
-                <div class="tag1">
-                    <a href=""> &#60; Return to Cart</a>
-                </div>
-
-                <div class="tag2">
-                    <button id="continue"> <a href="">Continue to Shipping</a></button>
-                </div>
-            </div>
-
-
-        </div>
+                    <div class="dummy3">
+                        <div class="dummy4">
+                            <input type="text" placeholder="Frist name" id="frist_name" required>
+                        </div>
+                        <div class="dummy5">
+                            <input type="text" placeholder="Last name" id="last_name" required>
+                        </div>
+                    </div>
 
 
 
-        <div class="main2">
-
-            <div class="down">
-
-                <div class="down1">
-                    <img src="../asset/images/icons/inform1.png" width="40px" alt="">
-                    Registion Fees
-                </div>
-                <div class="down2">
-
-                    <p>&#8377; 1200</p>
-
-
-                </div>
-            </div>
-            <hr>
-
-            <input type="text" id="yellow" placeholder="Discount Code">
-            <button>Apply</button>
-            <hr>
-
-            <div class="singlechild">
-                <div class="singlechild1">
-                    <p>Sub Total Fees</p>
-
-                    <p>Estimated Fees</p>
-                </div>
-
-                <div class="singlechild2">
-                    &#8377; 3000
                     <br>
-                    &#8377; 300
+                    <input type="text" id="address" placeholder="Address" required>
+                    <br>
+
 
                 </div>
+
+                <div class="dummy6">
+                    <div class="dummy7">
+                        <input type="text" id="pink" placeholder="city"required>
+                    </div>
+
+                    <div class="dummy8">
+                        <select name="state" id="state">
+                            <option value="0" label="select your state..." selected="selected"> select your state
+                            </option>
+                            <option>Delhi</option>
+                            <option>Kerala</option>
+                            <option>pune</option>
+                        </select>
+                    </div>
+
+
+                    <div class="dummy9">
+                        <input type="text" id="pincode" placeholder="Pin code" required>
+                    </div>
+                </div>
+
+                <input type="text" id="ph_num" placeholder="phone" required>
+                <br>
+                <input type="checkbox" id="box"> Save this Information for Next time
+
+                <br>
+                <div class="tag">
+                    <div class="tag1">
+                        <a href="../pages/cart.html"> &#60; Return to Cart</a>
+                    </div>
+
+                    <div class="tag2">
+                        <button id="continue"> Place Order</button>
+                    </div>
+                </div>
+
+
             </div>
-            <hr>
-            <div class="font">
-                <div class="font1">
-                    <p>Total Fees</p>
-
-                </div>
 
 
 
-                <div class="font2">
-                    &#8377; 3300
-                </div>
-            </div>
 
         </div>
-
-
     </div>
+</form>
 
+
+ 
 
     <script>
 
 
 
-        let continues = document.getElementById("continue")
-        continues.addEventListener("click", e => {
+        let continues = document.getElementById("form")
+        continues.addEventListener("submit", e => {
             Con()
         })
 
@@ -186,34 +150,37 @@
             //     "Product_billing_address"= billing_address,
             //     "pincode"=pincode 
             // next_obj.push(odj)
- 
+
             // localStorage.setItem("product_details", JSON.stringify(next_obj))
 
             let current_user = JSON.parse(localStorage.getItem("profile"))
             let current_user_email = current_user["email"]
             console.log(current_user_email)
             let next_obj = JSON.parse(localStorage.getItem("product_details"))
-            next_obj.find((data)=>{
-                if(current_user_email==data["requested_user_email"]){
-                data["user_first"]=frist_name,
-               data ["last_name"]= last_name,
-                data["user_ph_num"]=ph_num,
-               data[ "user_state"]= state,
-                data["Product_billing_address"]= billig_address,
-                data["pincode"]=pincode,
-                data["orders"]="placed"
+            next_obj.find((data) => {
+                if (current_user_email == data["requested_user_email"]) {
+                    data["user_first"] = frist_name,
+                        data["last_name"] = last_name,
+                        data["user_ph_num"] = ph_num,
+                        data["user_state"] = state,
+                        data["Product_billing_address"] = billig_address,
+                        data["pincode"] = pincode,
+                        data["orders"] = "placed"
 
 
-                localStorage.setItem("product_details", JSON.stringify(next_obj))
-                alert ("Order placed")
-                
+                    localStorage.setItem("product_details", JSON.stringify(next_obj))
+                    alert("Order placed")
                 }
-                 
+                
             })
 
 
-            
+
         }
+
+
+        // 
+        
     </script>
 </body>
 

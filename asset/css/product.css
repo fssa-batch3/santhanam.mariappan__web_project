@@ -1,7 +1,9 @@
 *{
   margin: 0px;
   padding: 0px;
+  
 }
+ 
 
 header{
   display: flex;
@@ -29,7 +31,7 @@ margin-left: 20px;
  .side_nav1 ul a{
   text-decoration: none;
   color: black;
-  background-color: aquamarine;
+  background-color: orange;
   padding: 15px;
   border-radius: 10px;
   border: none;
@@ -43,7 +45,7 @@ margin-left: 20px;
   outline: none;
  }
  .input i{
-  background-color: aquamarine;
+  background-color: orange;
   color: black;
   padding: 13px 20px;
   border-radius: 5px;
@@ -100,7 +102,7 @@ margin-left: 20px;
   padding: 15px;
   padding-right: 60px;
   padding-left: 60px;
-  background-color: white;
+  background-color: orange;
   border: none;
   font-size: 20px;
   margin-right: 250px;
@@ -114,7 +116,7 @@ span button {
   border: none;
   left: 500px;
   top: 0px;
-  background-color: rgba(242, 194, 2, 0.938);
+  background-color: orange;
   padding-top: 16px;
   padding-left: 30px;
   padding-right: 30px;
@@ -124,9 +126,10 @@ span button {
 
 
 body{
-  background-color:whitesmoke;
+  background-color:rgba(255,242,238,255);
   line-height: 1.6;
   letter-spacing: 1px;
+
 } 
 
 main{
@@ -186,7 +189,7 @@ main img{
   font-weight: 600;
 }
 #yellow{
-  color: red;
+  color: orange;
   font-weight: 600;
 }
 .product_txt h3{
@@ -213,16 +216,16 @@ main img{
  
    font-family: 'Poppins', sans-serif;
    padding: 10px 30px 10px 30px;
-   background-color: grey;
+   background-color: orange;
 }
 .hr{
   line-height: 3;
 }
 #lol{
-  color: red;
+  color: orange;
 }
 #red{
-  color: red;
+  color: orange;
 }
 
 .relate{

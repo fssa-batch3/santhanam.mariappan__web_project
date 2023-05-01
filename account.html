@@ -10,9 +10,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -38,28 +38,28 @@
         <div class="back_ground2">
 
 
-
+            =
             <div class="display2">
-                <i class="fa-solid fa-plus" style="color: aliceblue;"></i>
-                <h2>Upload your Profile</h2>
+                <!-- <i class="fa-solid fa-plus" style="color: aliceblue;"></i>/ -->
+                <h2>Profile</h2>
                 <br>
-                <img src="asset/images/about1.jpg" alt="no error" id="image_profile" width="200px">
+                <img src="asset/images/profile.png" alt="no error" id="image_profile" width="300px">
 
                 <br>
-                <input type="file" name="file" id="file">
+                <!-- <input type="file" name="file" id="file"> -->
 
                 <br><br>
 
-                <button id="your_art"> <a href="/asset/css/Rewardsandarts.html"> Your Uploaded arts</a>
 
-                </button>
                 <div class="btn">
 
                     <button id="save">Save</button>
                     <br> <br>
                     <button id="edit"> Edit </button>
-                    <br> <br>
-                    <button onclick="logout()">Logout</button>
+                </div>
+                <div class="log">
+                    <!-- <button  >Logout</button> -->
+                    <i class="fa-solid fa-right-from-bracket" onclick="logout()" style="color: #ffffff;"></i>
                 </div>
                 </form>
 
@@ -84,9 +84,9 @@
 
 
 
-                        <br><br>
+                        <br><br><br>
                         <h3>Email</h3> <input type="email" name="" id="email" disabled>
-                        <br><br>
+                        <br><br><br>
 
                         <h3>Phone number</h3>
 
@@ -97,7 +97,7 @@
 
 
 
-                        <br><br>
+                        <br><br><br>
 
                         <h3>Country</h3> <input type="country" name="country" id="country" pattern=^[A-Za-z0-9_]{1,32}$
                             disabled>
@@ -106,7 +106,7 @@
 
                         <!-- <h3>Zip-code</h3> <input type="text" name="zip-code" id="zip-code" pattern="{0-6}" disabled -->
 
-                        <br><br>
+                        <br><br><br>
 
                         <h3>Gender:</h3> <select name="Gender" id="gender" required>
 
@@ -119,6 +119,19 @@
                     </div>
 
                     <div class="about">
+
+                        <div class="dic"> 
+
+                           <div class="dic1"> 
+                            <!-- <a href="asset/css/artist1.html"><h1>Orders</h1></a> -->
+                            <h2 id="hi_or">Orders </h2> <a href="asset/css/artist1.html">  <img src="asset/images/order_logo.png" width="80px" alt="">  </a>
+                        </div>
+                            <!-- <button id="your_art"> <a href="/asset/css/Rewardsandarts.html"> Your Uploaded arts</a> -->
+                        <div class="dic2">        <h2>Your Arts</h2>
+                              <a href="/asset/css/Rewardsandarts.html"> <img src="asset/images/art_lo.png" width="80px" alt=""></a>  
+                        </div>
+                    </div>
+                        <!-- </button> -->
                         <h3 id="ab">About</h3>
                         <textarea rows="10" cols="50" name="comment" form="usrform" id="des"
                             placeholder="Add your description in maximum 20 character" required disabled></textarea>
@@ -137,12 +150,12 @@
 
 
         <div class="con_dev1">
-            <img src="asset/images/profile_img_con.png" width="300px" alt="">
+            <img src="asset/images/pro_bg.png" width="300px" alt="">
         </div>
 
         <div class="text">
-            <p> Publish creative art, craft, writings and other creatives to get visibility ofart enthusiast <br> across
-                the worldWe are specialsts in Art. Creativity and fun are our ingredients for awesome work</p>
+            <h3> Publish creative art, craft, writings and other creatives to get visibility ofart enthusiast <br> across
+                the worldWe are specialsts in Art. Creativity and fun are our ingredients for awesome work</h3>
         </div>
     </div>
 
@@ -167,7 +180,7 @@
         document.getElementById("phone").value = arr["mobile"];
         document.getElementById("gender").value = arr["gender"];
         document.getElementById("des").value = arr["about"];
-        document.getElementById("country").value =arr["country"]
+        document.getElementById("country").value = arr["country"]
 
 
 
@@ -209,7 +222,7 @@
             let gender = document.getElementById("gender").value
             let country = document.getElementById("country").value
             let about = document.getElementById("des").value
-           
+
 
 
 
@@ -221,8 +234,8 @@
                     userobj["about"] = about;
                     userobj["gender"] = gender;
                     userobj["country"] = country
-             
-                   
+
+
                     console.log(userobj["country"])
 
 
@@ -264,16 +277,16 @@
                     const profile = JSON.parse(localStorage.getItem("profile"))
                     profile["profile_picture"] = reader.result
                     localStorage.setItem("profile", JSON.stringify(profile))
-                    
+
                 });
                 reader.readAsDataURL(choosedFile);
-                  
+
             }
             const profile = JSON.parse(localStorage.getItem("profile"))
-        img.setAttribute("src", profile["profile_picture"])
+            img.setAttribute("src", profile["profile_picture"])
 
         })
-       
+
     </script>
 
 </body>

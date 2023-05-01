@@ -3,7 +3,7 @@
     padding: none;
     font-size: 15px;
     font-family: 'Poppins', sans-serif;
-    
+    background-color: rgba(255,242,238,255);
 }
 
 .main{
@@ -54,7 +54,7 @@ header{
 }
 
 
-#country{
+#country,#address,#ph_num{
     padding:10px 270px 10px 270px;
     
   
@@ -72,11 +72,13 @@ header{
     margin-left: 20px;
 }
 
-#frist{
+#frist,#frist_name,#last_name{
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 42px;
     padding-right: 50px;
+    border: 2px solid gainsboro;
+   
 }
 
 #optional{
@@ -96,12 +98,15 @@ header{
     margin-top: 20px;
 }
 
-#pink{
+#pink,#state,#pincode{
+    margin-left: 30px;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: -5px;
     margin-left: 10px;
     margin-bottom: 20px; 
+    border: 2px solid gainsboro;
+   
 }
 #box{
 margin-top: 10px;
@@ -125,6 +130,8 @@ hr{
     margin-left: 60px;
     margin-top: 10px;
     margin-bottom: 20px;
+    border: 2px solid gainsboro;
+   
 }
 
 button{
@@ -174,3 +181,27 @@ button{
     color: rgb(71, 97, 143);
   
 }
+
+.full{
+    display: flex;
+    margin-top: 150px;
+}
+
+ .tag1 a{
+    background-color: orange;
+    color: white;
+ }
+
+ .tag2 button{
+    background-color: orange;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+ }
+.half img{
+    margin-top: 70px;
+}
+ 
+
+/*  */

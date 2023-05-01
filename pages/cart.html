@@ -41,7 +41,7 @@
       <ul>
         <!-- <li><a href="">Become a seller</a></li> -->
         <li><a href="../pages/home.html">Home</a></li>
-        <span> <button><a href="">Become a seller</a></button></span>
+        <span> <button><a href="../pages/categories.html">Shop our product</a></button></span>
         <li> <img src="../asset/images/profile_picture_user_icon_153847.png" width="30px" alt="no error"></li>
 
       </ul>
@@ -148,6 +148,9 @@
   </div>
 
 
+  <!-- hjh -->
+  
+
   <script>
     //  <!-- <div class="note1">
     //     <img src="../asset/images/icons/cart1.png" width="20px" alt="">
@@ -249,7 +252,8 @@
     input_field.setAttribute("id", "input_value");
     // input_field.setAttribute("id", "quantity");
     input_field.setAttribute("name", "quantity");
-    input_field.setAttribute("min", "0");
+    input_field.setAttribute("min", "1");
+    // input_field.value("1")
     input_field.setAttribute("max", "5");
     input_field.setAttribute("placeholder", "0");
     note2.append(input_field);
@@ -302,6 +306,7 @@
         product["product_total"] = value,
         product["product_sub_total"] = sub_total,
         product["product_title"] = result["title_name"],
+        product["product_image"]= result["img"],
         product["Product_billing_address"] = "",
         product["user_first"] = "",
         product["user_state"] = "",
