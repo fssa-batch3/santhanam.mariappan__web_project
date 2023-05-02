@@ -29,8 +29,7 @@ else {
                 "Tradiational girl",
             artist_name:
                 "Sruthi",
-            pr
-                :
+            pr:
                 "1000",
             size_by:
                 "6 x 9 ",
