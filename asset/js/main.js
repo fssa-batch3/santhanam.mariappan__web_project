@@ -12,15 +12,16 @@ else {
 
             artist_name:
                 "Santta",
-                pr
+            pr
                 :
                 "2000",
             size_by:
                 "6 x 9 ",
             descr:
                 "The background of the painting may vary depending on the artist's style and preference, but it is often a muted color to allow the peacock to stand out. Some artists may include other elements such as flowers or foliage to add to the composition."
-                ,
-            status:true
+            ,
+            status: true,
+            user_email: "bharuchan90@gmail.com"
         },
         {
             img:
@@ -36,7 +37,10 @@ else {
             descr:
                 "John Marshall, the archeologist at Mohenjo-daro who found the figure, described the figure as " + "a young girl, her hand on her hip in a half-impudent posture, and legs slightly forward as she beats time to the music with her legs and feet"
             ,
-            status: true
+            status: true,
+            user_email
+                :
+                "bharuchan90@gmail.com"
         },
         // {
         //     img:
