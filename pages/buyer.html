@@ -57,17 +57,8 @@
 
     <h2 id="order">Order Histroy</h2>
 
-    <main>
-        <img src="../asset/images/3Dimg5.jpg" width="250px" alt="">
-        <h3>Title_name</h3>
-        <br>
-        <h4>Artist:Sandeep</h4>
-        <br>
-        <p>RS:2000</p>
-        <br>
-        <button>Ordered</button>
-
-    </main>
+    <div class="main"></div>
+         
 
 
     <script>
@@ -87,9 +78,8 @@
 
 product_email_data.find(function (obj){
     if(user_email_acc==obj["requested_user_email"]){
-        document.querySelector("body").innerHTML +=
-        
-            ` <div class=".main">
+        document.querySelector(".main").innerHTML +=
+            ` 
    <main>
     <img src="${obj["product_image"]}" width="250px" alt="">
     <h3>${obj["product_title"]}</h3>
@@ -98,10 +88,14 @@ product_email_data.find(function (obj){
     <br>
     <p>${obj["product_sub_total"]}</p>
     <br>
+    <p>${obj["order_date"]}</p>
+    <br>
+    <h3>Quantity:${obj["product_quatity"]}
+        <br> <br>
     <button>Ordered</button>
      
    </main>
-   </div>`
+    `
    
   
     }

@@ -28,9 +28,11 @@
             <img src="../asset/images/infor,m.png" width="550px" alt="">
         </div>
 
+         <a href="../pages/buyer.html">Order Histroy </a> 
         <div class="main">
 
             <div class="dummy">
+
                 <div class="dummy1">
                     <!-- <img src="../asset/images/new_logo plain.png" width="100px" alt=""> -->
                     <span>
@@ -59,10 +61,10 @@
 
                     <div class="dummy3">
                         <div class="dummy4">
-                            <input type="text" placeholder="Frist name" id="frist_name" required>
+                            <input type="text" placeholder="Frist name" id="frist_name"  required>
                         </div>
                         <div class="dummy5">
-                            <input type="text" placeholder="Last name" id="last_name" required>
+                            <input type="text" placeholder="Last name" id="last_name"  required>
                         </div>
                     </div>
 
@@ -77,7 +79,7 @@
 
                 <div class="dummy6">
                     <div class="dummy7">
-                        <input type="text" id="pink" placeholder="city"required>
+                        <input type="text" id="pink" placeholder="city" required>
                     </div>
 
                     <div class="dummy8">
@@ -88,12 +90,14 @@
                             <option>Delhi</option>
                             <option>Kerala</option>
                             <option>pune</option>
+                            <option>Gujarat</option>
+                            
                         </select>
                     </div>
 
 
                     <div class="dummy9">
-                        <input type="text" id="pincode" placeholder="Pin code" required>
+                        <input type="text" id="pincode" placeholder="Pin code" required >
                     </div>
                 </div>
 
@@ -171,7 +175,7 @@
 
                     localStorage.setItem("product_details", JSON.stringify(next_obj))
                     alert("Order placed")
-                    window.location.href = "../pages/buyer.html"
+                    window.location.href = "buyer.html"
                 }
                 
             })

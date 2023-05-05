@@ -275,6 +275,8 @@
     let ok;
     let sub_total;
 
+     
+
     // adding sum cart 
     let quality = input_field.addEventListener("change", () => {
       value = result["pr"];
@@ -294,8 +296,18 @@
 
     let fun = document.getElementById("pro")
 
+    let newdate;
+        let dateObj = new Date();
+        let month = dateObj.getUTCMonth() + 1; //months from 1-12
+        let day = dateObj.getUTCDate();
+        let year = dateObj.getUTCFullYear();
+        newdate = day + "/" + month + "/" + year;
+        console.log(newdate);
+
     fun.addEventListener('click', () => {
       let product = {}
+
+      
 
       let product_order_note = document.getElementById("product_order_note").value
 
@@ -309,6 +321,7 @@
         product["product_artist_name"] = result["artist_name"]
         product["product_image"] = result["img"],
         product["Product_billing_address"] = "",
+        product["order_date"]=newdate,
         product["user_first"] = "",
         product["user_state"] = "",
         product["pincode"] = "",
