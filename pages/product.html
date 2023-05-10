@@ -246,8 +246,24 @@
         console.log(storevalue);
 
         const user = JSON.parse(localStorage.getItem("upload"));
+        const clicked_page = localStorage.getItem("clicked");
+        let painting_div = JSON.parse(localStorage.getItem("typesofart"));
+        let result;
 
-        const result = user.find(function (userObj) {
+        // const result = user.find(function (userObj) {
+        // // userObj = {name : "Bala", "image": {}, "text": ""}
+        //          console.log(userObj["title_name"].length,storevalue.length);
+        // if (storevalue ===userObj["title_name"]) {
+        //     console.log(userObj["title_name"]);
+        //     return true;
+        // }
+        //  else {
+        //     return false;
+        // }
+        // });
+
+        if(clicked_page=="categories"){
+            result = user.find(function (userObj) {
         // userObj = {name : "Bala", "image": {}, "text": ""}
                  console.log(userObj["title_name"].length,storevalue.length);
         if (storevalue ===userObj["title_name"]) {
@@ -260,6 +276,25 @@
         });
 
 
+//    console.log(clicked_page)
+
+        }
+        else{
+            result = painting_div.find(function (userObj) {
+        // userObj = {name : "Bala", "image": {}, "text": ""}
+                 console.log(userObj["title_name"].length,storevalue.length);
+        if (storevalue ===userObj["title_name"]) {
+            console.log(userObj["title_name"]);
+            return true;
+        }
+         else {
+            return false;
+        }
+        });
+        // console.log(result)
+        }
+                
+       
 
 
 

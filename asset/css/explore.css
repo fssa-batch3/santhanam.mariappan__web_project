@@ -148,10 +148,20 @@ span button {
 }
 
 .slidesilder {
-    text-align: center;
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 1300px;
     margin-top: 50px;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 50px;
+}
+
+.slider{
+    margin-top: 90px;
+    margin-left: 40px;
 }
 
 /*  */
@@ -183,9 +193,9 @@ main {
     width: 350px;
 }
 
-.content1 {
-    /* display: flex; */
-}
+/* .content1 {
+    display: flex;
+} */
 
 .content1 {
     text-align: center;

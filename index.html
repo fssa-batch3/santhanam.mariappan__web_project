@@ -82,7 +82,7 @@
 
                     <input type="email" class="input_field" id="log_mail" placeholder="User mail" required>
                     <input type="password" class="input_field" id="passcode" placeholder="Enter password" required>
-                    <input type="checkbox" class="checkbox" id="span_check" required> <span>Save information</span>
+                    <!-- <input type="checkbox" class="checkbox" id="span_check" required> <span>Save information</span> -->
                     <button class="submitbut" id="login_submit"> login</a></button>
 
                     <!-- <input type="text" class="input_field" id="user_id" placeholder=" Create your User id"
@@ -317,13 +317,13 @@ butnlogin.addEventListener("click",()=>{
                     const profile = JSON.stringify(element);
 
                     // checkbox
-                    let span_check = document.getElementById("span_check").checked
-                    if (span_check) {
+                    // let span_check = document.getElementById("span_check").checked
+                    // if (span_check) {
 
                         localStorage.setItem("profile", profile);
                         alert("Sucessfully Login")
 
-                    }
+                    // }
                     return check = 1
                 }
                 else {

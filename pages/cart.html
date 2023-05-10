@@ -181,21 +181,55 @@
     console.log(transfer_value);
 
     const user = JSON.parse(localStorage.getItem("upload"));
+        const clicked_page = localStorage.getItem("clicked");
+        let painting_div = JSON.parse(localStorage.getItem("typesofart"));
+        if(clicked_page=="categories"){
+            result = user.find(function (userObj) {
+        // userObj = {name : "Bala", "image": {}, "text": ""}
+                //  console.log(userObj["title_name"].length,storevalue.length);
+        if (transfer_value ===userObj["title_name"]) {
+            console.log(userObj["title_name"]);
+            return true;
+        }
+         else {
+            return false;
+        }
+        });
 
-    const result = user.find(function (userObj) {
-      // userObj = {name : "Bala", "image": {}, "text": ""}
 
-      const value_name = userObj["title_name"];
+//    console.log(clicked_page)
 
-      // console.log(userObj)
-      if (transfer_value === value_name) {
-        return true;
-      } else {
-        return false;
-      }
-    });
+        }
+        else{
+            result = painting_div.find(function (userObj) {
+        // userObj = {name : "Bala", "image": {}, "text": ""}
+                //  console.log(userObj["title_name"].length,storevalue.length);
+        if (transfer_value ===userObj["title_name"]) {
+            console.log(userObj["title_name"]);
+            return true;
+        }
+         else {
+            return false;
+        }
+        });
+        // console.log(result)
+        }
 
-    console.log(result);
+
+    // const result = user.find(function (userObj) {
+    //   // userObj = {name : "Bala", "image": {}, "text": ""}
+
+    //   const value_name = userObj["title_name"];
+
+    //   // console.log(userObj)
+    //   if (transfer_value === value_name) {
+    //     return true;
+    //   } else {
+    //     return false;
+    //   }
+    // });
+
+    // console.log(result);
 
 
 

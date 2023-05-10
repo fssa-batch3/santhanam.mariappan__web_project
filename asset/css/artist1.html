@@ -45,7 +45,7 @@
     </header>
     <!-- hr line  -->
     <span id="hr1">
-        
+
         <hr>
     </span>
 
@@ -93,6 +93,9 @@
 
 </body>
 
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+
 <script>
 
     let artist_email = JSON.parse(localStorage.getItem("profile"))
@@ -131,7 +134,7 @@
     </div>
 
         <div class="other">
-             <form action="" id="approve">
+             <form  id="approve">
                 <button id="accept">Done</button>
                 
              
@@ -142,7 +145,24 @@
         }
     }
 
+    let email_send = document.getElementById("accept");
+    email_send.addEventListener("click",e => {
+        e.preventDefault();
+        console.log("email");
 
+        Email.send({
+            Host: "smtp.elasticemail.com",
+            Username: "bharuu90@gmail.com",
+            Password: "F5AF1592782CEDC418852B71C9B8DA562506",
+            To: 'bharuchan90@gmail.com',
+            From: "bharuu90@gmail.com",
+            Subject: "sucess",
+            Body: "Hi santhanam, Your ordered xxxx from Zanarts on 12/04/2003. Will be received on within 10 days to Address:15/A p.sv.k south street,Tirunlveli"
+        }).then(
+            message => alert(message)
+        );
+
+    })
 
 
 

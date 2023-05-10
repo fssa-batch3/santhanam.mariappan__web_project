@@ -2590,7 +2590,13 @@
         }
 
 
-
+  let anchor_buttons=document.querySelectorAll('.top2 a');
+//   console.log(anchor_buttons)
+  anchor_buttons.forEach((e)=>{
+    e.addEventListener("click",(el)=>{
+        localStorage.setItem("clicked","categories")
+    })
+  })
 
         //search
         let search = document.getElementById("search");

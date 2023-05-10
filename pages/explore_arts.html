@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../asset/css/explore_arts.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- header -->
+
+    <header>
+
+        <div class="logo">
+        <a href="../pages/home.html"> <img src="../asset/images/new_logo plain.png" width="150px" alt="no error"></a>
+
+             
+        </div>
+
+        <div class="input">
+            <input type="text" name="search_bar" id="search" placeholder="What do you like today???"> <i
+                class="fa fa-search"></i> </button>
+        </div>
+
+        <div class="side1_nav">
+            <ul>
+                <li><a href="">Upload arts</a></li>
+
+                <li> <img src="../asset/images/profile_picture_user_icon_153847.png" width="30px" alt="no error"></li>
+
+            </ul>
+
+        </div>
+
+    </header>
+
+    <hr>
+   
+
+    <!-- desgin for header -->
+
+    <div class="lader">
+
+        <div class="font">
+            <h1>Sell art  <br>
+                from your <br>
+                collection</h1>
+           
+            <h3>With our global reach and art market expertise, <br>  our specialists will find the right buyer for your   work.</h3>
+             <br><button> <a href="../pages/artist.html">Start selling</a></button>
+        </div>
+
+        <div class="img_div">
+            <img src="../asset/images/5218-removebg-preview.png" alt="">
+        </div>
+    </div>
+     
+      <hr id="hr_tag">
+  <br>
+     <h1 id="hello">Painting</h1>
+  
+
+    <!-- javascript -->
+    <script>
+        // const done = [
+
+        //     {
+        //         sketch: "../asset/images/user/sketch1.jpg",
+        //         id: "1",
+
+        //     },
+        //     {
+        //         sketch: "../asset/images/user/sketch2.jpg",
+        //         id: "2",
+        //     },
+        //     {
+        //         sketch: "../asset/images/user/sketch3.jpg",
+        //         id: "3",
+
+
+        //     },
+        //     {
+        //         sketch: "../asset/images/user/sketch4.jpg",
+        //         head: "",
+        //         id: "4",
+        //     },
+        //     {
+        //         sketch: "../asset/images/user/sketch5.jpg",
+
+        //         id: "5",
+        //     },
+        //     {
+        //         sketch: "../asset/images/user/sketch6.jpg",
+        //         head: "",
+        //         para: "",
+        //         sold: "Sold by: Aravind ",
+        //         size: "12*6 size non-Framed",
+        //         id: "6",
+        //     },
+        //     {
+        //         sketch: "../asset/images/user/sketch7.jpg",
+        //         head: "",
+        //         para: "",
+        //         sold: "Sold by : Isac",
+        //         size: "2*6 size non-Framed",
+        //         id: "7",
+        //     },
+        //     {
+        //         sketch: "../asset/images/user/sketch8.jpg",
+        //         head: "",
+        //         para: "",
+        //         sold: "Sold by : Mega",
+        //         size: "8*1 size non-Framed",
+        //         id: "8",
+        //     },
+        //     {
+        //         sketch: "../asset/images/user/sketch9.jpg",
+        //         head: "",
+        //         para: "",
+        //         sold: "Sold by : parama",
+        //         size: "2*6 size non-Framed",
+        //         id: "9",
+        //     },
+        //     {
+        //         sketch: "../asset/images/user/pro1.jpg",
+        //         head: "",
+        //         para: "",
+        //         sold: "Sold by : Teffy",
+        //         size: "8*0 size non-Framed",
+        //         id: "10",
+        //     },
+        //     {
+        //         sketch: "../asset/images/user/pro2.jpg",
+        //         head: "",
+        //         para: "",
+        //         sold: "Sold by: Satheep",
+        //         size: "4*6 size non-Framed",
+        //         id: "11",
+        //     },
+        //     {
+        //         sketch: "../asset/images/user/pro3.jpg",
+        //         head: "",
+        //         para: "",
+        //         sold: "Sold by : Joel",
+        //         size: "7*6 size non-Framed",
+        //         id: "12",
+        //     },
+        //     {
+        //         sketch: "../asset/images/user/pro4.jpg",
+        //         head: "",
+        //         para: "",
+        //         sold: "Sold by : Kumar",
+        //         size: "8*6 size non-Framed",
+        //         id: "13",
+        //     },
+        //     {
+        //         sketch: "../asset/images/user/pro5.jpg",
+        //         head: "",
+        //         para: "",
+        //         sold: "Sold by : Muthu",
+        //         size: "1*6 size non-Framed",
+        //         id: "14",
+        //     },
+        //     {
+        //         sketch: "../asset/images/user/pro6.jpg",
+        //         head: "",
+        //         para: "",
+        //         sold: "Sold by : Akash",
+        //         size: "4*6 size non-Framed",
+        //         id: "15",
+        //     },
+        //     {
+        //         sketch: "../asset/images/user/pro7.jpg",
+        //         head: "",
+        //         para: "",
+        //         sold: "Sold by : Nithi",
+        //         size: "1*6 size non-Framed",
+        //         id: "16",
+        //     },
+        //     {
+        //         sketch: "../asset/images/user/pro8.jpg",
+        //         head: "",
+        //         para: "",
+        //         sold: "Sold by : Ramesh",
+        //         size: "4*6 size non-Framed",
+        //         id: "17",
+        //     },
+        //     {
+        //         sketch: "../asset/images/user/pro9.jpg",
+        //         head: "",
+        //         para: "",
+        //         sold: "Sold by : Ram muthu",
+        //         size: "*6 size non-Framed",
+        //         id: "18",
+        //     },
+        //     {
+        //         sketch: "../asset/images/user/pro10.jpg",
+        //         head: "",
+        //         para: "",
+        //         sold: "Sold by : Bharath",
+        //         size: "*3 size non-Framed",
+        //         id: "19",
+        //     },
+        //     {
+        //         sketch: "../asset/images/user/pro11.jpg",
+        //         head: "",
+        //         para: "",
+        //         sold: "Sold by : akil",
+        //         size: "*9 size non-Framed",
+        //         id: "20",
+        //     },
+        //     {
+        //         sketch: "../asset/images/user/pro12.jpg",
+        //         head: "",
+        //         para: "",
+        //         sold: "Sold by: Sasi",
+        //         size: "*3 size non-Framed",
+        //         id: "21",
+        //     },
+        //     {
+        //         sketch: "../asset/images/user/pro13.jpg",
+        //         head: "",
+        //         para: "",
+        //         sold: "Sold by Hema",
+        //         size: "46 size non-Framed",
+        //         id: "22",
+        //     },
+        //     {
+        //         sketch: "../asset/images/user/pro14.jpg",
+        //         head: "",
+        //         para: "",
+        //         sold: "Sold by : Lisa",
+        //         size: "*16 size non-Framed",
+        //         id: "23",
+        //     }
+
+        // ]
+
+        // console.log(done)
+
+
+        localStorage.setItem("typesofart", JSON.stringify([
+            {
+                img:
+                    "https://iili.io/HUJjNZx.jpg",
+                title_name:
+                    "Dimitra Milan",
+
+                artist_name:
+                    "Joel",
+                pr
+                    :
+                    "3000",
+                size_by:
+                    "6 x 9 ",
+                descr:
+                    " “I am still in galleries and plan to continue working with a few fantastic gallery owners, but I am taking the initiative to market directly and take ownership of my brand.",
+                user_email: "bharuchan90@gmail.com",
+
+                dataset: "painting"
+            },
+            {
+                img:
+                    "https://iili.io/HUJwjSt.jpg",
+                title_name:
+                    "Jimena Reno",
+
+                artist_name:
+                    "John",
+                pr
+                    :
+                    "1000",
+                size_by:
+                    "5 x 9 ",
+                descr:
+                    "My favorite art",
+                user_email: "bharuchan90@gmail.com",
+
+                dataset: "painting"
+            },
+            {
+                img:
+                    "https://iili.io/HUJNMmu.jpg",
+                title_name:
+                    "Art sketch poses ",
+
+                artist_name:
+                    "Naresh",
+                pr
+                    :
+                    "1000",
+                size_by:
+                    "8x 9 ",
+                descr:
+                    "Simple art drawings sketches simple drawing ideas drawing flower drawing cute drawing easy drawing art inspiration art sketch drawing poses art",
+
+                user_email: "bharuchan90@gmail.com",
+
+                dataset: "painting"
+            },
+            {
+                img:
+                    "https://iili.io/HUJN8kF.jpg",
+                title_name:
+                    "Maria",
+
+                artist_name:
+                    "Denny",
+                pr
+                    :
+                    "9000",
+                size_by:
+                    "8x 9 ",
+                descr:
+                    "My favorite painting",
+
+                user_email: "bharuchan90@gmail.com",
+
+                dataset: "painting"
+            },
+            {
+                img:
+                    "https://iili.io/HUJNyQf.jpg",
+                title_name:
+                    "Cat Painting",
+
+                artist_name:
+                    "Gokul",
+                pr
+                    :
+                    "1000",
+                size_by:
+                    "8x 9 ",
+                descr:
+                    "My favorite painting",
+
+                user_email: "bharuchan90@gmail.com",
+
+                dataset: "painting"
+            },
+            {
+                img:
+                    "https://iili.io/HUJOI4V.jpg",
+                title_name:
+                    "Dog Painting",
+
+                artist_name:
+                    "Gokul",
+                pr
+                    :
+                    "1000",
+                size_by:
+                    "8x 9 ",
+                descr:
+                    "My favorite painting",
+
+                user_email: "bharuchan90@gmail.com",
+
+                dataset: "painting"
+            },
+            {
+                img:
+                    "https://iili.io/HUJOAYP.jpg",
+                title_name:
+                    "Eyesn on wall",
+
+                artist_name:
+                    "Gokul",
+                pr
+                    :
+                    "1000",
+                size_by:
+                    "8x 9 ",
+                descr:
+                    "My favorite painting",
+
+                user_email: "bharuchan90@gmail.com"
+                ,
+
+                dataset: "painting"
+            },
+            {
+                img:
+                    "https://iili.io/HUJOcZJ.jpg",
+                title_name:
+                    "Freaking girl",
+
+                artist_name:
+                    "Gokul",
+                pr
+                    :
+                    "1000",
+                size_by:
+                    "8x 9 ",
+                descr:
+                    "My favorite painting",
+
+                user_email: "bharuchan90@gmail.com",
+
+                dataset: "painting"
+            },
+            {
+                img:
+                    "https://iili.io/HUJObcB.jpg",
+                title_name:
+                    "Hand merge",
+
+                artist_name:
+                    "Sasi",
+                pr
+                    :
+                    "1000",
+                size_by:
+                    "8x 9 ",
+                descr:
+                    "My favorite painting",
+
+                user_email: "bharuchan90@gmail.com",
+
+                dataset: "painting"
+            },
+
+            // realism
+            {
+                img:
+                    "https://iili.io/HUdwHzb.jpg",
+                title_name:
+                    "Figurative art",
+
+                artist_name:
+                    "James",
+                pr
+                    :
+                    "5000",
+                size_by:
+                    "9x9 ",
+                descr:
+                    "Original Art Oil Painting, measuring: 36W x 40H x 1D cm, by: Matthew James Collins (Italy). Styles: Portraiture, Impressionism, Realism, Figurative, Fine Art",
+
+                user_email: "bharuchan90@gmail.com",
+
+                dataset: "realism"
+            },
+            {
+                img:
+                    "https://iili.io/HUdwcpn.jpg",
+                title_name:
+                    "Egg yolk",
+
+                artist_name:
+                    "James",
+                pr
+                    :
+                    "2000",
+                size_by:
+                    "3x9 ",
+                descr:
+                    "creating the egg white and the yolk along with the shells.",
+
+                user_email: "bharuchan90@gmail.com",
+
+                dataset: "realism"
+            },
+            {
+                img:
+                    "https://iili.io/HUdwvQj.jpg",
+                title_name:
+                    "Elephant realism",
+
+                artist_name:
+                    "James",
+                pr
+                    :
+                    "2000",
+                size_by:
+                    "3x9 ",
+                descr:
+                    "creating the egg white and the yolk along with the shells.",
+
+                user_email: "bharuchan90@gmail.com",
+
+                dataset: "realism"
+            },
+            {
+                img:
+                    "https://iili.io/HUdN3js.jpg",
+                title_name:
+                    "Tiny Lines",
+
+                artist_name:
+                    "James",
+                pr
+                    :
+                    "5000",
+                size_by:
+                    "3x9 ",
+                descr:
+                    "Original ink and watercolor illustrations inspired by wild places and creatures",
+
+                user_email: "bharuchan90@gmail.com",
+
+                dataset: "realism"
+            },
+            {
+                img:
+                    "https://iili.io/HUdNI99.jpg",
+                title_name:
+                    "Bird Hybrids",
+
+                artist_name:
+                    "kingston",
+                pr:
+                    "2000",
+                size_by:
+                    "5x9 ",
+                descr:
+                    "It is difficult for us to believe that our beloved felines are merciless bird hunters.",
+
+                user_email: "bharuchan90@gmail.com",
+
+                dataset: "realism"
+            },
+            {
+                img:
+                    "https://iili.io/HUdNv9t.jpg",
+                title_name:
+                    "Weirdest Animal",
+
+                artist_name:
+                    "Joel",
+                pr:
+                    "1000",
+                size_by:
+                    "6x9 ",
+                descr:
+                    "Photo manipulation is the application of image editing techniques to photographs in order to create an illusion or deception through analog or digital means.",
+
+                user_email: "bharuchan90@gmail.com",
+
+                dataset: "realism"
+            },
+            {
+                img:
+                    "https://iili.io/HUdOCxa.jpg",
+                title_name:
+                    "Go away",
+
+                artist_name:
+                    "Madhu",
+                pr:
+                    "3000",
+                size_by:
+                    "6x9 ",
+                descr:
+                    "My favorite art",
+
+                user_email: "bharuchan90@gmail.com",
+
+                dataset: "realism"
+            },
+            {
+                img:
+                    "https://iili.io/HUdObdN.jpg",
+                title_name:
+                    "Yash Rocky",
+
+                artist_name:
+                    "Dharun",
+                pr:
+                    "2000",
+                size_by:
+                    "7x9 ",
+                descr:
+                    "Yash Rocky from the movie KGF Chapter 2 - Realistic Color Pencil Portrait drawing",
+
+                user_email: "bharuchan90@gmail.com",
+
+                dataset: "realism"
+            },
+            {
+                img:
+                    "https://iili.io/HUdexIe.jpg",
+                title_name:
+                    "Magic art",
+
+                artist_name:
+                    "Dharun",
+                pr:
+                    "2000",
+                size_by:
+                    "7x9 ",
+                descr:
+                    "My favorite art",
+
+                user_email: "bharuchan90@gmail.com",
+
+                dataset: "realism"
+            },
+            // illustation
+            {
+                img:
+                    "https://iili.io/HUdg43b.jpg",
+                title_name:
+                    "Me Dream",
+
+                artist_name:
+                    "Balaji.s",
+                pr:
+                    "1000",
+                size_by:
+                    "7x9 ",
+                descr:
+                    "My favorite art",
+
+                user_email: "bharuchan90@gmail.com",
+
+                dataset: "illustration"
+            },
+            {
+                img:
+                    "https://iili.io/HUdgyFa.jpg",
+                title_name:
+                    "Conceptual",
+
+                artist_name:
+                    "Mark",
+                pr:
+                    "2000",
+                size_by:
+                    "7x9 ",
+                descr:
+                    "Mark Fredrickson is one of the finest and talented conceptual Artists from Tucson, Arizona",
+
+                user_email: "bharuchan90@gmail.com",
+
+                dataset: "illustration"
+            },
+            {
+                img:
+                    "https://iili.io/HUdr0Sj.jpg",
+                title_name:
+                    "Turma",
+
+                artist_name:
+                    "Mark",
+                pr:
+                    "2000",
+                size_by:
+                    "7x9 ",
+                descr:
+                    "Illustration that i did for MSP. Inspired by the Mauricio de Sousa's characters.",
+
+                user_email: "bharuchan90@gmail.com",
+
+                dataset: "illustration"
+            },
+            {
+                img:
+                    "https://iili.io/HUdiwIR.jpg",
+                title_name:
+                    "Cute girl in water",
+
+                artist_name:
+                    "Saran",
+                pr:
+                    "2000",
+                size_by:
+                    "7x9 ",
+                descr:
+                    "Dear you must in diet emergency",
+
+                user_email: "bharuchan90@gmail.com",
+
+                dataset: "illustration"
+            },
+            {
+                img:
+                    "https://iili.io/HUd4rkx.jpg",
+                title_name:
+                    "Cute girl",
+
+                artist_name:
+                    "Nithilan",
+                pr:
+                    "2000",
+                size_by:
+                    "7x9 ",
+                descr:
+                    "HD Girly Wallpaper Cute Wallpaper Girl",
+
+                user_email: "bharuchan90@gmail.com",
+
+                dataset: "illustration"
+            },
+            {
+                img:
+                    "https://iili.io/HUd6Lu4.jpg",
+                title_name:
+                    "Global Brands",
+
+                artist_name:
+                    "Santhanam",
+                pr:
+                    "2000",
+                size_by:
+                    "7x9 ",
+                descr:
+                    "Camel on desert",
+
+                user_email: "bharuchan90@gmail.com",
+
+                dataset: "illustration"
+            },
+            {
+                img:
+                    "https://iili.io/HUdPuNR.jpg",
+                title_name:
+                    "Inspiration feed",
+
+                artist_name:
+                    "Santhu",
+                pr:
+                    "1000",
+                size_by:
+                    "7x9 ",
+                descr:
+                    "Find the most inspiring illustrations, drawings, sketches, and paintings in this hand-picked collection",
+
+                user_email: "bharuchan90@gmail.com",
+
+                dataset: "illustration"
+            },
+            {
+                img:
+                    "https://iili.io/HUdP4WB.jpg",
+                title_name:
+                    "Humorous",
+
+                artist_name:
+                    "Santhu",
+                pr:
+                    "1000",
+                size_by:
+                    "7x9 ",
+                descr:
+                    "Find the most inspiring illustrations, drawings, sketches, and paintings in this hand-picked collection",
+
+                user_email: "bharuchan90@gmail.com",
+
+                dataset: "illustration"
+            },
+            {
+                img:
+                    "https://iili.io/HUdPpxp.jpg",
+                title_name:
+                    "Meal on board",
+
+                artist_name:
+                    "Ignacio",
+                pr:
+                    "4000",
+                size_by:
+                    "7x9 ",
+                descr:
+                    "This image is an interpretation in 3d of a drawing made by my friend and colleague Ignacio Güejes",
+
+                user_email: "bharuchan90@gmail.com",
+
+                dataset: "illustration"
+            },
+            // photography
+            {
+                img:
+                    "https://iili.io/HUftw8l.jpg",
+                title_name:
+                    "Streets of asia",
+
+                artist_name:
+                    "Bharu",
+                pr:
+                    "1000",
+                size_by:
+                    "10x9 ",
+                descr:
+                    "I am a fine art photographer based in Dhaka, Bangladesh. For the past couple of months I have travelled to different streets in Bangladesh, India and Nepal. I love to explore narrow streets and back alleys in a city.",
+
+                user_email: "bharuchan90@gmail.com",
+
+                dataset: "photography"
+            },
+            {
+                img:
+                    "https://iili.io/HUfDxS4.jpg",
+                title_name:
+                    "Smoke street",
+
+                artist_name:
+                    "Sandeep",
+                pr:
+                    "1000",
+                size_by:
+                    "10x9 ",
+                descr:
+                    "A subreddit to share your street photography work and discuss the technique, gear and philosophies behind shooting street.",
+
+                user_email: "bharuchan90@gmail.com",
+
+                dataset: "photography"
+            },
+            {
+                img:
+                    "https://iili.io/HUfbaII.jpg",
+                title_name:
+                    "Man with pigeons",
+
+                artist_name:
+                    "Sandeep",
+                pr:
+                    "1000",
+                size_by:
+                    "10x9 ",
+                descr:
+                    "I love pigeons. This is photo",
+
+                user_email: "bharuchan90@gmail.com",
+
+                dataset: "photography"
+            },
+            {
+                img:
+                    "https://iili.io/HUfbPTB.jpg",
+                title_name:
+                    "Childhood joy",
+
+                artist_name:
+                    "Yogi",
+                pr:
+                    "1000",
+                size_by:
+                    "10x9 ",
+                descr:
+                    "The Joy of Childhood will always be a great remembrance even for the oldest of them all. Nothing to care about, so much to gather and share, arguably childhood remains the best stage of one's",
+
+                user_email: "bharuchan90@gmail.com",
+
+                dataset: "photography"
+            },
+            {
+                img:
+                    "https://iili.io/HUfmgPn.jpg",
+                title_name:
+                    "Munroe Island",
+
+                artist_name:
+                    "Prash",
+                pr:
+                    "500",
+                size_by:
+                    "10x9 ",
+                descr:
+                    "Munroe Island is a small island located at Kollam District in Kerala (Gods Own Country), India. It is formed by the backwaters of Ashtamudi Lake and Kallada River, this island is named after Colonel Munroe, the British Resident of erstwhile Travancore State. He is credited with having integrated several backwater regions by digging canals.",
+
+                user_email: "bharuchan90@gmail.com",
+
+                dataset: "photography"
+            },
+            {
+                img:
+                    "https://iili.io/HUq9zjp.jpg",
+                title_name:
+                    "Elephant blessing",
+
+                artist_name:
+                    "Sasi",
+                pr:
+                    "500",
+                size_by:
+                    "10x9 ",
+                descr:
+                    "Sri Meenakshi Temple, Madurai, Tamil Nadu, India View On Black",
+
+                user_email: "bharuchan90@gmail.com",
+
+                dataset: "photography"
+            }
+
+
+        ]))
+
+
+        let painting_div = (JSON.parse(localStorage.getItem("typesofart")));
+
+        const url = window.location.search; // ?name=Arun
+        const urlParams = new URLSearchParams(url); // converting string into key-value pairs
+        const storevalue = urlParams.get("title");
+
+        let boat = document.createElement("div");
+        boat.setAttribute("class", "top2");
+        document.querySelector("body").append(boat);
+        painting_div.find((e) => {
+            if (e.dataset == storevalue) {
+                // console.log(e)
+
+
+
+
+                // main div
+                duck = document.createElement("div");
+                duck.setAttribute("class", "main1");
+                boat.append(duck);
+
+
+
+                // content div
+                animal = document.createElement("div");
+                animal.setAttribute("class", "content");
+                duck.append(animal);
+
+
+                // a tag
+
+                lion = document.createElement("a");
+                lion.setAttribute("href", "../pages/product.html?title=" + e.title_name);
+                // lion.innerText="view page"
+                animal.append(lion);
+
+
+
+
+                // image placed in a tag
+                animal_img = document.createElement("img");
+                animal_img.setAttribute("src", e["img"]);
+                // animal_img.src=done[i]["img"];
+                // console.log(done[i]["img"])
+                animal_img.setAttribute("alt", "noerror");
+                lion.append(animal_img);
+
+
+
+                // content1 div
+                some_animal = document.createElement("div");
+                some_animal.setAttribute("class", "content1");
+                animal.append(some_animal);
+
+
+                // content2
+                some1_animal = document.createElement("div");
+                some1_animal.setAttribute("class", "content2");
+                some_animal.append(some1_animal);
+
+
+
+                // h2 tag
+                heading_animal = document.createElement("h2");
+                heading_animal.innerText = e["title_name"];
+                some1_animal.append(heading_animal);
+
+
+                // p tag
+                para1_animal = document.createElement("h3");
+                para1_animal.innerText = "By" + e["artist_name"];
+                some1_animal.append(para1_animal);
+
+
+                // content3
+                some2_animal = document.createElement("div");
+                some2_animal.setAttribute("class", "content3");
+                some_animal.append(some2_animal);
+
+
+                // img
+                image2_animal = document.createElement("img");
+                image2_animal.setAttribute("src", "../asset/images/likw.png");
+                image2_animal.setAttribute("width", "30px");
+                image2_animal.setAttribute("alt", "no error");
+                some2_animal.append(image2_animal);
+            }
+        })
+
+        let anchor_buttons = document.querySelectorAll('.top2 a');
+        //   console.log(anchor_buttons)
+        anchor_buttons.forEach((e) => {
+            e.addEventListener("click", (el) => {
+                localStorage.setItem("clicked", "explore")
+            })
+        })
+
+       let head = document.getElementById("hello")
+           head.innerText = storevalue;
+           console.log(storevalue)
+    </script>
+</body>
+
+</html>
