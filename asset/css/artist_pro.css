@@ -1,6 +1,10 @@
  *{
   margin: 0px;
   box-sizing: border-box;
+  
+ }
+
+ body{
   background-color:  rgba(255,242,238,255);
  }
 
@@ -290,16 +294,18 @@ button.primary_ghost:hover {
 /* pop-up */
 .input_box{
   position: absolute;
-  top: 400px;
-  left: 600px;
+  top: 210px;
+  left: 400px;
   z-index: 1000;
   display:none ;
   background-color: white;
-  width: 500px;
-  height: 600px;
+  width: 700px;
+  height: 700px;
   line-height: 2;
   text-align: center;
   padding-top: 10px;
+  border-radius: 20px;
+  
  
 }
 
@@ -311,4 +317,29 @@ button.primary_ghost:hover {
 
 .container {
   text-align: center;
+}
+
+
+textarea{
+   font-size: 15px;
+   border: 2px solid orange;
+   border-radius: 5px;
+}
+#sold_by,#price,#width{
+  padding: 10px 50px 10px 50px;
+  border: 2px solid orange;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 15px;
+}
+
+#savebtn{
+  padding: 10px 40px;
+  border-radius: 20px;
+  border: none;
+  background-color: orange;
+}
+
+#close{
+  margin-left: 630px;
 }

@@ -25,10 +25,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 
 <body>
@@ -41,15 +41,20 @@
         </div>
 
         <div class="input">
-            <input type="text" name="search_bar" id="search" placeholder="What do you like today???"> <i
+            <input type="text" name="search_bar" id="search" placeholder="What do you like today???">
+ <i
                 class="fa fa-search"></i> </button>
         </div>
 
         <div class="side_nav1">
             <ul>
-                <li><a href="../pages/categories.html">Shop Our product</a></li>
+                <li>
+<a href="../pages/categories.html">Shop Our product</a>
+</li>
 
-                <li> <img src="../asset/images/profile_picture_user_icon_153847.png" width="30px" alt="no error"></li>
+                <li>
+ <img src="../asset/images/profile_picture_user_icon_153847.png" width="30px" alt="no error">
+</li>
 
             </ul>
 
@@ -63,9 +68,15 @@
 
     <div class="header_prt1">
         <ul>
-            <li><a href="">Explore |</a></li>
-            <li><a href="">Categories |</a></li>
-            <li><a href="">Find Service </a></li>
+            <li>
+<a href="">Explore |</a>
+</li>
+            <li>
+<a href="">Categories |</a>
+</li>
+            <li>
+<a href="">Find Service </a>
+</li>
 
         </ul>
     </div>
@@ -155,23 +166,15 @@
 
         </div>
     </div>
-
-
  
         <div class="foot">
             <img src="../asset/images/user/footerbackground.jpg"  alt="">
             <p>While drawing I discover what I really want to say</p>
         </div>  -->
 
-
     <!-- footer -->
 
-
-
-
-    <script>
-
-        const arr = [
+    <script>        const arr = [
     
     {
         id : '1',
@@ -231,11 +234,6 @@
                 size: "7*4 size non-Framed",
 
     }
-
-
-
-
-
       
 ]
 
@@ -247,7 +245,7 @@
 
         const user = JSON.parse(localStorage.getItem("upload"));
         const clicked_page = localStorage.getItem("clicked");
-        let painting_div = JSON.parse(localStorage.getItem("typesofart"));
+        const painting_div = JSON.parse(localStorage.getItem("typesofart"));
         let result;
 
         // const result = user.find(function (userObj) {
@@ -263,150 +261,121 @@
         // });
 
         if(clicked_page=="categories"){
-            result = user.find(function (userObj) {
-        // userObj = {name : "Bala", "image": {}, "text": ""}
-                 console.log(userObj["title_name"].length,storevalue.length);
-        if (storevalue ===userObj["title_name"]) {
-            console.log(userObj["title_name"]);
-            return true;
-        }
-         else {
-            return false;
-        }
-        });
-
+            result = user.find((userObj) => {
+    // userObj = {name : "Bala", "image": {}, "text": ""}
+             console.log(userObj.title_name.length,storevalue.length);
+    if (storevalue ===userObj.title_name) {
+        console.log(userObj.title_name);
+        return true;
+    }
+     
+        return false;
+    
+    });
 
 //    console.log(clicked_page)
 
         }
         else{
-            result = painting_div.find(function (userObj) {
-        // userObj = {name : "Bala", "image": {}, "text": ""}
-                 console.log(userObj["title_name"].length,storevalue.length);
-        if (storevalue ===userObj["title_name"]) {
-            console.log(userObj["title_name"]);
-            return true;
-        }
-         else {
-            return false;
-        }
-        });
+            result = painting_div.find((userObj) => {
+    // userObj = {name : "Bala", "image": {}, "text": ""}
+             console.log(userObj.title_name.length,storevalue.length);
+    if (storevalue ===userObj.title_name) {
+        console.log(userObj.title_name);
+        return true;
+    }
+     
+        return false;
+    
+    });
         // console.log(result)
         }
-                
-       
-
-
-
- 
 
         // for (let i=0; i<user.length; i++){
 
-
         // content 
-        let content = document.createElement("div");
+        const content = document.createElement("div");
         content.setAttribute("class", "content");
         document.querySelector("body").append(content);
 
-
         //  main div
-        let main = document.createElement("main");
+        const main = document.createElement("main");
         content.append(main);
-
 
         // span tag
 
-        let span = document.createElement("span");
+        const span = document.createElement("span");
         main.append(span);
 
-
-        let image = document.createElement("img");
-        image.setAttribute("src", result["img"]);
+        const image = document.createElement("img");
+        image.setAttribute("src", result.img);
         image.setAttribute("width", "400px");
         image.setAttribute("alt", "Image loading");
         span.append(image);
 
-        let image2 = document.createElement("img");
-        image2.setAttribute("src", result["img"]);
+        const image2 = document.createElement("img");
+        image2.setAttribute("src", result.img);
         image2.setAttribute("width", "150px");
         image2.setAttribute("alt", "Image loading");
         span.append(image2);
 
-
-        let image3 = document.createElement("img");
-        image3.setAttribute("src", result["img"]);
+        const image3 = document.createElement("img");
+        image3.setAttribute("src", result.img);
         image3.setAttribute("width", "150px");
         image3.setAttribute("alt", "Image loading");
         span.append(image3);
 
-
         // product_txt div
 
-        let product_txt = document.createElement("div");
+        const product_txt = document.createElement("div");
         product_txt.setAttribute("class", "product_txt");
         content.append(product_txt);
 
-
-
         //  span div
-        let span1 = document.createElement("span");
+        const span1 = document.createElement("span");
         span1.setAttribute("id", "top");
-        span1.innerText = result["title_name"]
+        span1.innerText = result.title_name
         // console.log(span1)
         product_txt.append(span1);
 
-
         // br
 
-        let brr = document.createElement("br");
+        const brr = document.createElement("br");
         product_txt.append(brr);
 
-
-
-
         //  span div
-        let span2 = document.createElement("span");
+        const span2 = document.createElement("span");
         span2.setAttribute("id", "parrot");
-        span2.innerHTML = result["descr"]
+        span2.innerHTML = result.descr
         product_txt.append(span2);
 
-
         // br
 
-        let br1 = document.createElement("br");
+        const br1 = document.createElement("br");
         product_txt.append(br1);
 
-
         // br
 
-        let br2 = document.createElement("br");
+        const br2 = document.createElement("br");
         product_txt.append(br2);
-
-
-
 
         // p tag
 
-        let para = document.createElement("p");
+        const para = document.createElement("p");
         para.innerHTML = "Reference: 8*6bsize<br>";
         product_txt.append(para);
 
-
-
         // br
 
-        let br3 = document.createElement("br");
+        const br3 = document.createElement("br");
         para.append(br3);
-
-
 
         // span
 
-        let span_id = document.createElement("span");
+        const span_id = document.createElement("span");
         span_id.setAttribute("id", "yellow");
-        span_id.innerHTML = result["artist_name"]
+        span_id.innerHTML = result.artist_name
         para.append(span_id);
-
 
         // // br
         // let break_tag1 = document.
@@ -414,308 +383,258 @@
         // h3
 
         h3 = document.createElement("h3");
-        h3.innerHTML = "₹" + result["pr"];
+        h3.innerHTML = `₹${  result.pr}`;
         product_txt.append(h3);
-
 
         // p
 
         para1 = document.createElement("p");
         product_txt.append(para1);
 
-
         // img tag
-        let image4 = document.createElement("img");
+        const image4 = document.createElement("img");
         image4.setAttribute("src", " ../asset/images/free.png");
         image4.setAttribute("alt", "Image loading");
         para1.append(image4);
-
 
         // hello span
 
         // span
 
-        let span_id1 = document.createElement("span");
+        const span_id1 = document.createElement("span");
         span_id1.setAttribute("id", "hello");
         span_id1.innerHTML = "Free Shipping <br>"
         para1.append(span_id1);
 
-
-
-
-
         // span
 
-        let span_id2 = document.createElement("span");
+        const span_id2 = document.createElement("span");
         span_id2.setAttribute("id", "star");
-        span_id2.innerText = result["size_by"]
+        span_id2.innerText = result.size_by
         product_txt.append(span_id2);
-
 
         // material div
 
-        let material = document.createElement("div");
+        const material = document.createElement("div");
         material.setAttribute("class", "material");
         product_txt.append(material);
 
-
         // materials a tag
 
-        let material_a = document.createElement("a");
-        material_a.setAttribute("href", "../pages/cart.html?title_name="+  result["title_name"] );
+        const material_a = document.createElement("a");
+        material_a.setAttribute("href", `../pages/cart.html?title_name=${  result.title_name}` );
         material_a.innerText = "BUY NOW";
         // material.setAttribute("value",title_name);
         // console.log(result["title_name"])
         material.append(material_a);
 
-
-        let break_tag = document.createElement("br");
+        const break_tag = document.createElement("br");
         product_txt.append(break_tag);
-
 
         // hr div tag
 
-        let hr_tag = document.createElement("div");
+        const hr_tag = document.createElement("div");
         hr_tag.setAttribute("class", "hr");
         product_txt.append(hr_tag);
 
         //  h3tag
 
-        let h3_tag = document.createElement("h3");
+        const h3_tag = document.createElement("h3");
         h3_tag.innerText = "Product Detail";
         hr_tag.append(h3_tag);
 
         //    span = lol tag
 
-
-        let span_tag = document.createElement("span");
+        const span_tag = document.createElement("span");
         span_tag.setAttribute("id", "lol");
         hr_tag.append(span_tag);
 
-
-
-
         //  p tag placed in span 
 
-        let p_tag = document.createElement("p");
+        const p_tag = document.createElement("p");
         p_tag.innerText = "8*6 size non-Framed";
         span_tag.append(p_tag);
 
-
         //  hr tag
 
-        let hr = document.createElement("hr");
+        const hr = document.createElement("hr");
         hr_tag.append(hr)
-
 
         //    h3 _ tag
 
-        let h3_tag1 = document.createElement("h3");
+        const h3_tag1 = document.createElement("h3");
         h3_tag1.innerText = "Exchange & Returns";
         hr_tag.append(h3_tag1);
 
-
         //  p tag
 
-        let p_tag1 = document.createElement("p");
+        const p_tag1 = document.createElement("p");
         // p_tag.innerHTML="br"
         p_tag1.innerHTML = "We do not accept returns unless product is damaged <br>. Request to share unboxing video incase  of damage and write to us within 5<br> days of product receipt"
         hr_tag.append(p_tag1);
 
-
         // <hr> tag
 
-        let hr_tagg = document.createElement("hr");
+        const hr_tagg = document.createElement("hr");
         hr_tag.append(hr_tagg);
-
 
         // h3_tag
 
-        let h3_taging = document.createElement("h3");
+        const h3_taging = document.createElement("h3");
         h3_taging.innerText = " Shipping Info";
         hr_tag.append(h3_taging);
 
-
         // p_tag
 
-        let p_tag2 = document.createElement("p");
+        const p_tag2 = document.createElement("p");
         p_tag2.innerText = "Products are shipped within 10 working days of order confirmation"
         hr_tag.append(p_tag2);
 
-
         // hr_tag
 
-        let hor_tag = document.createElement("hr");
+        const hor_tag = document.createElement("hr");
         hr_tag.append(hor_tag);
-
 
         //    h3_tag 
 
-        let h3_tag2 = document.createElement("h3");
+        const h3_tag2 = document.createElement("h3");
         h3_tag2.innerText = "Care Instructions";
         hr_tag.append(h3_tag2);
 
-
         //    p_tag
-        let para_taggg = document.createElement("p");
+        const para_taggg = document.createElement("p");
         para_taggg.innerText = "Gently wipe with a dry cloth";
         hr_tag.append(para_taggg);
 
-
-
         // hr_tag
 
-        let hor1_tag = document.createElement("hr");
+        const hor1_tag = document.createElement("hr");
         hr_tag.append(hor1_tag);
-
 
         //  p_tag
 
-        let para_graph = document.createElement("p");
+        const para_graph = document.createElement("p");
         para_graph.innerText = "Category: Paintings,Sub Category:"
         hr_tag.append(para_graph);
 
-
         // span tag\
-        let spaning = document.createElement("span");
+        const spaning = document.createElement("span");
         spaning.setAttribute("id", "red");
         spaning.innerText = "Non-framed";
         para_graph.append(spaning);
 
-
-
-
-
-
         // relate div 
-        let relate = document.createElement("div");
+        const relate = document.createElement("div");
         relate.setAttribute("class", "relate");
         document.querySelector("body").append(relate);
 
         //  rev1 div   // 
 
-        let rev1 = document.createElement("div");
+        const rev1 = document.createElement("div");
         rev1.setAttribute("class", "rev1");
         relate.append(rev1);
 
         //   image tah
-        let img_tag = document.createElement("img");
+        const img_tag = document.createElement("img");
         img_tag.setAttribute("src", "../asset/images/product1.jpg");
         img_tag.setAttribute("width", "400px");
         img_tag.setAttribute("alt", "product1.jpg");
         rev1.append(img_tag);
 
-
         // p_tag
 
-        let p_tagging = document.createElement("p");
+        const p_tagging = document.createElement("p");
         p_tagging.innerText = "Joker-color";
         rev1.append(p_tagging);
 
         //  h3_tag
-        let h3_taging1 = document.createElement("h3");
+        const h3_taging1 = document.createElement("h3");
         h3_taging1.innerHTML = "&#8377; 1400";
         rev1.append(h3_taging1)
 
-
         // rev1_tag
 
-        let rev1_tag = document.createElement("div");
+        const rev1_tag = document.createElement("div");
         rev1_tag.setAttribute("class", "rev1");
         relate.append(rev1_tag);
 
-
         //img_sc
 
-        let img_sc = document.createElement("img");
+        const img_sc = document.createElement("img");
         img_sc.setAttribute("src", "../asset/images/product3.jpg");
         img_sc.setAttribute("alt", "no_error");
         rev1_tag.append(img_sc);
 
-
         //  p 
-        let para_dot = document.createElement("p");
+        const para_dot = document.createElement("p");
         para_dot.innerText = "Venom"
         rev1_tag.append(para_dot);
 
-
         // h3_tag
-        let h3_tagline = document.createElement("h3");
+        const h3_tagline = document.createElement("h3");
         h3_tagline.innerHTML = "&#8377; 1400";
         rev1_tag.append(h3_tagline);
 
-
-
         //  rev1 tag
-        let rev1_tagline = document.createElement("div");
+        const rev1_tagline = document.createElement("div");
         rev1_tagline.setAttribute("class", "rev1");
         relate.append(rev1_tagline);
 
         // img_src
 
-        let img_src = document.createElement("img");
+        const img_src = document.createElement("img");
         img_src.setAttribute("src", "../asset/images/product4.jpg");
         img_src.setAttribute("alt", "product4.jpg");
         rev1_tagline.append(img_src);
 
-
         // p_tag
-        let p_tag_line = document.createElement("p");
+        const p_tag_line = document.createElement("p");
         p_tag_line.innerText = "Wild-man";
         rev1_tagline.append(p_tag_line);
 
-
         // h3_tag
-        let h3_tag_line = document.createElement("h3");
+        const h3_tag_line = document.createElement("h3");
         h3_tag_line.innerHTML = "&#8377; 1400";
         rev1_tagline.append(h3_tag_line);
 
-
-
         //  rev1 div 
-        let rev11_tagline = document.createElement("div");
+        const rev11_tagline = document.createElement("div");
         rev11_tagline.setAttribute("class", "rev1");
         relate.append(rev11_tagline);
 
-
         // img_src
-        let img1_src = document.createElement("img");
+        const img1_src = document.createElement("img");
         img1_src.setAttribute("src", "../asset/images/product2.jpg");
         img1_src.setAttribute("alt", "product4.jpg");
         rev11_tagline.append(img1_src);
 
-
         // p_tag
-        let p1_tag_line = document.createElement("p");
+        const p1_tag_line = document.createElement("p");
         p1_tag_line.innerText = "spider_man";
         rev11_tagline.append(p1_tag_line);
 
-
         // h3_tag
-        let h3_1tag_line = document.createElement("h3");
+        const h3_1tag_line = document.createElement("h3");
         h3_1tag_line.innerHTML = "&#8377; 1300";
         rev11_tagline.append(h3_1tag_line);
 
-
         // foot div 
-        let foot = document.createElement("div");
+        const foot = document.createElement("div");
         foot.setAttribute("class", "foot");
         document.querySelector("body").append(foot);
 
-
         // img_src
 
-        let img_source = document.createElement("img");
+        const img_source = document.createElement("img");
         img_source.setAttribute("src", "../asset/images/user/footerbackground.jpg");
         img_source.setAttribute("alt", "no error");
         foot.append(img_source);
 
         // ptag
 
-        let para_graph_atg = document.createElement("p");
+        const para_graph_atg = document.createElement("p");
         para_graph_atg.innerText = "While drawing I discover what I really want to say";
         foot.append(para_graph_atg);
-
 
     // }
 
@@ -748,14 +667,9 @@
     //                 sold : "Sold:Rahul",
     //                 size: "2*4 size non-Framed",
     //     }
-
-
           
     // ] 
-
-
     </script>
-
 
     <footer>
         <hr>
@@ -776,8 +690,6 @@
             </div>
         </div>
     </footer>
-
-
 
 </body>
 

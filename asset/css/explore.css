@@ -2,10 +2,17 @@
     margin: 0px;
     padding: 0px;
 }
+
+body{
+    background-color:  rgba(255,242,238,255);
+}
 header{
     display: flex;
     justify-content: space-between;
+    
    }
+
+   
   
    .logo img{
     margin-left: 30px;
@@ -38,7 +45,7 @@ header{
     outline: none;
    }
    .input i{
-    background-color:rgba(242, 194, 2, 0.938);
+    background-color:sandybrown;
     color: black;
     padding: 13px 20px;
     border-radius: 5px;
@@ -99,6 +106,7 @@ header{
     border: none;
     font-size: 20px;
     margin-right: 250px;
+    outline: none;
 }
 
 span button {
@@ -109,7 +117,7 @@ span button {
     border: none;
     left: 500px;
     top: 0px;
-    background-color: rgba(242, 194, 2, 0.938);
+    background-color:sandybrown;
     padding-top: 16px;
     padding-left: 30px;
     padding-right: 30px;

@@ -4,12 +4,15 @@
   scroll-behavior: smooth;
 }
 
-
+.upload_text a img{
+  margin-left: 500px;
+}
 
 
 
 body {
   padding-bottom: 50px;
+  background-color:  rgba(255,242,238,255);
 }
 
 #myVideo {
@@ -237,6 +240,7 @@ body {
 .after h1 {
   padding-top: 50px;
   font-family: 'Montserrat', sans-serif;
+  color: black;
   font-weight: 800;
   font-size: 50px;
   padding-bottom: 10px;
@@ -857,3 +861,5 @@ h2 {
   opacity: 0;
   transition: opacity 1s
 }
+
+ 

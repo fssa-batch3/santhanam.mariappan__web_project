@@ -14,17 +14,13 @@
 
     <!-- setting background image -->
 
-
      <img src="asset/images/gif1.gif" id="img" width="150px" alt="">
-
 
     <div class="main">
 
         <div class="side_img">
             <img src="./asset/images/Zan-removebg-preview.png" width="450px" height="300px" alt="">
         </div>
-
-
 
         <div class="backgrond_image">
 
@@ -46,15 +42,12 @@
 
                 </div>
 
-
                 <form id="login" class="input_group">
                     <!-- 
                     <input type="email" class="input_field" id="log_mail" placeholder="User mail" required>
                     <input type="text" class="input_field" id="passcode" placeholder="Enter password" required>
                      <input type="checkbox" class="checkbox"> <span>Save information</span>
                     <button class="submitbut" id="login_submit"> login</a></button>  -->
-
-
 
                     <input type="text" class="input_field" id="user_id" placeholder=" Create your User Name"
                     pattern="[A-Za-z]{4,24}" title="usernmae  contain minimum 1 and maximum 24 character">
@@ -63,22 +56,19 @@
                         pattern="[A-Z a-z] [0-9] [@,!] {8-12}"
                         title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
 
-
                     <input type="password" class="input_field" id="password1" placeholder="Enter your password"
                         required>
                     <input type="tel" class="input_field" id="mobilenumber" placeholder="Enter your mobile number"
                         pattern="[0-9]{10}" title=" This box only have numbers" required>
-   <br><br><br>
+   <br>
+<br>
+<br>
                     <!-- <input type="checkbox" class="checkbox" id="Agree"> <span> Agree terms and conditions</span> -->
                     <button type="submit" class="submit_butn">Register</button>
 
-
                 </form>
 
-
-
                 <form id="register" class="input_group">
-
 
                     <input type="email" class="input_field" id="log_mail" placeholder="User mail" required>
                     <input type="password" class="input_field" id="passcode" placeholder="Enter password" required>
@@ -92,7 +82,6 @@
                         pattern="[A-Z a-z] [0-9] [@,!] {8-12}"
                         title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
 
-
                      <input type="password" class="input_field" id="password1" placeholder="Enter your password"
                         required>
                      <input type="text" class="input_field" id="mobilenumber" placeholder="Enter your mobile number"
@@ -103,32 +92,23 @@
 
                 </form>
 
-
             </div>
 
         </div>
     </div>
 
-
     <script src="asset/js/main.js"></script>
-   <script>
-
-
-        // creating divs
-
+   <script>        // creating divs
 
         //   main div
         //     yellow = document.createElement("div");
         //     yellow.setAttribute("class", "main")
         //     document.querySelector("body").prepend(yellow)
 
-
         //     //side_img div
         //     red = document.createElement("div");
         //     red.setAttribute("class", "side_img");
         //     yellow.append(red);
-
-
 
         //     // image placed inside the side_img div
 
@@ -136,12 +116,10 @@
         //     orange.setAttribute("src", "./assets/banner.jpg");
         //     red.append(orange);
 
-
         //     // backgrond_image div
         //     violet = document.createElement("div");
         //     violet.setAttribute("class", "backgrond_image");
         //     yellow.append(violet);
-
 
         //     // form_class
 
@@ -149,20 +127,15 @@
         //     blue.setAttribute("class", "form_class");
         //     violet.append(blue);
 
-
         //  //  but_box
         //     black = document.createElement("div");
         //     black.setAttribute("class", "but_box");
         //     blue.append(black);
 
-
-
         //     // butn
         //     brown = document.createElement("div");
         //     brown.setAttribute("class", "butn");
         //     black.append(brown);
-
-
 
         //     // button1
 
@@ -172,10 +145,7 @@
         //     grey.innerText="Login";
         //     black.append(grey);
 
-
-
         //     // button2
-
 
         //     pink=document.createElement("button");
         //     pink.setAttribute("class","butn_1");
@@ -183,12 +153,11 @@
         //     pink.innerText="Register";
         //     black.append(grey);
 
-        let red = document.getElementById("login")
-        let yellow = document.getElementById("register")
-        let orange = document.getElementById("butn")
-        let butn1 = document.getElementById("butn_1")
-        let butn2 = document.getElementById("butn_2")
-
+        const red = document.getElementById("login")
+        const yellow = document.getElementById("register")
+        const orange = document.getElementById("butn")
+        const butn1 = document.getElementById("butn_1")
+        const butn2 = document.getElementById("butn_2")
 
         // declares a function for register page
         // let register_login = document.getElementById("butn_2")
@@ -203,7 +172,7 @@
             butn1.style.color = "black"
         }
         )
-        let butnlogin = document.getElementById("butn_1")
+        const butnlogin = document.getElementById("butn_1")
 butnlogin.addEventListener("click",()=>{
     login();
 })
@@ -218,42 +187,40 @@ butnlogin.addEventListener("click",()=>{
 
         }
 
-        let formButton = document.getElementById("login")
+        const formButton = document.getElementById("login")
         formButton.addEventListener("submit", (e) => {
 
             field();
             e.preventDefault();
 
-
         })
         // register page to create new account
         function field() {
 
-            let user = document.getElementById("user_id").value;
-            let email = document.getElementById("email").value;
-            let pass = document.getElementById("password").value;
-            let enterpass = document.getElementById("password1").value;
+            const user = document.getElementById("user_id").value;
+            const email = document.getElementById("email").value;
+            const pass = document.getElementById("password").value;
+            const enterpass = document.getElementById("password1").value;
 
-            let mobile = document.getElementById("mobilenumber").value;
-
+            const mobile = document.getElementById("mobilenumber").value;
 
             //   alert message for email or account created sucessfully
-            let ret = {};
+            const ret = {};
 
-            ret["user"] = user,
-                ret["email"] = email,
-                ret["pass"] = pass,
-                ret["enterpass"] = enterpass,
-                ret["mobile"] = mobile,
-                ret["about"] = "",
-                ret["country"] = "",
-                ret["gender"] = ""
+            ret.user = user,
+                ret.email = email,
+                ret.pass = pass,
+                ret.enterpass = enterpass,
+                ret.mobile = mobile,
+                ret.about = "",
+                ret.country = "",
+                ret.gender = ""
 
-            let command = JSON.parse(localStorage.getItem("users")) ?? [];
+            const command = JSON.parse(localStorage.getItem("users")) ?? [];
             let j = 0;
 
             for (let i = 0; i < command.length; i++) {
-                if (command[i]["email"] == email) {
+                if (command[i].email == email) {
                     j = 1;
                     break;
 
@@ -281,57 +248,49 @@ butnlogin.addEventListener("click",()=>{
 
             }
 
-
         }
 
-
-
-        let submit_butn = document.getElementById("login_submit")
-        let test = document.getElementById("test");
-
+        const submit_butn = document.getElementById("login_submit")
+        const test = document.getElementById("test");
 
         // Declaring a function for login
-        let formBtn = document.getElementById("register")
+        const formBtn = document.getElementById("register")
         formBtn.addEventListener("submit", (e) => {
             e.preventDefault();
             done();
         })
 
-
         function done() {
 
-            let log_mail = document.getElementById("log_mail").value;
-            let passcode = document.getElementById("passcode").value;
-
+            const log_mail = document.getElementById("log_mail").value;
+            const passcode = document.getElementById("passcode").value;
 
             // popup
 
-            let submit_butn = document.getElementById("login_submit")
+            const submit_butn = document.getElementById("login_submit")
             const user_data = JSON.parse(localStorage.getItem("users"));
 
             let check;
 
             user_data.find(element => {
 
-                if (element["email"] == log_mail && element["pass"] == passcode) {
-                    const profile = JSON.stringify(element);
+        if (element.email == log_mail && element.pass == passcode) {
+            const profile = JSON.stringify(element);
 
-                    // checkbox
-                    // let span_check = document.getElementById("span_check").checked
-                    // if (span_check) {
+            // checkbox
+            // let span_check = document.getElementById("span_check").checked
+            // if (span_check) {
 
-                        localStorage.setItem("profile", profile);
-                        alert("Sucessfully Login")
+                localStorage.setItem("profile", profile);
+                alert("Sucessfully Login")
 
-                    // }
-                    return check = 1
-                }
-                else {
-                    return check = 0
-                }
+            // }
+            return check = 1
+        }
+        
+            return check = 0
 
-
-            })
+    })
 
             if (check == 1) {
 
@@ -344,12 +303,8 @@ butnlogin.addEventListener("click",()=>{
 
             }
 
-
         }
-
-
     </script>
-
 
 </body>
 

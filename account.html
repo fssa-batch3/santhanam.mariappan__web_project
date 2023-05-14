@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="account.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
@@ -19,24 +19,16 @@
 
     <!-- main -->
 
-
-
     <!--  display flex div  -->
     <div class="back_ground">
-
-
 
         <!-- 
         <div class="back_ground1">
             <a href="./pages/home.html">Back to home</a>
 
-
         </div> -->
 
-
-
         <div class="back_ground2">
-
 
             =
             <div class="display2">
@@ -48,13 +40,14 @@
                 <br>
                 <!-- <input type="file" name="file" id="file"> -->
 
-                <br><br>
-
+                <br>
+<br>
 
                 <div class="btn">
 
                     <button id="save">Save</button>
-                    <br> <br>
+                    <br>
+ <br>
                     <button id="edit"> Edit </button>
                 </div>
                 <div class="log">
@@ -67,54 +60,52 @@
 
         </div>
 
-
-
-
         <div class="display">
-
-
 
             <form id="forms">
 
                 <div class="none">
                     <div class="display1">
 
-                        <h3> User name:</h3> <input type="text" name="firstname" id="username" disabled
-                            pattern=^[A-Za-z0-9_]{1,32}$ title="This contain have (Upper case && Lowercase)">
+                        <h3> User name:</h3>
+ <input type="text" name="firstname" id="username" disabled
+                            pattern="^[A-Za-z0-9_]{1,32}$" title="This contain have (Upper case && Lowercase)">
 
-
-
-                        <br><br><br>
-                        <h3>Email</h3> <input type="email" name="" id="email" disabled>
-                        <br><br><br>
+                        <br>
+<br>
+<br>
+                        <h3>Email</h3>
+ <input type="email" name="" id="email" disabled>
+                        <br>
+<br>
+<br>
 
                         <h3>Phone number</h3>
 
                         <input type="tel" name="phone" id="phone" disabled required pattern="[0-9]{10}"
                             title="This contain have Number only">
 
+                        <br>
+<br>
+<br>
 
-
-
-
-                        <br><br><br>
-
-                        <h3>Country</h3> <input type="country" name="country" id="country" pattern=^[A-Za-z0-9_]{1,32}$
+                        <h3>Country</h3>
+ <input type="country" name="country" id="country" pattern="^[A-Za-z0-9_]{1,32}$"
                             disabled>
-
-
 
                         <!-- <h3>Zip-code</h3> <input type="text" name="zip-code" id="zip-code" pattern="{0-6}" disabled -->
 
-                        <br><br><br>
+                        <br>
+<br>
+<br>
 
-                        <h3>Gender:</h3> <select name="Gender" id="gender" required>
+                        <h3>Gender:</h3>
+ <select name="Gender" id="gender" required>
 
                             <option>Male</option>
                             <option>Female</option>
                             <option>Other</option>
                         </select>
-
 
                     </div>
 
@@ -124,11 +115,17 @@
 
                            <div class="dic1"> 
                             <!-- <a href="asset/css/artist1.html"><h1>Orders</h1></a> -->
-                            <h2 id="hi_or">Orders </h2> <a href="asset/css/artist1.html">  <img src="asset/images/order_logo.png" width="80px" alt="">  </a>
+                            <h2 id="hi_or">Orders </h2>
+ <a href="asset/css/artist1.html">
+  <img src="asset/images/order_logo.png" width="80px" alt="">  
+</a>
                         </div>
                             <!-- <button id="your_art"> <a href="/asset/css/Rewardsandarts.html"> Your Uploaded arts</a> -->
-                        <div class="dic2">        <h2>Your Arts</h2>
-                              <a href="/asset/css/Rewardsandarts.html"> <img src="asset/images/art_lo.png" width="80px" alt=""></a>  
+                        <div class="dic2">
+        <h2>Your Arts</h2>
+                              <a href="/asset/css/Rewardsandarts.html">
+ <img src="asset/images/art_lo.png" width="80px" alt="">
+</a>  
                         </div>
                     </div>
                         <!-- </button> -->
@@ -139,30 +136,20 @@
                 </div>
         </div>
 
-
-
-
-
     </div>
 
-
     <div class="con_dev">
-
 
         <div class="con_dev1">
             <img src="asset/images/pro_bg.png" width="300px" alt="">
         </div>
 
         <div class="text">
-            <h3> Publish creative art, craft, writings and other creatives to get visibility ofart enthusiast <br> across
+            <h3>
+ Publish creative art, craft, writings and other creatives to get visibility ofart enthusiast <br> across
                 the worldWe are specialsts in Art. Creativity and fun are our ingredients for awesome work</h3>
         </div>
     </div>
-
-
-
-
-
 
     <script>
         const form = document.getElementById("save")
@@ -173,18 +160,12 @@
 
         let arr = JSON.parse(localStorage.getItem("profile"));
 
-
-
         document.getElementById("username").value = arr["user"];
         document.getElementById("email").value = arr["email"];
         document.getElementById("phone").value = arr["mobile"];
         document.getElementById("gender").value = arr["gender"];
         document.getElementById("des").value = arr["about"];
         document.getElementById("country").value = arr["country"]
-
-
-
-
 
         let Edit = document.getElementById("edit")
         console.log(Edit)
@@ -199,12 +180,6 @@
             document.getElementById("des").removeAttribute("disabled");
 
         })
-
-
-
-
-
-
 
         function save() {
 
@@ -223,10 +198,6 @@
             let country = document.getElementById("country").value
             let about = document.getElementById("des").value
 
-
-
-
-
             newdata.find(userobj => {
                 if (userobj["email"] == useremail) {
                     userobj["user"] = username;
@@ -235,10 +206,7 @@
                     userobj["gender"] = gender;
                     userobj["country"] = country
 
-
                     console.log(userobj["country"])
-
-
 
                     localStorage.setItem("users", JSON.stringify(newdata))
                     localStorage.setItem("profile", JSON.stringify(userobj))
@@ -247,9 +215,7 @@
 
             })
 
-
         }
-
 
         function logout() {
             let del = JSON.parse(localStorage.getItem("profile"));
@@ -258,13 +224,11 @@
             localStorage.setItem("profile", JSON.stringify(dele))
             window.location.href = "index.html"
 
-
         }
 
         let fi = document.getElementById("file")
 
         let img = document.getElementById("image_profile")
-
 
         //this function for change profile picture
         file.addEventListener('change', function () {

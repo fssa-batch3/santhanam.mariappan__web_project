@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 
 <body>
@@ -24,7 +24,8 @@
         </div>
 
         <div class="input">
-            <input type="text" name="search_bar" id="search" placeholder="What do you like today???"> <i
+            <input type="text" name="search_bar" id="search" placeholder="What do you like today???">
+ <i
                 class="fa fa-search"></i>
         </div>
 
@@ -45,9 +46,15 @@
 
     <div class="header_prt1">
         <ul>
-            <li><a href="../pages/home.html">Home |</a></li>
-            <li><a href="categories.html">Products |</a></li>
-            <li><a href="findservice,.html">Find Service </a></li>
+            <li>
+<a href="../pages/home.html">Home |</a>
+</li>
+            <li>
+<a href="categories.html">Products |</a>
+</li>
+            <li>
+<a href="findservice,.html">Find Service </a>
+</li>
 
         </ul>
     </div>
@@ -55,9 +62,6 @@
         <br>
         <hr>
     </span>
-
-
-
 
     <!-- background_image -->
 
@@ -107,65 +111,56 @@
             <h3>Width and height(mm)</h3>
 
             <input type="text" name="width" id="width">
-
+             <br><br>
             <button type="submit" id="savebtn">Save</button>
-
-
 
         </form>
     </div>
 
+    <script>        // forloop
 
-    <script>
-
-
-        // forloop
-
-        let profile_page = JSON.parse(localStorage.getItem("upload"))
+        const profile_page = JSON.parse(localStorage.getItem("upload"))
 
         let showedProduct;
         showedProduct = profile_page.filter((data) => {
-            if (data["status"] == true) {
-                return true
-            }
-            else {
-                return false
-            }
-        })
-        let container = document.createElement("div");
+    if (data.status == true) {
+        return true
+    }
+    
+        return false
+    
+})
+        const container = document.createElement("div");
         container.setAttribute("class", "container");
 
-
-
-        let h2 = document.createElement("h2");
+        const h2 = document.createElement("h2");
         h2.setAttribute("id", "h2_tag");
         h2.innerText = "Your Uploaded art"
         container.append(h2);
 
-        let uli = document.createElement("ul");
+        const uli = document.createElement("ul");
         uli.setAttribute("class", "cards");
         console.log(uli);
-        let ul = document.querySelector(".cards")
+        const ul = document.querySelector(".cards")
 
         // console.log(showedProduct,"ytrfd");
         for (let i = 0; i < showedProduct.length; i++) {
 
-
             ul.innerHTML += `<li class="card">
                 <div class="image_card">
-                    <img class="round" src=${showedProduct[i]["img"]} width="200px" alt="user" />
+                    <img class="round" src=${showedProduct[i].img} width="200px" alt="user" />
                     <h3  id="card-title">
-                        ${showedProduct[i]["title_name"]}
+                        ${showedProduct[i].title_name}
                         </h3>
                     <div class="card-content">
-                        <p>Rs:  ${showedProduct[i]["pr"]}</p>
+                        <p>Rs:  ${showedProduct[i].pr}</p>
                     </div>
                 </div>
                 <div class="buttons">
-                    <button value="${showedProduct[i]["title_name"]}" class="primary">
+                    <button value="${showedProduct[i].title_name}" class="primary">
                         Edit
                     </button>
-                    <button value="${showedProduct[i]["title_name"]}"class="primary_ghost">      
+                    <button value="${showedProduct[i].title_name}"class="primary_ghost">      
                         Delete
                     </button>
                 </div>
@@ -178,27 +173,20 @@
         // let empty_div = document.createElement("div");
         // li.append(empty_div);
 
-
         // let image = document.querySelector("img");
         // image.setAttribute("class", "round")
         // image.setAttribute("src", showedProduct[i]["img"]);
         // image.setAttribute("alt", "Image loading");
         // empty_div.append(image);
 
-
-
         // let card_title = document.createElement("h3");
         // card_title.setAttribute("id", "card-title");
         // card_title.innerText = showedProduct[i]["title_name"]
         // empty_div.append(card_title);
 
-
-
         // let card_content = document.createElement("div");
         // card_content.setAttribute("class", "card-content")
         // empty_div.append(card_content);
-
-
 
         // let para = document.createElement("p");
         // para.innerText = showedProduct[i]["Art_title"];
@@ -214,7 +202,6 @@
         // button.innerText = "Edit"
         // div_button.append(button);
 
-
         // let button1 = document.createElement("button");
         // button1.setAttribute("class", "primary_ghost");
         // button1.setAttribute("value",showedProduct[i]["title_name"]);
@@ -223,38 +210,28 @@
         // container.append(uli);
         // document.querySelector("body").append(container);
 
-
-
-
-
-
-
-
-
-
-        let input_box = document.getElementsByClassName("input_box")
+        const input_box = document.getElementsByClassName("input_box")
 
         console.log(input_box)
 
-        let card_name = document.getElementById("card-title").innerText
+        const card_name = document.getElementById("card-title").innerText
         console.log(card_name)
         // console.log( profile_page[0]["title_name"])
 
         //view
-        let des = document.getElementById("des");
-        let sold_by = document.getElementById("sold_by");
-        let price = document.getElementById("price");
-        let width = document.getElementById("width");
+        const des = document.getElementById("des");
+        const sold_by = document.getElementById("sold_by");
+        const price = document.getElementById("price");
+        const width = document.getElementById("width");
 
-        let savebtn = document.getElementById("savebtn")
-        let uploadproducts = JSON.parse(localStorage.getItem("upload"))
+        const savebtn = document.getElementById("savebtn")
+        const uploadproducts = JSON.parse(localStorage.getItem("upload"))
         // uploadproducts.find((data)=>{
 
         // })
         let saveButton;
 
-        let Edit = document.querySelectorAll(".primary");
-
+        const Edit = document.querySelectorAll(".primary");
 
         Edit.forEach(btn => {
 
@@ -263,95 +240,78 @@
             btn.addEventListener("click", (e) => {
                 // console.log("jihgvfg");
 
-
                 profile_page.find(obj => {
                     // console.log(obj["title_name"])
                     // console.log(card_name)
                     // console.log("fal", card_name, obj["title_name"].trim());
 
-                    if (obj["title_name"].trim() == card_name) {
-                        let head = document.getElementById("title_name1")
+                    if (obj.title_name.trim() == card_name) {
+                        const head = document.getElementById("title_name1")
                         head.innerText = card_name
                         // console.log("sure");
 
                         input_box[0].style.display = "block"
-                        // input_box[0].style.display = "block"
+                         
+                        // body.style.filter = "blur(6px)"
                     }
                 })
                     // view
                     for (let i = 0; i < uploadproducts.length; i++) {
 
-                        if (buttonValue == uploadproducts[i]["title_name"]) {
+                        if (buttonValue == uploadproducts[i].title_name) {
 
-                            sold_by.value = uploadproducts[i]["artist_name"];
-                            des.value = uploadproducts[i]["descr"];
-                            price.value = uploadproducts[i]["pr"];
-                            width.value = uploadproducts[i]["size_by"];
-                            savebtn.value = uploadproducts[i]["title_name"]
+                            sold_by.value = uploadproducts[i].artist_name;
+                            des.value = uploadproducts[i].descr;
+                            price.value = uploadproducts[i].pr;
+                            width.value = uploadproducts[i].size_by;
+                            savebtn.value = uploadproducts[i].title_name
                         }
                     }
-
                
             })
         })
 
-
-
-
-
-
-
         savebtn.addEventListener(("click"), () => {
-            let Savedbtn = savebtn.value;
+            const Savedbtn = savebtn.value;
             // alert(Savedbtn)
 
             for (let i = 0; i < uploadproducts.length; i++) {
 
-                if (Savedbtn == uploadproducts[i]["title_name"]) {
-                    uploadproducts[i]["artist_name"] = sold_by.value;
-                    uploadproducts[i]["descr"] = des.value;
-                    uploadproducts[i]["pr"] = price.value;
-                    uploadproducts[i]["size_by"] = width.value;
-
+                if (Savedbtn == uploadproducts[i].title_name) {
+                    uploadproducts[i].artist_name = sold_by.value;
+                    uploadproducts[i].descr = des.value;
+                    uploadproducts[i].pr = price.value;
+                    uploadproducts[i].size_by = width.value;
 
                     localStorage.setItem("upload", JSON.stringify(uploadproducts))
-
 
                 }
             }
 
-
         })
 
-
-
-
-        let close_tab = document.getElementById("close");
+        const close_tab = document.getElementById("close");
         close_tab.addEventListener("click", e => {
 
             input_box[0].style.display = "none";
 
         })
 
-
-
         // delete 
 
-        let deletedd = document.querySelectorAll(".primary_ghost");
+        const deletedd = document.querySelectorAll(".primary_ghost");
 
         deletedd.forEach((e, index) => {
             e.addEventListener("click", () => {
                 // alert("ok")
                 console.log("hiiii")
 
-
-
-                let deletevalue = e.value
+                const deletevalue = e.value
                 uploadproducts.find((data) => {
-                    console.log(deletevalue, data["title_name"], deletevalue.length, data["title_name"].length, deletevalue == data["title_name"]);
+                    console.log(deletevalue, data.title_name, deletevalue.length, data.title_name.length, deletevalue == data.title_name);
 
-                    if (deletevalue == data["title_name"]) {
-                        data["status"] = false
+                    if (deletevalue == data.title_name) {
+                        data.status = false
                         console.log("hi")
                         // alert("ok")
 
@@ -360,18 +320,17 @@
                     localStorage.setItem("upload", JSON.stringify(uploadproducts))
                 })
 
-
             })
         })
 
         //search feature
 
-        let search = document.getElementById("search");
+        const search = document.getElementById("search");
         search.addEventListener("keyup", (e) => {
-            let words = e.target.value.toLowerCase();
-            let letter = document.querySelectorAll(".image_card");
+            const words = e.target.value.toLowerCase();
+            const letter = document.querySelectorAll(".image_card");
             letter.forEach((element) => {
-                let content = element.children[1].textContent.toLowerCase();
+                const content = element.children[1].textContent.toLowerCase();
                 if (content.includes(words)) {
                     element.style.display = "block";
                    
@@ -380,9 +339,6 @@
                 }
             });
         });
-
-
-
     </script>
 
 </body>
