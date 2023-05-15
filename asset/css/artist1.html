@@ -110,6 +110,7 @@
 
     const product_email = JSON.parse(localStorage.getItem("product_details"))
     const filter_data = product_email.filter((datas) => datas.person_product_email == artist_email_acc)
+     
     console.log(filter_data)
 
     if (filter_data == null) {
@@ -136,7 +137,7 @@
 
         <div class="other">
              <form  id="approve">
-                <button id="accept">Done</button>
+                <button data-id=${filter_data[i].requested_user_email} id="accept">Done</button>
              
              </form>
         </div>
@@ -145,18 +146,19 @@
         }
     }
 
-    const email_send = document.querySelector("#accept");
+    const email_send = document.querySelectorAll("#accept");
 
-    email_send.addEventListener("click", e => {
+    email_send.forEach((el)=>{
+        el.addEventListener("click", e => {
         e.preventDefault();
-
+    //  console.log(e.target.dataset.id)
         alert("Buyer will recieve Your Email")
 
         Email.send({
             Host: "smtp.elasticemail.com",
             Username: "bharuu90@gmail.com",
             Password: "F5AF1592782CEDC418852B71C9B8DA562506",
-            To: 'bharuchan90@gmail.com',
+            To: e.target.dataset.id,
             From: "bharuu90@gmail.com",
             Subject: "sucess",
             Body: "Hi santhanam, Your ordered xxxx from Zanarts on 12/04/2003. Will be received on within 10 days to Address:15/A p.sv.k south street,Tirunlveli"
@@ -164,9 +166,11 @@
             message => alert(message)
         );
 
-
+    e.target.style.display="none"
 
     })
+    })
+    
 </script>
 
 </html>

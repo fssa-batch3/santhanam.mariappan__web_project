@@ -431,7 +431,7 @@ material.setAttribute("class", "material");
 
 //anchor
 anchor = document.createElement("a");
-anchor.setAttribute("href", `../pages/rewards.html?title=${  material1[i].title}`)
+anchor.setAttribute("href", `../pages/product.html?title=${  material1[i].title}`)
 material.append(anchor);
 
 //image
@@ -455,6 +455,14 @@ material.append(anchor1);
 document.querySelector("div.user").append(material);
   
     }
+
+    const anchor_buttons=document.querySelectorAll('.material a');
+//   console.log(anchor_buttons)
+  anchor_buttons.forEach((e)=>{
+    e.addEventListener("click",(el)=>{
+        localStorage.setItem("clicked","home")
+    })
+  })
   </script>
 
   <!-- new home page starts -->

@@ -29,6 +29,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -42,19 +45,18 @@
 
         <div class="input">
             <input type="text" name="search_bar" id="search" placeholder="What do you like today???">
- <i
-                class="fa fa-search"></i> </button>
+            <i class="fa fa-search"></i> </button>
         </div>
 
         <div class="side_nav1">
             <ul>
                 <li>
-<a href="../pages/categories.html">Shop Our product</a>
-</li>
+                    <a href="../pages/categories.html">Shop Our product</a>
+                </li>
 
                 <li>
- <img src="../asset/images/profile_picture_user_icon_153847.png" width="30px" alt="no error">
-</li>
+                    <img src="../asset/images/profile_picture_user_icon_153847.png" width="30px" alt="no error">
+                </li>
 
             </ul>
 
@@ -69,22 +71,39 @@
     <div class="header_prt1">
         <ul>
             <li>
-<a href="">Explore |</a>
-</li>
+                <a href="">Explore |</a>
+            </li>
             <li>
-<a href="">Categories |</a>
-</li>
+                <a href="">Categories |</a>
+            </li>
             <li>
-<a href="">Find Service </a>
-</li>
+                <a href="">Find Service </a>
+            </li>
 
         </ul>
     </div>
     <span id="hr2">
         <hr>
     </span>
+
+    <!-- 
+    <section class="rating__card"> -->
+    <!-- <blockquote class="rating__card__quote">“Lorem ipsum dolor sit amet, cu pertinax nominati sea, id iriure utamur interpretaris sea, vix ne latine aliquam complectitur. Enim quas his no, mea ferri audire rationibus ei.”</blockquote>
+        
+        <div class="rating__card__stars">
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+          <span class="rating__card__stars__name">Name</span>
+        </div>
+        <p class="rating__card__bottomText">Customer Since 2001</p> -->
+    <!-- </section> -->
+
+
     <!-- end of header -->
-<!--  
+    <!--  
    <div class="content">
         <main>
            <span> <img src="../asset/images/hyperreal1.jpg" width="400px" alt=""></span> 
@@ -174,68 +193,106 @@
 
     <!-- footer -->
 
-    <script>        const arr = [
-    
-    {
-        id : '1',
-                head : "THE LONELY GIRL",
-                sketch : "../asset/images/user/sketch1.jpg",
-                para: "Hey There Lonely Girl is a song recorded in 1963,<br> titled Hey There Lonely girl in its original version by Ruby and the Romantics.<br> It was a hit both for them and for Eddie Holman.",
-                sold : "Sold by : Gokul <br> <br>",
-                price: "&#8377; 900 <br><br>",
-                size: "8*6 size non-Framed",
-    },
-    {
-        id:'2',
-               sketch : "../asset/images/user/sketch2.jpg",
-                head : "A cute girl",
-                para: "This is an art of cute girl closeone to the artist with the full of love",
-                sold : "Sold by: Bharathi",
-                price: "&#8377; 2000 <br><br>",
-                size: "2*4 size non-Framed",
-    },
+    <script>
+        //   const arr = [
 
-    {
-        id:"3",
-                sketch : "../asset/images/user/sketch3.jpg",
-                head : "Sorarai-Pottru",
-                para: "Maara, a young man from a remote village, dreams of launching his <br> own airline service. However, he must overcome several obstacles <br>and challenges in order to be successful in his quest.",
-                sold : "Sold by:Bharathi",
-                price: "&#8377; 2000 <br><br>",
-                size: "5*4 size non-Framed",
-    },
-    {
-        id:"4",
-                sketch : "../asset/images/user/sketch4.jpg",
-                head : "Thor",
-                para: "As the son of Odin (Anthony Hopkins), king of the Norse gods,<br> Thor (Chris Hemsworth) will soon inherit the throne of Asgard from his aging father.",
-                sold : "Sold by:Bharu",
-                price: "&#8377; 2500 <br><br>",
-                size: "5*4 size non-Framed",
+        //     {
 
-    },
-    {
-        id:"5",
-                sketch : "../asset/images/user/sketch5.jpg",
-                head : "Mersal-Vijay",
-                para: "A detective arrests a doctor for crimes targeting medical professionals but later <br> finds the real culprit in a tale of revenge, corruption and magic.",
-                sold : "Sold by:Santhu",
-                price: "&#8377; 3500 <br><br>",
-                size: "7*4 size non-Framed",
+        //                 head : "THE LONELY GIRL",
+        //                 sketch : "../asset/images/user/sketch1.jpg",
+        //                 para: "Hey There Lonely Girl is a song recorded in 1963,<br> titled Hey There Lonely girl in its original version by Ruby and the Romantics.<br> It was a hit both for them and for Eddie Holman.",
+        //                 sold : "Sold by : Gokul <br> <br>",
+        //                 price: "&#8377; 900 <br><br>",
+        //                 size: "8*6 size non-Framed",
+        //     },
+        //     {
+        //         id:'2',
+        //                sketch : "../asset/images/user/sketch2.jpg",
+        //                 head : "A cute girl",
+        //                 para: "This is an art of cute girl closeone to the artist with the full of love",
+        //                 sold : "Sold by: Bharathi",
+        //                 price: "&#8377; 2000 <br><br>",
+        //                 size: "2*4 size non-Framed",
+        //     },
 
-    },
-    {
-        id:"6",
-                sketch : "../asset/images/user/sketch6.jpg",
-                head : "Mom and child",
-                para: "Our daughters are the most precious of our treasures, <br>the dearest possessions of our homes and the objects of our most watchful love",
-                sold : "Sold by:Santhu",
-                price: "&#8377; 1500 <br><br>",
-                size: "7*4 size non-Framed",
+        //     {
 
-    }
-      
-]
+        //                 sketch : "../asset/images/user/sketch3.jpg",
+        //                 head : "Sorarai-Pottru",
+        //                 para: "Maara, a young man from a remote village, dreams of launching his <br> own airline service. However, he must overcome several obstacles <br>and challenges in order to be successful in his quest.",
+        //                 sold : "Sold by:Bharathi",
+        //                 price: "&#8377; 2000 <br><br>",
+        //                 size: "5*4 size non-Framed",
+        //     },
+        //     {
+
+        //         "image" : "../asset/images/user/sketch4.jpg",
+        //         "title" : "Thor",
+        //         "des": "As the son of Odin (Anthony Hopkins), king of the Norse gods,<br> Thor (Chris Hemsworth) will soon inherit the throne of Asgard from his aging father.",
+        //         "artist" : "Sold by:Bharu",
+        //         "pr": "&#8377; 2500 <br><br>",
+        //         "Size": "5*4 size non-Framed",
+
+        //     },
+        //     {
+
+        //         "image" : "../asset/images/user/sketch5.jpg",
+        //         "title" : "Mersal-Vijay",
+        //         "des": "A detective arrests a doctor for crimes targeting medical professionals but later <br> finds the real culprit in a tale of revenge, corruption and magic.",
+        //         "artist" : "Sold by:Santhu",
+        //         "pr": "&#8377; 3500 <br><br>",
+        //         "Size": "7*4 size non-Framed",
+
+        //     },
+        //     {
+        //         id:"6",
+        //              "image" : "../asset/images/user/sketch6.jpg",
+        //              "title" : "Mom and child",
+        //              "des": "Our daughters are the most precious of our treasures, <br>the dearest possessions of our homes and the objects of our most watchful love",
+        //              "artist" : "Sold by:Santhu",
+        //              "pr": "&#8377; 1500 <br><br>",
+        //                 "Size": "7*4 size non-Framed",
+
+        //     }
+
+        // ]
+
+        const material1 = [
+            {
+
+                "img": "../asset/images/home1.jpg",
+                "title_name": "WaterDrop on girl",
+                "descr": "asefdghjklrestdyhikljo;fdzgxhjkl;'zfdxgchvjbknl",
+                "artist_name": "Balaji",
+                "Size": "6 x 8 non framed",
+                "pr": "300",
+                "user_email": "bharuchan90@gmail.com",
+
+            },
+
+            {
+                "img": "../asset/images/home2.jpg",
+                "title_name": "kiss in art",
+                "descr": "asefdghjklrestdyhikljo;fdzgxhjkl;'zfdxgchvjbknl",
+                "artist_name": "Balaji",
+                "size_by": "6 x 8 non framed",
+                "pr": "300",
+                "user_email": "bharuchan90@gmail.com",
+
+            },
+
+            {
+                "img": "../asset/images/hyperreal1.jpg",
+                "title_name": "Tiger",
+                "descr": "asefdghjklrestdyhikljo;fdzgxhjkl;'zfdxgchvjbknl",
+                "artist": "Balaji",
+                "Size": "6 x 8 non framed",
+                "pr": "300",
+                "user_email": "bharuchan90@gmail.com",
+            }
+
+        ]
+        localStorage.setItem("homeproducts", JSON.stringify(material1))
 
         const url = window.location.search; // ?name=Arun
         const urlParams = new URLSearchParams(url); // converting string into key-value pairs
@@ -260,37 +317,55 @@
         // }
         // });
 
-        if(clicked_page=="categories"){
+        if (clicked_page == "categories") {
             result = user.find((userObj) => {
-    // userObj = {name : "Bala", "image": {}, "text": ""}
-             console.log(userObj.title_name.length,storevalue.length);
-    if (storevalue ===userObj.title_name) {
-        console.log(userObj.title_name);
-        return true;
-    }
-     
-        return false;
-    
-    });
+                // userObj = {name : "Bala", "image": {}, "text": ""}
+                console.log(userObj.title_name.length, storevalue.length);
+                if (storevalue === userObj.title_name) {
+                    console.log(userObj.title_name);
 
-//    console.log(clicked_page)
+                    return true;
+                }
+
+                return false;
+
+            });
+
+            //    console.log(clicked_page)
 
         }
-        else{
+        else if (clicked_page == "home") {
+            console.log("home")
+            result = material1.find((userObj) => {
+                // userObj = {name : "Bala", "image": {}, "text": ""}
+                //  console.log(userObj.title_name.length,storevalue.length);
+                if (storevalue === userObj.title_name) {
+                    console.log(userObj + "hj");
+                    console.log(userObj);
+                    result = userObj
+                    return result = userObj;
+                }
+
+                return false;
+
+            });
+            // console.log(result)
+        }
+        else {
             result = painting_div.find((userObj) => {
-    // userObj = {name : "Bala", "image": {}, "text": ""}
-             console.log(userObj.title_name.length,storevalue.length);
-    if (storevalue ===userObj.title_name) {
-        console.log(userObj.title_name);
-        return true;
-    }
-     
-        return false;
-    
-    });
-        // console.log(result)
-        }
+                // userObj = {name : "Bala", "image": {}, "text": ""}
+                console.log(userObj.title_name.length, storevalue.length);
+                if (storevalue === userObj.title_name) {
+                    console.log(userObj.title_name + "user");
+                    return true;
+                }
 
+                return false;
+
+            });
+            // console.log(result)
+        }
+        console.log("new" + result)
         // for (let i=0; i<user.length; i++){
 
         // content 
@@ -308,7 +383,7 @@
         main.append(span);
 
         const image = document.createElement("img");
-        image.setAttribute("src", result.img);
+        image.setAttribute("src", result["img"]);
         image.setAttribute("width", "400px");
         image.setAttribute("alt", "Image loading");
         span.append(image);
@@ -383,7 +458,7 @@
         // h3
 
         h3 = document.createElement("h3");
-        h3.innerHTML = `₹${  result.pr}`;
+        h3.innerHTML = `₹${result.pr}`;
         product_txt.append(h3);
 
         // p
@@ -422,7 +497,7 @@
         // materials a tag
 
         const material_a = document.createElement("a");
-        material_a.setAttribute("href", `../pages/cart.html?title_name=${  result.title_name}` );
+        material_a.setAttribute("href", `../pages/cart.html?title_name=${result.title_name}`);
         material_a.innerText = "BUY NOW";
         // material.setAttribute("value",title_name);
         // console.log(result["title_name"])
@@ -522,6 +597,58 @@
         spaning.setAttribute("id", "red");
         spaning.innerText = "Non-framed";
         para_graph.append(spaning);
+
+
+        // feedback
+        let feedback = document.createElement("div");
+        feedback.setAttribute("class", "feed_back");
+        hr_tag.append(feedback)
+
+        feedback.innerHTML += `<h2 id="feed">Feed back for this art</h2>
+        <hr id="hr_feed">
+            
+          <h4>Name</h4><input id="name_feed" type="text">
+          
+          <h4>Comment</h4><input id="cmt_feed" type="text">
+        
+           
+      
+          <button id="butm">Submit</button> 
+           
+          <br> <br>
+            `
+    //         <div class="stars">
+    //     <input type="radio" id="star5" name="rating" value="5">
+    //     <label for="star5"></label>
+    //     <input type="radio" id="star4" name="rating" value="4">
+    //     <label for="star4"></label>
+    //     <input type="radio" id="star3" name="rating" value="3">
+    //     <label for="star3"></label>
+    //     <input type="radio" id="star2" name="rating" value="2">
+    //     <label for="star2"></label>
+    //     <input type="radio" id="star1" name="rating" value="1">
+    //     <label for="star1"></label>
+    //   </div>
+      
+
+
+
+
+
+        // comment 
+        // let comment = document.createElement("h3");
+        // comment.setAttribute("id", "comment_sec");
+        // comment.innerText = "Comments"
+        // document.querySelector("body").append(comment);
+
+        // section
+        // <section class="rating__card">
+        let section = document.createElement("div");
+        section.setAttribute("class", "rating__card");
+        document.querySelector("body").append(section);
+
+
+
 
         // relate div 
         const relate = document.createElement("div");
@@ -636,41 +763,115 @@
         para_graph_atg.innerText = "While drawing I discover what I really want to say";
         foot.append(para_graph_atg);
 
-    // }
 
-    //  url parameter
 
-    //  const arr = [
+        // }
+
+        //  url parameter
+
+        //  const arr = [
+
+        //     {
+        //         id : '1',
+        //                 head : "Cat sleeping in paper",
+        //                 sketch : "../asset/images/user/sketch1.jpg",
+        //                 para: "Graphite vector art.Created by the famous artist Gokul.Inspired by the love of cats ",
+        //                 sold : "Sold by : Gokul",
+        //                 size: "8*6 size non-Framed",
+        //     },
+        //     {
+        //         id:'2',
+        //                sketch : "../asset/images/user/sketch2.jpg",
+        //                 head : "Swimming pool",
+        //                 para: "A vector computing Art.Swimming pool we used to go vacciation to our families. Artistwas Rahul",
+        //                 sold : "Sold:Rahul",
+        //                 size: "2*4 size non-Framed",
+        //     },
+
+        //     {
+        //         id:"3",
+        //                 sketch : "../asset/images/user/sketch3.jpg",
+        //                 head : "3D fingers",
+        //                 para: "The illusation of 3D finger using computing",
+        //                 sold : "Sold:Rahul",
+        //                 size: "2*4 size non-Framed",
+        //     }
+
+        // ] 
+
+
+
+        let rating__card = document.querySelector(".rating__card")
+        if (JSON.parse(localStorage.getItem("reviews"))) {
+            let review_card = JSON.parse(localStorage.getItem("reviews"))
+            for (let i = 0; i < review_card.length; i++) {
+                if (storevalue === review_card[i].product)
+
+                    rating__card.innerHTML += ` <div class ="whote_rate">
+           
+                 <blockquote class="rating__card__quote">
+        “ ${review_card[i].comment}”
+        </blockquote>
     
-    //     {
-    //         id : '1',
-    //                 head : "Cat sleeping in paper",
-    //                 sketch : "../asset/images/user/sketch1.jpg",
-    //                 para: "Graphite vector art.Created by the famous artist Gokul.Inspired by the love of cats ",
-    //                 sold : "Sold by : Gokul",
-    //                 size: "8*6 size non-Framed",
-    //     },
-    //     {
-    //         id:'2',
-    //                sketch : "../asset/images/user/sketch2.jpg",
-    //                 head : "Swimming pool",
-    //                 para: "A vector computing Art.Swimming pool we used to go vacciation to our families. Artistwas Rahul",
-    //                 sold : "Sold:Rahul",
-    //                 size: "2*4 size non-Framed",
-    //     },
+    <div class="rating__card__stars">
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span> <br>
+      <span class="rating__card__stars__name">${review_card[i].name}</span>
+    </div>
+     <br>
+    
+    </div>`
 
-    //     {
-    //         id:"3",
-    //                 sketch : "../asset/images/user/sketch3.jpg",
-    //                 head : "3D fingers",
-    //                 para: "The illusation of 3D finger using computing",
-    //                 sold : "Sold:Rahul",
-    //                 size: "2*4 size non-Framed",
-    //     }
-          
-    // ] 
+            }
+
+        }
+
+
+        let butm = document.getElementById("butm")
+        butm.addEventListener("click", () => {
+            let name_feed = document.getElementById("name_feed").value;
+            let cmt_feed = document.getElementById("cmt_feed").value;
+            let arr = JSON.parse(localStorage.getItem("reviews")) || []
+            let baka = {
+                "name": name_feed,
+                "comment": cmt_feed,
+                "product": storevalue
+            }
+            arr.push(baka)
+            localStorage.setItem("reviews", JSON.stringify(arr))
+            window.location.reload()
+        })
+
+
+
+        // review star
+        // const stars = document.querySelectorAll('input[name="rating"]');
+        // let selectedRating;
+    
+        // stars.forEach(star => star.addEventListener('change', function() {
+        //   selectedRating = this.value;
+        //   console.log(`Selected rating: ${selectedRating}`);
+        // }));
+
+
+
+
+
+
     </script>
 
+
+    <!--  -->
+
+
+
+
+
+
+    <!-- end of review -->
     <footer>
         <hr>
         <div class="foot1">

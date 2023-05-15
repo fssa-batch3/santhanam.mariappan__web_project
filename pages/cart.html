@@ -194,6 +194,7 @@
     console.log(transfer_value);
 
     const user = JSON.parse(localStorage.getItem("upload"));
+    const homeproduct=JSON.parse(localStorage.getItem("homeproducts"));
         const clicked_page = localStorage.getItem("clicked");
         const painting_div = JSON.parse(localStorage.getItem("typesofart"));
         if(clicked_page=="categories"){
@@ -202,6 +203,28 @@
             //  console.log(userObj["title_name"].length,storevalue.length);
     if (transfer_value ===userObj.title_name) {
         console.log(userObj.title_name);
+        
+        return true;
+
+    }
+     
+        return false;
+    
+    });
+
+//    console.log(clicked_page)
+
+        }
+
+       else if(clicked_page=="home"){
+        console.log("home in");
+            result = homeproduct.find((userObj) => {
+    // userObj = {name : "Bala", "image": {}, "text": ""}
+            //  console.log(userObj["title_name"].length,storevalue.length);
+    if (transfer_value ===userObj.title_name) {
+        console.log(userObj.title_name+"title");
+        result=userObj
+       console.log(result+"carf");
         return true;
     }
      
