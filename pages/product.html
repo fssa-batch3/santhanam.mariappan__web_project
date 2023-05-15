@@ -71,10 +71,10 @@
     <div class="header_prt1">
         <ul>
             <li>
-                <a href="">Explore |</a>
+                <a href="../pages/explore.html">Explore |</a>
             </li>
             <li>
-                <a href="">Categories |</a>
+                <a href="../pages/categories.html">Shop our product |</a>
             </li>
             <li>
                 <a href="">Find Service </a>
@@ -303,6 +303,7 @@
         const user = JSON.parse(localStorage.getItem("upload"));
         const clicked_page = localStorage.getItem("clicked");
         const painting_div = JSON.parse(localStorage.getItem("typesofart"));
+        let uploader_email;
         let result;
 
         // const result = user.find(function (userObj) {
@@ -323,7 +324,7 @@
                 console.log(userObj.title_name.length, storevalue.length);
                 if (storevalue === userObj.title_name) {
                     console.log(userObj.title_name);
-
+                 uploader_email= userObj.user_email
                     return true;
                 }
 
@@ -331,7 +332,7 @@
 
             });
 
-            //    console.log(clicked_page)
+               console.log(uploader_email+"uploader")
 
         }
         else if (clicked_page == "home") {
@@ -495,9 +496,20 @@
         product_txt.append(material);
 
         // materials a tag
+      
+
 
         const material_a = document.createElement("a");
-        material_a.setAttribute("href", `../pages/cart.html?title_name=${result.title_name}`);
+        // if(uploader_email===user_mail){
+        //     alert("it is your work you cant buy you idiot")
+        // }
+        // else{
+        // material_a.setAttribute("href", `../pages/cart.html?title_name=${result.title_name}`);
+          
+        // }
+        material_a.setAttribute("id","buy_btn");
+
+
         material_a.innerText = "BUY NOW";
         // material.setAttribute("value",title_name);
         // console.log(result["title_name"])
@@ -505,6 +517,23 @@
 
         const break_tag = document.createElement("br");
         product_txt.append(break_tag);
+
+          const request_email_arr=JSON.parse(localStorage.getItem("profile"));
+         let user_mail=request_email_arr["email"];
+
+         console.log(user_mail)
+
+
+        let buy_btn=document.getElementById("buy_btn")
+        buy_btn.addEventListener("click",()=>{
+            if(uploader_email===user_mail){
+            alert("it is your work you cant buy you idiot")
+        }
+        else{
+        material_a.setAttribute("href", `../pages/cart.html?title_name=${result.title_name}`);
+
+        }
+        })
 
         // hr div tag
 

@@ -47,10 +47,10 @@
     <div class="header_prt1">
         <ul>
             <li>
-<a href="../pages/home.html">Home |</a>
+<a href="/pages/home.html">Home |</a>
 </li>
             <li>
-<a href="categories.html">Products |</a>
+<a href="/pages/categories.html">Products |</a>
 </li>
             <li>
 <a href="findservice,.html">Find Service </a>
@@ -142,9 +142,14 @@
         uli.setAttribute("class", "cards");
         console.log(uli);
         const ul = document.querySelector(".cards")
+       
+        const request_email_arr=JSON.parse(localStorage.getItem("profile"));
+         let user_mail=request_email_arr["email"];
 
+         console.log(user_mail)
         // console.log(showedProduct,"ytrfd");
         for (let i = 0; i < showedProduct.length; i++) {
+            if(showedProduct[i].user_email==user_mail){
 
             ul.innerHTML += `<li class="card">
                 <div class="image_card">
@@ -165,6 +170,8 @@
                     </button>
                 </div>
                 </li>`
+            }
+
         }
         // let li = document.createElement("li");
         // li.setAttribute("class", "card")

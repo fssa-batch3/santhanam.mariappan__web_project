@@ -152,19 +152,20 @@
         el.addEventListener("click", e => {
         e.preventDefault();
     //  console.log(e.target.dataset.id)
-        alert("Buyer will recieve Your Email")
+        // alert("Buyer will recieve Your Email")
 
-        Email.send({
-            Host: "smtp.elasticemail.com",
-            Username: "bharuu90@gmail.com",
-            Password: "F5AF1592782CEDC418852B71C9B8DA562506",
-            To: e.target.dataset.id,
-            From: "bharuu90@gmail.com",
-            Subject: "sucess",
-            Body: "Hi santhanam, Your ordered xxxx from Zanarts on 12/04/2003. Will be received on within 10 days to Address:15/A p.sv.k south street,Tirunlveli"
-        }).then(
-            message => alert(message)
-        );
+        // Email.send({
+        //     Host: "smtp.elasticemail.com",
+        //     Username: "bharuu90@gmail.com",
+        //     Password: "F5AF1592782CEDC418852B71C9B8DA562506",
+        //     To: e.target.dataset.id,
+        //     From: "bharuu90@gmail.com",
+        //     Subject: "sucess",
+        //     Body: "Hi santhanam, Your ordered xxxx from Zanarts on 12/04/2003. Will be received on within 10 days to Address:15/A p.sv.k south street,Tirunlveli"
+        // }).then(
+        //     message => alert(message)
+        // );
+        // console.log(e.target.dataset.id)
 
     e.target.style.display="none"
 

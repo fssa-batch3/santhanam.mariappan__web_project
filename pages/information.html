@@ -52,7 +52,7 @@
 
                     <div class="dummy2">
                         <p> Shipping Address</p>
-                        <select name="country" id="country" required>
+                        <select name="country" id="country" value="Tirunelveli" required>
 
 
                             <option value="">--Select District--</option>
@@ -97,19 +97,20 @@
 
                         <div class="dummy3">
                             <div class="dummy4">
-                                <input type="text" placeholder="Frist name" id="frist_name" required
+                                <input type="text" placeholder="Frist name" id="frist_name" value="Isac" required
                                     pattern=^[a-zA-Z]{3,20}$
                                     title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters.">
                             </div>
                             <div class="dummy5">
-                                <input type="text" placeholder="Last name" id="last_name" required
+                                <input type="text" placeholder="Last name" value="Deva" id="last_name" required
                                     pattern=^[a-zA-Z]{3,20}$
                                     title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters.">
                             </div>
                         </div>
 
                         <br>
-                        <input type="text" id="address" placeholder="Address" required>
+                        <input type="text" id="address" value="15/A P.S.V.K South street,Pettai" placeholder="Address"
+                            required>
                         <br>
 
                     </div>
@@ -118,6 +119,7 @@
                         <div class="dummy7">
                             <!-- <input type="text" id="pink" placeholder="city" required> -->
                             <select name="country" id="pink" required>
+                                <option>Select</option>
                                 <option value="">City</option>
                                 <option value="">Town</option>
                                 <option value="">Village</option>
@@ -139,12 +141,12 @@
                         </div>
 
                         <div class="dummy9">
-                            <input type="text" id="pincode" placeholder="Pin code" required pattern="[0-9]{6}"
-                                title=" This box only have numbers">
+                            <input type="text" id="pincode" placeholder="Pin code" value="627004" required
+                                pattern="[0-9]{6}" title=" This box only have numbers">
                         </div>
                     </div>
 
-                    <input type="text" id="ph_num" placeholder="phone" required pattern="[0-9]{10}"
+                    <input type="text" id="ph_num" placeholder="phone" value="909529766" required pattern="[0-9]{10}"
                         title=" This box only have numbers">
                     <br>
                     <input type="checkbox" id="box"> Save this Information for Next time
@@ -259,23 +261,26 @@
                 <div class="form-group half pl-3">
                     <br>
                     <label for="cccode">CVV Code <span class="question">?</span></label>
-                    <input class="form-control is-invalid" id="cccode" type="text" name="cccode" />
+                    <input class="form-control is-invalid" id="cccode" type="text" value="3456" name="cccode" />
                 </div>
                 <br>
                 <div class="form-group">
                     <br>
                     <label for="ccname">Name on Card</label> <br>
-                    <input class="form-control" id="waste" class="waste" type="text" name="ccname" />
+                    <input class="form-control" id="waste" class="waste" type="text" value="Isac" name="ccname" />
                 </div>
             </div>
             <div class="payment-actions"><a class="return" href="javascript:void(0);">Return to Shipping</a><a
-                    class="finish" onclick="order()" href="javascript:void(0);"> Order place
+                    class="finish" id="order_fun" href="javascript:void(0);"> Order place
                 </a>
             </div>
         </div>
     </div>
 
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
     <script>
+
         const continues = document.getElementById("form")
         continues.addEventListener("submit", e => {
             e.preventDefault();
@@ -327,15 +332,48 @@
         }
 
 
-        function order() {
-        //     Swal.fire(
-        //         'Your order is placed',
-        //         'You clicked the button!',
-        //         'failure'
-        //     )
-        alert("Your order is placed")
-        window.location.href="../pages/buyer.html"
-        }
+
+
+        
+
+
+
+         const request_email_arr=JSON.parse(localStorage.getItem("profile"));
+         let user_mail=request_email_arr["email"];
+
+         console.log(user_mail)
+
+                // request_email_arr.find(e=>{
+                //     // if(e.requested_user_email==)
+                //    return user_mail=e.requested_user_email
+                // })
+
+        const email_send = document.querySelectorAll("#order_fun");
+
+        email_send.forEach((el) => {
+            el.addEventListener("click", e => {
+                e.preventDefault();
+                //  console.log(e.target.dataset.id)
+                alert("Buyer will recieve Your Email")
+
+                Email.send({
+                    Host: "smtp.elasticemail.com",
+                    Username: "bharuu90@gmail.com",
+                    Password: "F5AF1592782CEDC418852B71C9B8DA562506",
+                    To:`${user_mail}`,
+                    From: "bharuu90@gmail.com",
+                    Subject: "Thanks for purchasing",
+                    Body: "Hi santhanam, Your ordered xxxx from Zanarts on 12/04/2003. Will be received on within 10 days to Address:15/A p.sv.k south street,Tirunlveli"
+                }).then(
+                    message => alert(message)
+                );
+                 
+                window.location.href="../pages/buyer.html"
+
+
+            })
+        })
+
         //
     </script>
 
