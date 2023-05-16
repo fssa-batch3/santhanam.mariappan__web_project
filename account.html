@@ -7,157 +7,251 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account page</title>
     <link rel="stylesheet" href="account.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <!-- main -->
 
-    <div class="main">
+    <!--  display flex div  -->
+    <div class="back_ground">
 
+        <!-- 
+        <div class="back_ground1">
+            <a href="./pages/home.html">Back to home</a>
 
-        <!--  display flex div  -->
-        <div class="back_ground">
+        </div> -->
 
-         
+        <div class="back_ground2">
 
+            =
+            <div class="display2">
+                <!-- <i class="fa-solid fa-plus" style="color: aliceblue;"></i>/ -->
+                <h2>Profile</h2>
+                <br>
+                <img src="asset/images/profile.png" alt="no error" id="image_profile" width="300px">
 
-            <div class="back_ground1">
-                <a href="./pages/home.html">Back to home</a>
-                <img src="profile.png" width="300px" height="440px" alt="no error">
+                <br>
+                <!-- <input type="file" name="file" id="file"> -->
+
+                <br>
+<br>
+
+                <div class="btn">
+
+                    <button id="save">Save</button>
+                    <br>
+ <br>
+                    <button id="edit"> Edit </button>
+                </div>
+                <div class="log">
+                    <!-- <button  >Logout</button> -->
+                    <i class="fa-solid fa-right-from-bracket" onclick="logout()" style="color: #ffffff;"></i>
+                </div>
+                </form>
 
             </div>
 
-            <div class="back_ground2">
+        </div>
 
+        <div class="display">
 
-                <span id="text_box">
-                    <h2>User Profile </h2>
+            <form id="forms">
 
-                </span>
+                <div class="none">
+                    <div class="display1">
 
+                        <h3> User name:</h3>
+ <input type="text" name="firstname" id="username" disabled
+                            pattern="^[A-Za-z0-9_]{1,32}$" title="This contain have (Upper case && Lowercase)">
 
+                        <br>
+<br>
+<br>
+                        <h3>Email</h3>
+ <input type="email" name="" id="email" disabled>
+                        <br>
+<br>
+<br>
 
-                <div class="display">
+                        <h3>Phone number</h3>
 
-                    <div class="display1"> 
+                        <input type="tel" name="phone" id="phone" disabled required pattern="[0-9]{10}"
+                            title="This contain have Number only">
 
-                    <h3> User name:</h3> <input type="text" name="firstname" id="username" disabled>
+                        <br>
+<br>
+<br>
 
-                    <br><br>
+                        <h3>Country</h3>
+ <input type="country" name="country" id="country" pattern="^[A-Za-z0-9_]{1,32}$"
+                            disabled>
 
-                    <h3>Gender:</h3> <input type="text" name="gender" id="gender" disabled>
+                        <!-- <h3>Zip-code</h3> <input type="text" name="zip-code" id="zip-code" pattern="{0-6}" disabled -->
 
-                    <br><br>
+                        <br>
+<br>
+<br>
 
-                    <h3>Phone number</h3> <input type="text" name="phone" id="phone" disabled>
+                        <h3>Gender:</h3>
+ <select name="Gender" id="gender" required>
 
-                 <br><br>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
 
-                    <h3>Email</h3> <input type="email" name="" id="email" disabled>
+                    </div>
 
-                    <br><br>
+                    <div class="about">
 
-                    <h3>Country</h3> <input type="country" name="country" id="country" disabled>
+                        <div class="dic"> 
 
-                    <br><br>
-
-                    <h3>Zip-code</h3> <input type="text" name="zip-code" id="zip-code" disabled>
+                           <div class="dic1"> 
+                            <!-- <a href="asset/css/artist1.html"><h1>Orders</h1></a> -->
+                            <h2 id="hi_or">Orders </h2>
+ <a href="asset/css/artist1.html">
+  <img src="asset/images/order_logo.png" width="80px" alt="">  
+</a>
+                        </div>
+                            <!-- <button id="your_art"> <a href="/asset/css/Rewardsandarts.html"> Your Uploaded arts</a> -->
+                        <div class="dic2">
+        <h2>Your Arts</h2>
+                              <a href="/asset/css/Rewardsandarts.html">
+ <img src="asset/images/art_lo.png" width="80px" alt="">
+</a>  
+                        </div>
+                    </div>
+                        <!-- </button> -->
+                        <h3 id="ab">About</h3>
+                        <textarea rows="10" cols="50" name="comment" form="usrform" id="des"
+                            placeholder="Add your description in maximum 20 character" required disabled></textarea>
+                    </div>
                 </div>
+        </div>
 
+    </div>
 
+    <div class="con_dev">
 
+        <div class="con_dev1">
+            <img src="asset/images/pro_bg.png" width="300px" alt="">
+        </div>
 
-                <div class="display2">
-                 <img src="profile1 (2).png" alt="no error" width="200px">
-                 <h2>Upload your Photo</h2>
-                 <br>
-                 <input type="file" name="file" id="file">
-                </div>
-                </div>
+        <div class="text">
+            <h3>
+ Publish creative art, craft, writings and other creatives to get visibility ofart enthusiast <br> across
+                the worldWe are specialsts in Art. Creativity and fun are our ingredients for awesome work</h3>
+        </div>
+    </div>
 
+    <script>
+        const form = document.getElementById("save")
+        form.addEventListener("click", function (e) {
+            e.preventDefault();
+            save();
+        })
 
+        let arr = JSON.parse(localStorage.getItem("profile"));
 
+        document.getElementById("username").value = arr["user"];
+        document.getElementById("email").value = arr["email"];
+        document.getElementById("phone").value = arr["mobile"];
+        document.getElementById("gender").value = arr["gender"];
+        document.getElementById("des").value = arr["about"];
+        document.getElementById("country").value = arr["country"]
 
+        let Edit = document.getElementById("edit")
+        console.log(Edit)
+        Edit.addEventListener("click", (e) => {
+            e.preventDefault();
+            // alert("djidjid")
+            console.log("clicked")
+            document.getElementById("username").removeAttribute("disabled");
+            document.getElementById("gender").removeAttribute("disabled");
+            document.getElementById("phone").removeAttribute("disabled");
+            document.getElementById("country").removeAttribute("disabled");
+            document.getElementById("des").removeAttribute("disabled");
 
+        })
 
+        function save() {
 
-                <button onclick="save()" >Save</button>
-                <br> <br>
-                <button onclick="edit()"> Edit </button>
-                <br> <br>
-                <button onclick="logout()">Logout</button>
+            document.getElementById("username").setAttribute("disabled", "");
+            document.getElementById("gender").setAttribute("disabled", "");
+            document.getElementById("phone").setAttribute("disabled", "");
+            document.getElementById("country").setAttribute("disabled", "");
+            document.getElementById("des").setAttribute("disabled", "");
 
+            let newdata = JSON.parse(localStorage.getItem("users"));
 
+            const useremail = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            let username = document.getElementById("username").value
+            let gender = document.getElementById("gender").value
+            let country = document.getElementById("country").value
+            let about = document.getElementById("des").value
 
+            newdata.find(userobj => {
+                if (userobj["email"] == useremail) {
+                    userobj["user"] = username;
+                    userobj["mobile"] = phone;
+                    userobj["about"] = about;
+                    userobj["gender"] = gender;
+                    userobj["country"] = country
 
-            </div>
-<script>
+                    console.log(userobj["country"])
 
-let arr=JSON.parse(localStorage.getItem("profile"));
+                    localStorage.setItem("users", JSON.stringify(newdata))
+                    localStorage.setItem("profile", JSON.stringify(userobj))
 
+                }
 
+            })
 
-document.getElementById("username").value=arr["user"];
-document.getElementById("email").value=arr["email"];
-document.getElementById("phone").value=arr["mobile"];
+        }
 
+        function logout() {
+            let del = JSON.parse(localStorage.getItem("profile"));
 
+            let dele = delete del
+            localStorage.setItem("profile", JSON.stringify(dele))
+            window.location.href = "index.html"
 
-function edit(){
-     
-    document.getElementById("username").removeAttribute("disabled");
-    document.getElementById("gender").removeAttribute("disabled");
-    document.getElementById("phone").removeAttribute("disabled");
-    document.getElementById("country").removeAttribute("disabled");
-    document.getElementById("zip-code").removeAttribute("disabled");
-    
+        }
 
-}
+        let fi = document.getElementById("file")
 
+        let img = document.getElementById("image_profile")
 
-function save(){
-  
-    document.getElementById("username").setAttribute("disabled","");
-    document.getElementById("gender").setAttribute("disabled","");
-    document.getElementById("phone").setAttribute("disabled","");
-    document.getElementById("country").setAttribute("disabled","");
-    document.getElementById("zip-code").setAttribute("disabled","");
-  
-let newdata=JSON.parse(localStorage.getItem("users"));
+        //this function for change profile picture
+        file.addEventListener('change', function () {
+            const choosedFile = this.files[0];
+            if (choosedFile) {
+                const reader = new FileReader();
+                reader.addEventListener('load', function () {
+                    img.setAttribute('src', reader.result);
+                    //setting image src in localstorage
+                    const profile = JSON.parse(localStorage.getItem("profile"))
+                    profile["profile_picture"] = reader.result
+                    localStorage.setItem("profile", JSON.stringify(profile))
 
- const useremail = document.getElementById("email").value;
- const phone = document.getElementById("phone").value;
- let username=document.getElementById("username").value
+                });
+                reader.readAsDataURL(choosedFile);
 
+            }
+            const profile = JSON.parse(localStorage.getItem("profile"))
+            img.setAttribute("src", profile["profile_picture"])
 
-  
-  newdata.find(userobj => {
-     if (userobj["email"] ==useremail)
-      {
-         userobj["user"]=username;
-         userobj["mobile"]=phone;        
-         localStorage.setItem("users",JSON.stringify(newdata))
-         localStorage.setItem("profile",JSON.stringify(userobj))
+        })
 
-  }
-
- })
-
-
-}
-
-
-function logout(){
-      let del = JSON.parse(localStorage.getItem("profile"));
-
-      let dele = delete del
-       localStorage.setItem("profile",JSON.stringify(dele))
-    
-      
-}
- 
-</script>
+    </script>
 
 </body>
 

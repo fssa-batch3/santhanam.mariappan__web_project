@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buyer.html</title>
+    <link rel="stylesheet" href="../asset/css/buyer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            <img src="../asset/images/new_logo plain.png" width="150px" alt="no error">
+        </div>
+
+        <div class="input">
+            <input type="text" name="search_bar" id="search" placeholder="What do you like today???">
+ <i
+                class="fa fa-search"></i>
+        </div>
+
+        <div class="side1_nav">
+            <ul>
+
+            </ul>
+
+        </div>
+
+    </header>
+    <!-- hr line  -->
+    <span id="hr1">
+        <br>
+        <hr>
+        <br>
+    </span>
+
+    <div class="header_prt1">
+        <ul>
+            <li>
+<a href="../pages/home.html">Home |</a>
+</li>
+            <li>
+<a href="categories.html">Products |</a>
+</li>
+            <li>
+<a href="findservice,.html">Find Service </a>
+</li>
+
+        </ul>
+    </div>
+    <span id="hr2">
+        <br>
+        <hr>
+    </span>
+
+    <!-- page start -->
+
+    <h2 id="order">Order Histroy</h2>
+
+    <div class="main"></div>
+
+    <script>        const user_data = JSON.parse(localStorage.getItem("profile"))
+        const user_email_acc = user_data.email
+
+        console.log(user_data);
+        console.log(user_email_acc);
+
+        const product_email_data = JSON.parse(localStorage.getItem("product_details"))
+    // let product_email_acc = product_email_data[7]["requested_user_email"]
+    console.log(product_email_data);
+
+// console.log(product_email_acc);
+
+product_email_data.find((obj) =>{
+    if(user_email_acc==obj.requested_user_email){
+        document.querySelector(".main").innerHTML +=
+            ` 
+   <main>
+    <img src="${obj.product_image}" width="250px" alt="">
+    <h3>${obj.product_title}</h3>
+    <br>
+    <h4>Artist:${obj.product_artist_name}</h4>
+    <br>
+    <p>${obj.product_sub_total}</p>
+    <br>
+    <p>${obj.order_date}</p>
+    <br>
+    <h3>Quantity:${obj.product_quatity}
+        <br> <br>
+    <button>Ordered</button>
+     
+   </main>
+    `
+  
+    }
+})
+
+        // let filter_user_data = user_data.filter((datas) => {
+        //     return datas.requested_user_email == user_email_acc
+
+        // })
+    </script>
+
+</body>
+
+</html>

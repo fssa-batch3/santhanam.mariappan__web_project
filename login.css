@@ -4,38 +4,56 @@
     padding: 0px;
     font-size: 15px;
     font-family: serif;
+    background-color:  rgba(251,234,220,255);
+    
 }
 
-
-.main {
-    /* background-image: linear-gradient(white,#1dbf73); */
-    background-image: url(asset/images/wave-haikei\ \(1\).png);
-    background-size: cover;
-    background-repeat: no-repeat;
+#img{
     position: absolute;
-    height: 100%;
-    width: 100%;
+    top: 324px;
+    left: 300px;
+}
+.main {
+     /* background-size: cover;
+    background-repeat: no-repeat; */
+    display: flex;
+      /* height: 100%;
+    width: 100%;  */
 
+} 
+.icons{
+    background-color: white;
+}
+#login{
+    background-color: white;
 }
 
+#register{
+    background-color: white;
+}
+.side_img{
+    margin-top: 100px;
+}
 .form_class {
     width: 400px;
     height: 550px;
     position: relative;
     margin: 15% auto;
-    background: whitesmoke;
+    background: white;
     padding: 5px;
     overflow: hidden;
     border-radius: 10px;
     margin-top: 230px;
+    box-shadow: orange 0px 2px 5px;
 }
 
 .but_box {
     width: 220px;
     margin: 35px auto;
     position: relative;
-    box-shadow: 0 0 20px 9px #1c1a191f;
-    border-radius: 30px;
+    box-shadow: 0 0 2px 1px orange;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 
@@ -46,6 +64,8 @@
     border: 0;
     outline: none;
     position: relative;
+    color: orange;
+    
 }
 
 #butn {
@@ -54,10 +74,13 @@
     position: absolute;
     width: 110px;
     height: 100%;
-    /* background: linear-gradient( #ff105f,#ffad06); */
     border-radius: 30px;
-    /* transition: .5 s; */
+    transition: .5 s;
+    background-color: rgba(251,186,113,255);
+
+    
 }
+ 
 
 .icons {
     margin: 30px auto;
@@ -67,14 +90,13 @@
 .icons img {
     width: 35px;
     margin: 0 12px;
-    box-shadow: 0 0 20px 0  rgb(106, 106, 227);
     cursor: pointer;
     border-radius: 50%;
 }
 
 
 .input_group {
-    top: 180px;
+    /* top: 180px; */
     position: absolute;
     width: 280px;
     transition: .5s
@@ -84,14 +106,11 @@
     width: 100%;
     padding: 10px 0;
     margin: 5px 0;
-   
-    border-top: 0px;
-    border-left: 0px;
-    border-right: 0px;
-    border-radius: 15px;
     outline: none;
-    background: transparent;
+    border: 1px solid orange;
     text-align: center;
+    border-right:solid 8px orange ;
+    border-radius: 5px;
 
 }
 
@@ -103,10 +122,13 @@
     cursor: pointer;
     display: block;
     margin: auto;
-    background: linear-gradient(to right, rgb(106, 106, 227), white);
+    background-color:rgba(251,186,113,255);
     border: 0;
     outline: none;
-    border-radius: 30px;
+     
+}
+ span{
+    background-color: white;
 }
 
 .submitbut {
@@ -118,10 +140,10 @@
     margin-left: 30px;
     display: block;
     /* margin: auto; */
-    background: linear-gradient(to right, rgb(106, 106, 227), white);
+    background-color:rgba(251,186,113,255);
     border: 0;
     outline: none;
-    border-radius: 30px;
+     
 }
 
 
@@ -151,10 +173,12 @@
 
 .main {
     display: flex;
-    /* margin: 100px 400px 100px 400px; */
+   
 
 }
-
+#butn_1{
+    color:white;
+}
 .header {
     margin: 100px 400px 100px 400px;
 }

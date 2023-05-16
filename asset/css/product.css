@@ -3,6 +3,11 @@
   padding: 0px;
 }
 
+body{
+  background-color: rgba(255, 242, 238, 255);
+}
+ 
+
 header{
   display: flex;
   justify-content: space-between;
@@ -29,7 +34,7 @@ margin-left: 20px;
  .side_nav1 ul a{
   text-decoration: none;
   color: black;
-  background-color: aquamarine;
+  background-color: orange;
   padding: 15px;
   border-radius: 10px;
   border: none;
@@ -43,7 +48,7 @@ margin-left: 20px;
   outline: none;
  }
  .input i{
-  background-color: aquamarine;
+  background-color: orange;
   color: black;
   padding: 13px 20px;
   border-radius: 5px;
@@ -100,7 +105,7 @@ margin-left: 20px;
   padding: 15px;
   padding-right: 60px;
   padding-left: 60px;
-  background-color: white;
+  background-color: orange;
   border: none;
   font-size: 20px;
   margin-right: 250px;
@@ -114,7 +119,7 @@ span button {
   border: none;
   left: 500px;
   top: 0px;
-  background-color: rgba(242, 194, 2, 0.938);
+  background-color: orange;
   padding-top: 16px;
   padding-left: 30px;
   padding-right: 30px;
@@ -124,9 +129,10 @@ span button {
 
 
 body{
-  background-color:whitesmoke;
+  background-color:rgba(255,242,238,255);
   line-height: 1.6;
   letter-spacing: 1px;
+
 } 
 
 main{
@@ -186,7 +192,7 @@ main img{
   font-weight: 600;
 }
 #yellow{
-  color: red;
+  color: orange;
   font-weight: 600;
 }
 .product_txt h3{
@@ -213,16 +219,16 @@ main img{
  
    font-family: 'Poppins', sans-serif;
    padding: 10px 30px 10px 30px;
-   background-color: grey;
+   background-color: orange;
 }
 .hr{
   line-height: 3;
 }
 #lol{
-  color: red;
+  color: orange;
 }
 #red{
-  color: red;
+  color: orange;
 }
 
 .relate{
@@ -308,4 +314,113 @@ font-family:  sans-serif;
   justify-content: space-around;
 }
 
+
+/* review */
+
  
+h1 {
+  font-family: sans-serif;
+  color: #545454;
+} 
+  
+/*RATING CARD*/
+
+.whote_rate{
+  background-color: white;
+  text-align: center;
+  border-radius:20px;
+  width: 550px;
+  margin-left: 20px;
+  box-shadow: 0px 15px 20px -13px sandybrown;
+}
+
+.rating__card {
+  /* box-shadow: 0px 15px 50px -18px rgba(0, 0, 0, 0.3); */
+  /* width: 300px; */
+  font-family: sans-serif;
+  color: #545454;
+  font-size: 10px;
+  border-radius: 30px;
+  display: flex;
+  width: 800px;
+}
+.rating__card__quote {
+  padding: 30px 30px;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 1.2;
+  font-size: 15px;
+  line-height: 1.54;
+}
+.fa-star {
+  color: #545454;
+}
+.checked {
+  color: orange;
+}
+.rating__card__stars {
+  margin: auto;
+  display: block;
+  text-align: center;
+}
+.rating__card__stars__name {
+  font-size: 16px;
+  margin: 0 0 0 5px;
+}
+.rating__card__bottomText {
+  margin: 30px auto 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+#name_feed{
+  padding: 10px 40px ;
+  border: none;
+  outline: none;
+}
+#cmt_feed{
+  padding: 40px 60px ;
+  border: none;
+  outline: none;
+}
+
+#butm{
+  padding: 10px 30px;
+  background-color: sandybrown;
+  border: none;
+  border-radius: 20px;
+  margin-left: 30px;
+}
+/* .rating__card{
+  display: flex;
+  justify-content: space-between;
+}
+
+.whole_rate{
+ padding-left: 50px;
+} */
+
+
+/* review */
+.stars {
+  display: inline-block;
+}
+
+.stars input {
+  display: none;
+}
+
+.stars label {
+  font-size: 30px;
+  color: #ccc;
+  float: right;
+}
+
+.stars label:before {
+  content: "\2605";
+  display: block;
+}
+
+.stars input:checked ~ label {
+  color: #ffca08;
+}

@@ -2,6 +2,15 @@
     margin: 0px;
     padding: 0px;
     font-family: 'Poppins', sans-serif;
+    background-color:  rgba(255,242,238,255);
+}
+span a{
+  background-color: orange;
+  color: orange;
+}
+
+button a{
+  background-color:  rgba(251,186,113,255);
 }
 header {
   display: flex;
@@ -21,7 +30,7 @@ header {
   align-items: center;
   /* margin-top: 30px; */
   font-family: 'Poppins', sans-serif;
-  color: gray;
+  color: orange;
 }
 
 .side_nav ul li {
@@ -40,7 +49,7 @@ header {
 
 .side_nav span button {
   margin-left: 20px;
-  background-color:  blanchedalmond;
+  background-color:   rgba(251,186,113,255);
   padding: 12px 25px 12px 25px;
   margin-bottom: 10px;
   border-radius: 50px;
@@ -59,7 +68,7 @@ header {
 }
 
 .input i {
-  background-color:  blanchedalmond;
+  background-color:   rgba(251,186,113,255);
   
   color: black;
   padding: 15px 20px;
@@ -93,7 +102,7 @@ header {
 
   .main h2{
     margin-top: 20px;
-    background-color: blanchedalmond;
+    background-color:  rgba(251,186,113,255);
     color: black;
     text-align: center;
     padding-top: 40px;
@@ -156,7 +165,7 @@ header {
     padding: 20px;
     padding-left: 60px;
     padding-right: 60px;
-    background-color: antiquewhite;
+    background-color: orange;
     border-radius: 50px;
     border: none;
   }
@@ -170,5 +179,8 @@ header {
   .mother h3,h2{
     color: grey;
 }
+
+/* in */
+
 
  

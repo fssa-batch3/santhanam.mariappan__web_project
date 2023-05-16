@@ -10,11 +10,28 @@ Wireframe:
 Website link  :https://fssa-batch3.github.io/santhanam.mariappan__web_project/
 
 
+ <h3>Zan arts features tracking </h3>
+  <h4>
+ Completed - User Modulue
+    1.Create new Account
+    2.Register Login
+    3.Edit User profile
+    4.Delete User profile</h4>
+
+  <h4>
+  Completed - Product Modulue
+    1.Upload an art
+    2.Delete the uploaded art
+    3.Edit the uploaded art
+    4.Product listing </h4>
 
 
-Create an account :
 
-Scenario 1: Successfully create an account
+
+
+
+ <h1>Create an account :</h1>
+ <h2>Scenario 1: </h2> Successfully create an account
 Steps:
 Navigate to the registration page.
 Enter the required information such as name, email, mobilenumber and password.
@@ -23,9 +40,9 @@ Expected Result:
 The user is redirected to the login page.
 
 
-Login into Website:
+<h1>Login into Website:</h1>
 
-Scenario 1: Successfully login in to account
+<h2>Scenario 1:</h2> Successfully login in to account
 Steps:
 Navigate to the login page.
 Enter the required information such as email, and password.
@@ -34,29 +51,32 @@ Expected Result:
 The user is redirected to the user profile page.
 
 
-Edit option in Profile page :
+<h1>Edit option in Profile page :</h1>
 
-Scenario 1 : Sucessfully in Edit Username
+<h2>Scenario 1 :</h2> Sucessfully in Edit Username
 Steps :
 Click the edit option in profile page 
 "Type your Username"
 click save 
 
+(Change your profile image in not working)
+
 Expected Result
 The user name is changed in local storage 
 
 
-Delete option in Profile page 
+<h1>Delete option in Profile page </h1>
 
-Scenario 1 :Sucessfully delete information in profile page 
+<h2>Scenario 1 :</h2>Sucessfully delete information in profile page 
 Steps :
 Click delete option in profile page 
+Reload the pageit will show undefined 
 Expected Result :The user detail deleted in local storage 
 
 
-Upload arts in website 
+<h1>Upload arts in website </h1>
 
-Scenario 1: Sucessfully upload art in Shop our product page 
+<h2>Scenario 1:</h2> Sucessfully upload art in Shop our product page 
 
 Steps :
 Scroll down the mouse in home page . There is upload option in home page . Click that
@@ -67,7 +87,22 @@ Click upload
 Expected Result : Sucessfully upload arts in shop our products
 
 
+<h1>Edit upload arts </h1>
 
+
+<h1>Delete upload arts</h1>
+
+<h2>Scenario 1: </h2> Sucessfully delete the uploaded arts 
+Steps :
+
+Go to the home page and scroll down to the upload arts
+
+Enter the title name which is same as upload art title 
+
+click delete it will delete in the shop our product page
+
+Expectrd Result : Sucessfully Delete arts in shop our product page.
+ 
 
 
 

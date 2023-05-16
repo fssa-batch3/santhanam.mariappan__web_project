@@ -1,0 +1,64 @@
+.feedback-container {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  
+  .feedback-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .feedback-container p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .feedback-container textarea {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .feedback-container button.submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .feedback-container button.submit-btn:hover {
+    background-color: #3e8e41;
+  }
+  
+  .feedback-container .stars {
+    display: inline-block;
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .feedback-container .stars i {
+    color: #ccc;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  
+  .feedback-container .stars i:hover {
+    color: #ffcc00;
+  }
+  .feedback-container .stars i::after{
+    color: #ffcc00;
+  }
+  .feedback-container .message {
+    display: block;
+    margin-top: 10px;
+    color: green;
+  }

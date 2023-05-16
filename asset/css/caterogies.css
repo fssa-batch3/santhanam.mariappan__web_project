@@ -1,6 +1,10 @@
 * {
   margin: 0px;
   padding: 0px;
+   
+}
+body{
+  background-color:  rgba(255,242,238,255);
 }
 
 /*  
@@ -127,10 +131,11 @@ header {
 #search {
   font-family: 'Poppins', sans-serif;
   outline: none;
+  border: 1px solid gray;
 }
 
 .input i {
-  background-color: rgba(215, 203, 180, 255);
+  background-color:rgba(251,186,113,255);
   color: white;
   padding: 13px 20px;
   border-radius: 5px;
@@ -165,13 +170,20 @@ header {
   color: gray;
 }
 
-
+#art_con{
+  position: absolute;
+  top: 650px;
+  left: 350px;
+  font-size: 50px;
+  background-color: none;
+  color: white;
+}
 
 /* backgroundimg */
 .backimg img {
   width: 1490px;
   margin-top: 40px;
-  height: 700px;
+  height: 900px;
 }
 
 .tag_hr {
@@ -181,10 +193,10 @@ header {
 .tag_hr p {
   margin-left: 550px;
   font-size: 35px;
-  background-color: white;
+  background-color:rgba(255,242,238,255);
   width: 380px;
   position: absolute;
-  top: 980px;
+  top: 1180px;
 }
 
 .tag1 {
@@ -204,13 +216,15 @@ header {
 }
 
 .content a img {
-  width: 400px;
+  width: 370px;
+  height: 500px;
 }
 
 
 
 .content3 img{
-  margin-left: 290px;
+  margin-left: 200px;
+  background-color: rgba(255,242,238,255);
 }
 
 /* display flex for column */
@@ -378,3 +392,9 @@ footer {
   margin-right: 100px;
   width: 200px;
 }
+
+ 
+
+/* like button */
+ 
+ 
